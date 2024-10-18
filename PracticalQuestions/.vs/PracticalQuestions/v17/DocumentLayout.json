@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\C# SEM 5\\PracticalQuestions\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9CE98F57-5003-41C8-AAF1-E740F1EC2DD1}|PracticalQuestions\\PracticalQuestions.csproj|e:\\c# sem 5\\practicalquestions\\practicalquestions\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CE98F57-5003-41C8-AAF1-E740F1EC2DD1}|PracticalQuestions\\PracticalQuestions.csproj|solutionrelative:practicalquestions\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\C# SEM 5\\PracticalQuestions\\PracticalQuestions\\Program.cs",
+              "RelativeDocumentMoniker": "PracticalQuestions\\Program.cs",
+              "ToolTip": "E:\\C# SEM 5\\PracticalQuestions\\PracticalQuestions\\Program.cs",
+              "RelativeToolTip": "PracticalQuestions\\Program.cs",
+              "ViewState": "AQIAAGgAAAAAAAAAAADwv3AAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T05:13:26.528Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

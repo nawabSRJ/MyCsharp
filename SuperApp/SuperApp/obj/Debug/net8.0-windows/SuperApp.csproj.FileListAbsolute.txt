@@ -1,0 +1,17 @@
+E:\C# SEM 5\SuperApp\SuperApp\bin\Debug\net8.0-windows\SuperApp.exe
+E:\C# SEM 5\SuperApp\SuperApp\bin\Debug\net8.0-windows\SuperApp.deps.json
+E:\C# SEM 5\SuperApp\SuperApp\bin\Debug\net8.0-windows\SuperApp.runtimeconfig.json
+E:\C# SEM 5\SuperApp\SuperApp\bin\Debug\net8.0-windows\SuperApp.dll
+E:\C# SEM 5\SuperApp\SuperApp\bin\Debug\net8.0-windows\SuperApp.pdb
+E:\C# SEM 5\SuperApp\SuperApp\obj\Debug\net8.0-windows\SuperApp.Form1.resources
+E:\C# SEM 5\SuperApp\SuperApp\obj\Debug\net8.0-windows\SuperApp.Form2.resources
+E:\C# SEM 5\SuperApp\SuperApp\obj\Debug\net8.0-windows\SuperApp.csproj.GenerateResource.cache
+E:\C# SEM 5\SuperApp\SuperApp\obj\Debug\net8.0-windows\SuperApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\C# SEM 5\SuperApp\SuperApp\obj\Debug\net8.0-windows\SuperApp.AssemblyInfoInputs.cache
+E:\C# SEM 5\SuperApp\SuperApp\obj\Debug\net8.0-windows\SuperApp.AssemblyInfo.cs
+E:\C# SEM 5\SuperApp\SuperApp\obj\Debug\net8.0-windows\SuperApp.csproj.CoreCompileInputs.cache
+E:\C# SEM 5\SuperApp\SuperApp\obj\Debug\net8.0-windows\SuperApp.dll
+E:\C# SEM 5\SuperApp\SuperApp\obj\Debug\net8.0-windows\refint\SuperApp.dll
+E:\C# SEM 5\SuperApp\SuperApp\obj\Debug\net8.0-windows\SuperApp.pdb
+E:\C# SEM 5\SuperApp\SuperApp\obj\Debug\net8.0-windows\SuperApp.genruntimeconfig.cache
+E:\C# SEM 5\SuperApp\SuperApp\obj\Debug\net8.0-windows\ref\SuperApp.dll

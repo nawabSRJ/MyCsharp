@@ -1,0 +1,14 @@
+E:\C# SEM 5\StringHW3\Homework3\Homework3\bin\Debug\net8.0\Homework3.exe
+E:\C# SEM 5\StringHW3\Homework3\Homework3\bin\Debug\net8.0\Homework3.deps.json
+E:\C# SEM 5\StringHW3\Homework3\Homework3\bin\Debug\net8.0\Homework3.runtimeconfig.json
+E:\C# SEM 5\StringHW3\Homework3\Homework3\bin\Debug\net8.0\Homework3.dll
+E:\C# SEM 5\StringHW3\Homework3\Homework3\bin\Debug\net8.0\Homework3.pdb
+E:\C# SEM 5\StringHW3\Homework3\Homework3\obj\Debug\net8.0\Homework3.GeneratedMSBuildEditorConfig.editorconfig
+E:\C# SEM 5\StringHW3\Homework3\Homework3\obj\Debug\net8.0\Homework3.AssemblyInfoInputs.cache
+E:\C# SEM 5\StringHW3\Homework3\Homework3\obj\Debug\net8.0\Homework3.AssemblyInfo.cs
+E:\C# SEM 5\StringHW3\Homework3\Homework3\obj\Debug\net8.0\Homework3.csproj.CoreCompileInputs.cache
+E:\C# SEM 5\StringHW3\Homework3\Homework3\obj\Debug\net8.0\Homework3.dll
+E:\C# SEM 5\StringHW3\Homework3\Homework3\obj\Debug\net8.0\refint\Homework3.dll
+E:\C# SEM 5\StringHW3\Homework3\Homework3\obj\Debug\net8.0\Homework3.pdb
+E:\C# SEM 5\StringHW3\Homework3\Homework3\obj\Debug\net8.0\Homework3.genruntimeconfig.cache
+E:\C# SEM 5\StringHW3\Homework3\Homework3\obj\Debug\net8.0\ref\Homework3.dll

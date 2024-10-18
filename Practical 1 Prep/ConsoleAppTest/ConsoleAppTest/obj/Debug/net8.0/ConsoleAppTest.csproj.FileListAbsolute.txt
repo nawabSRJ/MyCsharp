@@ -1,0 +1,14 @@
+E:\C# SEM 5\Practical 1 Prep\ConsoleAppTest\ConsoleAppTest\bin\Debug\net8.0\ConsoleAppTest.exe
+E:\C# SEM 5\Practical 1 Prep\ConsoleAppTest\ConsoleAppTest\bin\Debug\net8.0\ConsoleAppTest.deps.json
+E:\C# SEM 5\Practical 1 Prep\ConsoleAppTest\ConsoleAppTest\bin\Debug\net8.0\ConsoleAppTest.runtimeconfig.json
+E:\C# SEM 5\Practical 1 Prep\ConsoleAppTest\ConsoleAppTest\bin\Debug\net8.0\ConsoleAppTest.dll
+E:\C# SEM 5\Practical 1 Prep\ConsoleAppTest\ConsoleAppTest\bin\Debug\net8.0\ConsoleAppTest.pdb
+E:\C# SEM 5\Practical 1 Prep\ConsoleAppTest\ConsoleAppTest\obj\Debug\net8.0\ConsoleAppTest.GeneratedMSBuildEditorConfig.editorconfig
+E:\C# SEM 5\Practical 1 Prep\ConsoleAppTest\ConsoleAppTest\obj\Debug\net8.0\ConsoleAppTest.AssemblyInfoInputs.cache
+E:\C# SEM 5\Practical 1 Prep\ConsoleAppTest\ConsoleAppTest\obj\Debug\net8.0\ConsoleAppTest.AssemblyInfo.cs
+E:\C# SEM 5\Practical 1 Prep\ConsoleAppTest\ConsoleAppTest\obj\Debug\net8.0\ConsoleAppTest.csproj.CoreCompileInputs.cache
+E:\C# SEM 5\Practical 1 Prep\ConsoleAppTest\ConsoleAppTest\obj\Debug\net8.0\ConsoleAppTest.dll
+E:\C# SEM 5\Practical 1 Prep\ConsoleAppTest\ConsoleAppTest\obj\Debug\net8.0\refint\ConsoleAppTest.dll
+E:\C# SEM 5\Practical 1 Prep\ConsoleAppTest\ConsoleAppTest\obj\Debug\net8.0\ConsoleAppTest.pdb
+E:\C# SEM 5\Practical 1 Prep\ConsoleAppTest\ConsoleAppTest\obj\Debug\net8.0\ConsoleAppTest.genruntimeconfig.cache
+E:\C# SEM 5\Practical 1 Prep\ConsoleAppTest\ConsoleAppTest\obj\Debug\net8.0\ref\ConsoleAppTest.dll

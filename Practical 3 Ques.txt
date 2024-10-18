@@ -1,0 +1,4 @@
+Practical 3 ques :
+Q) WAP to input a string and find the nearest vowel in the string based on the character that is entered.
+Q) WAP to input a string and print the frequency of each letter.
+Q) WAP to input a string and find which word contains maximum vowels.

@@ -1,0 +1,14 @@
+E:\C# SEM 5\PracticalQuestions\PracticalQuestions\bin\Debug\net8.0\PracticalQuestions.exe
+E:\C# SEM 5\PracticalQuestions\PracticalQuestions\bin\Debug\net8.0\PracticalQuestions.deps.json
+E:\C# SEM 5\PracticalQuestions\PracticalQuestions\bin\Debug\net8.0\PracticalQuestions.runtimeconfig.json
+E:\C# SEM 5\PracticalQuestions\PracticalQuestions\bin\Debug\net8.0\PracticalQuestions.dll
+E:\C# SEM 5\PracticalQuestions\PracticalQuestions\bin\Debug\net8.0\PracticalQuestions.pdb
+E:\C# SEM 5\PracticalQuestions\PracticalQuestions\obj\Debug\net8.0\PracticalQuestions.GeneratedMSBuildEditorConfig.editorconfig
+E:\C# SEM 5\PracticalQuestions\PracticalQuestions\obj\Debug\net8.0\PracticalQuestions.AssemblyInfoInputs.cache
+E:\C# SEM 5\PracticalQuestions\PracticalQuestions\obj\Debug\net8.0\PracticalQuestions.AssemblyInfo.cs
+E:\C# SEM 5\PracticalQuestions\PracticalQuestions\obj\Debug\net8.0\PracticalQuestions.csproj.CoreCompileInputs.cache
+E:\C# SEM 5\PracticalQuestions\PracticalQuestions\obj\Debug\net8.0\PracticalQuestions.dll
+E:\C# SEM 5\PracticalQuestions\PracticalQuestions\obj\Debug\net8.0\refint\PracticalQuestions.dll
+E:\C# SEM 5\PracticalQuestions\PracticalQuestions\obj\Debug\net8.0\PracticalQuestions.pdb
+E:\C# SEM 5\PracticalQuestions\PracticalQuestions\obj\Debug\net8.0\PracticalQuestions.genruntimeconfig.cache
+E:\C# SEM 5\PracticalQuestions\PracticalQuestions\obj\Debug\net8.0\ref\PracticalQuestions.dll

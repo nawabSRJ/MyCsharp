@@ -1,0 +1,14 @@
+E:\C# SEM 5\EnumIntro\EnumIntro\bin\Debug\net8.0\EnumIntro.exe
+E:\C# SEM 5\EnumIntro\EnumIntro\bin\Debug\net8.0\EnumIntro.deps.json
+E:\C# SEM 5\EnumIntro\EnumIntro\bin\Debug\net8.0\EnumIntro.runtimeconfig.json
+E:\C# SEM 5\EnumIntro\EnumIntro\bin\Debug\net8.0\EnumIntro.dll
+E:\C# SEM 5\EnumIntro\EnumIntro\bin\Debug\net8.0\EnumIntro.pdb
+E:\C# SEM 5\EnumIntro\EnumIntro\obj\Debug\net8.0\EnumIntro.GeneratedMSBuildEditorConfig.editorconfig
+E:\C# SEM 5\EnumIntro\EnumIntro\obj\Debug\net8.0\EnumIntro.AssemblyInfoInputs.cache
+E:\C# SEM 5\EnumIntro\EnumIntro\obj\Debug\net8.0\EnumIntro.AssemblyInfo.cs
+E:\C# SEM 5\EnumIntro\EnumIntro\obj\Debug\net8.0\EnumIntro.csproj.CoreCompileInputs.cache
+E:\C# SEM 5\EnumIntro\EnumIntro\obj\Debug\net8.0\EnumIntro.dll
+E:\C# SEM 5\EnumIntro\EnumIntro\obj\Debug\net8.0\refint\EnumIntro.dll
+E:\C# SEM 5\EnumIntro\EnumIntro\obj\Debug\net8.0\EnumIntro.pdb
+E:\C# SEM 5\EnumIntro\EnumIntro\obj\Debug\net8.0\EnumIntro.genruntimeconfig.cache
+E:\C# SEM 5\EnumIntro\EnumIntro\obj\Debug\net8.0\ref\EnumIntro.dll

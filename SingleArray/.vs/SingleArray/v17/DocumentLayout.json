@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\C# SEM 5\\SingleArray\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7C8131BC-D35D-40C0-A1E7-4F9C0FA4664A}|SingleArray\\SingleArray.csproj|e:\\c# sem 5\\singlearray\\singlearray\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C8131BC-D35D-40C0-A1E7-4F9C0FA4664A}|SingleArray\\SingleArray.csproj|solutionrelative:singlearray\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\C# SEM 5\\SingleArray\\SingleArray\\Program.cs",
+              "RelativeDocumentMoniker": "SingleArray\\Program.cs",
+              "ToolTip": "E:\\C# SEM 5\\SingleArray\\SingleArray\\Program.cs",
+              "RelativeToolTip": "SingleArray\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAALYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T01:49:54.978Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+D:\Srajan\C#\SingleArray3\SingleArray3\obj\Debug\net8.0\SingleArray3.GeneratedMSBuildEditorConfig.editorconfig
+D:\Srajan\C#\SingleArray3\SingleArray3\obj\Debug\net8.0\SingleArray3.AssemblyInfoInputs.cache
+D:\Srajan\C#\SingleArray3\SingleArray3\obj\Debug\net8.0\SingleArray3.AssemblyInfo.cs
+D:\Srajan\C#\SingleArray3\SingleArray3\obj\Debug\net8.0\SingleArray3.csproj.CoreCompileInputs.cache
+D:\Srajan\C#\SingleArray3\SingleArray3\bin\Debug\net8.0\SingleArray3.exe
+D:\Srajan\C#\SingleArray3\SingleArray3\bin\Debug\net8.0\SingleArray3.deps.json
+D:\Srajan\C#\SingleArray3\SingleArray3\bin\Debug\net8.0\SingleArray3.runtimeconfig.json
+D:\Srajan\C#\SingleArray3\SingleArray3\bin\Debug\net8.0\SingleArray3.dll
+D:\Srajan\C#\SingleArray3\SingleArray3\bin\Debug\net8.0\SingleArray3.pdb
+D:\Srajan\C#\SingleArray3\SingleArray3\obj\Debug\net8.0\SingleArray3.dll
+D:\Srajan\C#\SingleArray3\SingleArray3\obj\Debug\net8.0\refint\SingleArray3.dll
+D:\Srajan\C#\SingleArray3\SingleArray3\obj\Debug\net8.0\SingleArray3.pdb
+D:\Srajan\C#\SingleArray3\SingleArray3\obj\Debug\net8.0\SingleArray3.genruntimeconfig.cache
+D:\Srajan\C#\SingleArray3\SingleArray3\obj\Debug\net8.0\ref\SingleArray3.dll

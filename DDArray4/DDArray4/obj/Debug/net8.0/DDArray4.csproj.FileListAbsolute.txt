@@ -1,0 +1,14 @@
+D:\Srajan\C#\DDArray4\DDArray4\bin\Debug\net8.0\DDArray4.exe
+D:\Srajan\C#\DDArray4\DDArray4\bin\Debug\net8.0\DDArray4.deps.json
+D:\Srajan\C#\DDArray4\DDArray4\bin\Debug\net8.0\DDArray4.runtimeconfig.json
+D:\Srajan\C#\DDArray4\DDArray4\bin\Debug\net8.0\DDArray4.dll
+D:\Srajan\C#\DDArray4\DDArray4\bin\Debug\net8.0\DDArray4.pdb
+D:\Srajan\C#\DDArray4\DDArray4\obj\Debug\net8.0\DDArray4.GeneratedMSBuildEditorConfig.editorconfig
+D:\Srajan\C#\DDArray4\DDArray4\obj\Debug\net8.0\DDArray4.AssemblyInfoInputs.cache
+D:\Srajan\C#\DDArray4\DDArray4\obj\Debug\net8.0\DDArray4.AssemblyInfo.cs
+D:\Srajan\C#\DDArray4\DDArray4\obj\Debug\net8.0\DDArray4.csproj.CoreCompileInputs.cache
+D:\Srajan\C#\DDArray4\DDArray4\obj\Debug\net8.0\DDArray4.dll
+D:\Srajan\C#\DDArray4\DDArray4\obj\Debug\net8.0\refint\DDArray4.dll
+D:\Srajan\C#\DDArray4\DDArray4\obj\Debug\net8.0\DDArray4.pdb
+D:\Srajan\C#\DDArray4\DDArray4\obj\Debug\net8.0\DDArray4.genruntimeconfig.cache
+D:\Srajan\C#\DDArray4\DDArray4\obj\Debug\net8.0\ref\DDArray4.dll

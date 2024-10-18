@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\C# SEM 5\\DDArray3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0A3A9266-9789-4D87-9291-192E5358BCAF}|DDArray3\\DDArray3.csproj|e:\\c# sem 5\\ddarray3\\ddarray3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A3A9266-9789-4D87-9291-192E5358BCAF}|DDArray3\\DDArray3.csproj|solutionrelative:ddarray3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\C# SEM 5\\DDArray3\\DDArray3\\Program.cs",
+              "RelativeDocumentMoniker": "DDArray3\\Program.cs",
+              "ToolTip": "E:\\C# SEM 5\\DDArray3\\DDArray3\\Program.cs",
+              "RelativeToolTip": "DDArray3\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADwAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T08:06:22.525Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

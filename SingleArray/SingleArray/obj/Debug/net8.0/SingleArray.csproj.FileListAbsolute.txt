@@ -1,0 +1,28 @@
+D:\Srajan\C#\SingleArray\SingleArray\bin\Debug\net8.0\SingleArray.exe
+D:\Srajan\C#\SingleArray\SingleArray\bin\Debug\net8.0\SingleArray.deps.json
+D:\Srajan\C#\SingleArray\SingleArray\bin\Debug\net8.0\SingleArray.runtimeconfig.json
+D:\Srajan\C#\SingleArray\SingleArray\bin\Debug\net8.0\SingleArray.dll
+D:\Srajan\C#\SingleArray\SingleArray\bin\Debug\net8.0\SingleArray.pdb
+D:\Srajan\C#\SingleArray\SingleArray\obj\Debug\net8.0\SingleArray.GeneratedMSBuildEditorConfig.editorconfig
+D:\Srajan\C#\SingleArray\SingleArray\obj\Debug\net8.0\SingleArray.AssemblyInfoInputs.cache
+D:\Srajan\C#\SingleArray\SingleArray\obj\Debug\net8.0\SingleArray.AssemblyInfo.cs
+D:\Srajan\C#\SingleArray\SingleArray\obj\Debug\net8.0\SingleArray.csproj.CoreCompileInputs.cache
+D:\Srajan\C#\SingleArray\SingleArray\obj\Debug\net8.0\SingleArray.dll
+D:\Srajan\C#\SingleArray\SingleArray\obj\Debug\net8.0\refint\SingleArray.dll
+D:\Srajan\C#\SingleArray\SingleArray\obj\Debug\net8.0\SingleArray.pdb
+D:\Srajan\C#\SingleArray\SingleArray\obj\Debug\net8.0\SingleArray.genruntimeconfig.cache
+D:\Srajan\C#\SingleArray\SingleArray\obj\Debug\net8.0\ref\SingleArray.dll
+E:\C# SEM 5\SingleArray\SingleArray\bin\Debug\net8.0\SingleArray.exe
+E:\C# SEM 5\SingleArray\SingleArray\bin\Debug\net8.0\SingleArray.deps.json
+E:\C# SEM 5\SingleArray\SingleArray\bin\Debug\net8.0\SingleArray.runtimeconfig.json
+E:\C# SEM 5\SingleArray\SingleArray\bin\Debug\net8.0\SingleArray.dll
+E:\C# SEM 5\SingleArray\SingleArray\bin\Debug\net8.0\SingleArray.pdb
+E:\C# SEM 5\SingleArray\SingleArray\obj\Debug\net8.0\SingleArray.GeneratedMSBuildEditorConfig.editorconfig
+E:\C# SEM 5\SingleArray\SingleArray\obj\Debug\net8.0\SingleArray.AssemblyInfoInputs.cache
+E:\C# SEM 5\SingleArray\SingleArray\obj\Debug\net8.0\SingleArray.AssemblyInfo.cs
+E:\C# SEM 5\SingleArray\SingleArray\obj\Debug\net8.0\SingleArray.csproj.CoreCompileInputs.cache
+E:\C# SEM 5\SingleArray\SingleArray\obj\Debug\net8.0\SingleArray.dll
+E:\C# SEM 5\SingleArray\SingleArray\obj\Debug\net8.0\refint\SingleArray.dll
+E:\C# SEM 5\SingleArray\SingleArray\obj\Debug\net8.0\SingleArray.pdb
+E:\C# SEM 5\SingleArray\SingleArray\obj\Debug\net8.0\SingleArray.genruntimeconfig.cache
+E:\C# SEM 5\SingleArray\SingleArray\obj\Debug\net8.0\ref\SingleArray.dll

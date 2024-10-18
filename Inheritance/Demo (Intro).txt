@@ -1,0 +1,94 @@
+namespace InheritanceDemo
+{
+    class A
+    {
+        public void infunc()
+        {
+            Console.WriteLine("In func!!");
+        }
+        public void outfunc()
+        {
+            Console.WriteLine("Out func!!");
+        }
+
+    } // class A ends
+    class B : A
+    {
+        public void get()
+        {
+            base.infunc();
+        }
+        public void put()
+        {
+            base.outfunc();
+        }
+    }  // class B ends
+
+    class C : B
+    {
+
+        public void get2()
+        {
+            base.infunc();
+        }
+        public void put2()
+        {
+            base.put();
+        }
+
+    }
+    class Extra
+    {
+        public void putExtra()
+        {
+            Console.WriteLine("This is the extra class func!!");
+        }
+    }
+
+
+    class D : I
+    {
+        public void sraj()
+        {
+            Console.WriteLine("Bye bye bye");
+        }
+    }
+
+
+    interface I
+    {
+        public abstract void sraj();
+    }
+    abstract class AbstratClass
+    {
+
+        public abstract void func();
+
+    }
+    class ChildAbstract : AbstratClass , I{
+        public override void func()
+        {
+            Console.WriteLine("Inside the definition of func");
+        }
+        virtual public void sraj()
+        {
+            Console.WriteLine("Hey there");
+        }
+    }
+    class Program
+    {
+
+        public static void Main(string[] args)
+        {
+
+            B obj = new B();
+            obj.get();
+            obj.put();
+            C obj2 = new C();
+            obj2.get2();
+            obj2.put2();
+            D obj3 = new D();
+            obj3.sraj();
+        }
+    }
+}

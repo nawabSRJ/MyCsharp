@@ -1,0 +1,188 @@
+/*class PractiseQus
+{
+    public static void Main(String[] args)
+    {
+        Console.Write("Enter a number: ");
+        string input = Console.ReadLine() !;
+        int num = int.Parse(input) ;
+        int temp = num;
+        bool flag = true;
+        do { 
+        
+            temp = rotate(temp);
+            Console.WriteLine(temp);
+            if (!isPrime(temp)) {
+                Console.WriteLine("NO");
+                flag = false;
+                //break;
+            }
+        } while (temp != num);
+        if (flag)
+        {
+            Console.WriteLine("YES");
+        }
+    }
+
+    public static bool isPrime(int num)
+    {
+        if (num <= 2) return true;
+        for(int i = 2; i*i < num; i++)
+        {
+            if (num % i == 0) return false;
+        }
+        return true;
+    }
+    
+    public static int rotate(int num)
+    {
+        int noOfDigs = 0;
+        int firstDig;
+        int firstRotatedNum;
+        int finalNum = 0;
+
+        int temp = num;
+        while (temp > 0)
+        {
+            noOfDigs++;
+            temp /= 10;
+        }
+        //Console.WriteLine(noOfDigs);
+
+        temp = num;
+        for (int i = 0; i < noOfDigs-1; i++)
+        {
+            temp = temp / 10;
+        }
+        firstDig = temp;
+        firstRotatedNum = firstDig;
+        //Console.WriteLine(firstRotatedNum
+
+        temp = num;
+        temp *= 10;
+        temp += firstRotatedNum;
+
+
+        for (int i = 0; i < noOfDigs; i++)
+        {
+            int dig = temp % 10;
+            for (int j = 0; j < i; j++)
+            {
+                dig *= 10;
+            }
+
+            finalNum += dig;
+            temp /= 10;
+        }
+        return finalNum;
+    }
+} */
+class SingleDArray
+{
+    public static void Main(String[] args)
+    {
+        while (true)
+        {
+            Console.WriteLine("Make Choice : ");
+        Console.WriteLine("1)Add Contact");
+        Console.WriteLine("2)Search Contact");
+        Console.WriteLine("3)Edit Contact");
+        Console.WriteLine("4)Delete Contact");
+        String[] names = new String[10];  // at max Ten Contacts
+        int[] numbers = new int[10]; // for corresponding 10 phone numbers
+        int choice = int.Parse(Console.ReadLine() !);
+        int total = 0;
+        Console.WriteLine("Your Choice : " + choice);
+        
+            switch (choice)
+            {
+                case 0:
+                    Console.WriteLine("Terminating...");
+                    break;
+                case 1:
+                    Console.WriteLine("Enter Name of Contact : ");
+                    String tempName = Console.ReadLine()!;
+                    Console.WriteLine("Enter the Phone Number : ");
+                    int tempnumber = int.Parse(Console.ReadLine()!);
+
+                    AddContact(tempName, tempnumber, names, numbers, total);
+                    break;
+                case 2:
+                    SearchContact(numbers, names);
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                default:
+                    Console.WriteLine("Please Choose between 1 - 4");
+                    break;
+            } // end of switch
+        }
+    } // end of Main
+
+    public static void AddContact(String name , int number , String[] names, int[] numbers,int total)
+    {
+        if(!(total <= 10))
+        {
+            Console.WriteLine("Cannot add more contacts!!");
+            return;
+        }
+
+        names[total] = name;
+        numbers[total] = number;
+        Console.WriteLine("Contact " + names[total] + " saved with number : " + numbers[total]);
+        total++; // increase total count
+        return;
+         
+    }
+    public static void SearchContact(int[] numbers , String[] names)
+    {
+        Console.WriteLine("On what basis : ");
+        Console.WriteLine("1)Phone Number \n2)Contact Name");
+        int ch = int.Parse(Console.ReadLine()!);
+        switch (ch) 
+        {
+            case 1:
+                Console.WriteLine("Enter Phone Number : ");
+                int tempNumber = int.Parse(Console.ReadLine() !);
+                String holder = SearchByNumber(tempNumber , numbers , names);
+                Console.WriteLine("The number " + tempNumber + " is held by " + holder);
+                return;
+            case 2:
+                Console.WriteLine("Enter Contact Name : ");
+                String tempName = Console.ReadLine()!;
+                int answer = SearchByName(tempName, numbers, names);
+                Console.WriteLine("Phone number of " + tempName + " is " + answer);
+                return;
+            default:
+                Console.WriteLine("Please Enter a valid choice");
+                break;
+
+        }
+
+    }
+    public static String SearchByNumber(int tempNumber , int[] numbers , String[] names) 
+    {
+        for (int i = 0; i < numbers.Length; i++) { 
+            if(numbers[i] == tempNumber)
+            {
+                return names[i];
+            }
+        }
+        return "Not found!!";
+    }
+
+    public static int SearchByName(String tempName, int[] numbers, String[] names)
+    {
+        for (int i = 0; i < names.Length; i++)
+        {
+            if (names[i] == tempName)
+            {
+                return numbers[i];
+            }
+        }
+        return 0;
+    }
+
+} // end of class
+

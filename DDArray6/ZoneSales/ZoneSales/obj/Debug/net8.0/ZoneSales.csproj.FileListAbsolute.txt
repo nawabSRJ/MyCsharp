@@ -1,0 +1,28 @@
+E:\C# SEM 5\DDArray6-Zone Sales\ZoneSales\ZoneSales\bin\Debug\net8.0\ZoneSales.exe
+E:\C# SEM 5\DDArray6-Zone Sales\ZoneSales\ZoneSales\bin\Debug\net8.0\ZoneSales.deps.json
+E:\C# SEM 5\DDArray6-Zone Sales\ZoneSales\ZoneSales\bin\Debug\net8.0\ZoneSales.runtimeconfig.json
+E:\C# SEM 5\DDArray6-Zone Sales\ZoneSales\ZoneSales\bin\Debug\net8.0\ZoneSales.dll
+E:\C# SEM 5\DDArray6-Zone Sales\ZoneSales\ZoneSales\bin\Debug\net8.0\ZoneSales.pdb
+E:\C# SEM 5\DDArray6-Zone Sales\ZoneSales\ZoneSales\obj\Debug\net8.0\ZoneSales.GeneratedMSBuildEditorConfig.editorconfig
+E:\C# SEM 5\DDArray6-Zone Sales\ZoneSales\ZoneSales\obj\Debug\net8.0\ZoneSales.AssemblyInfoInputs.cache
+E:\C# SEM 5\DDArray6-Zone Sales\ZoneSales\ZoneSales\obj\Debug\net8.0\ZoneSales.AssemblyInfo.cs
+E:\C# SEM 5\DDArray6-Zone Sales\ZoneSales\ZoneSales\obj\Debug\net8.0\ZoneSales.csproj.CoreCompileInputs.cache
+E:\C# SEM 5\DDArray6-Zone Sales\ZoneSales\ZoneSales\obj\Debug\net8.0\ZoneSales.dll
+E:\C# SEM 5\DDArray6-Zone Sales\ZoneSales\ZoneSales\obj\Debug\net8.0\refint\ZoneSales.dll
+E:\C# SEM 5\DDArray6-Zone Sales\ZoneSales\ZoneSales\obj\Debug\net8.0\ZoneSales.pdb
+E:\C# SEM 5\DDArray6-Zone Sales\ZoneSales\ZoneSales\obj\Debug\net8.0\ZoneSales.genruntimeconfig.cache
+E:\C# SEM 5\DDArray6-Zone Sales\ZoneSales\ZoneSales\obj\Debug\net8.0\ref\ZoneSales.dll
+E:\C# SEM 5\DDArray6\ZoneSales\ZoneSales\bin\Debug\net8.0\ZoneSales.exe
+E:\C# SEM 5\DDArray6\ZoneSales\ZoneSales\bin\Debug\net8.0\ZoneSales.deps.json
+E:\C# SEM 5\DDArray6\ZoneSales\ZoneSales\bin\Debug\net8.0\ZoneSales.runtimeconfig.json
+E:\C# SEM 5\DDArray6\ZoneSales\ZoneSales\bin\Debug\net8.0\ZoneSales.dll
+E:\C# SEM 5\DDArray6\ZoneSales\ZoneSales\bin\Debug\net8.0\ZoneSales.pdb
+E:\C# SEM 5\DDArray6\ZoneSales\ZoneSales\obj\Debug\net8.0\ZoneSales.GeneratedMSBuildEditorConfig.editorconfig
+E:\C# SEM 5\DDArray6\ZoneSales\ZoneSales\obj\Debug\net8.0\ZoneSales.AssemblyInfoInputs.cache
+E:\C# SEM 5\DDArray6\ZoneSales\ZoneSales\obj\Debug\net8.0\ZoneSales.AssemblyInfo.cs
+E:\C# SEM 5\DDArray6\ZoneSales\ZoneSales\obj\Debug\net8.0\ZoneSales.csproj.CoreCompileInputs.cache
+E:\C# SEM 5\DDArray6\ZoneSales\ZoneSales\obj\Debug\net8.0\ZoneSales.dll
+E:\C# SEM 5\DDArray6\ZoneSales\ZoneSales\obj\Debug\net8.0\refint\ZoneSales.dll
+E:\C# SEM 5\DDArray6\ZoneSales\ZoneSales\obj\Debug\net8.0\ZoneSales.pdb
+E:\C# SEM 5\DDArray6\ZoneSales\ZoneSales\obj\Debug\net8.0\ZoneSales.genruntimeconfig.cache
+E:\C# SEM 5\DDArray6\ZoneSales\ZoneSales\obj\Debug\net8.0\ref\ZoneSales.dll

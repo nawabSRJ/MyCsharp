@@ -1,0 +1,17 @@
+E:\C# SEM 5\QuizApp\bin\Debug\net8.0-windows\QuizApp.exe
+E:\C# SEM 5\QuizApp\bin\Debug\net8.0-windows\QuizApp.deps.json
+E:\C# SEM 5\QuizApp\bin\Debug\net8.0-windows\QuizApp.runtimeconfig.json
+E:\C# SEM 5\QuizApp\bin\Debug\net8.0-windows\QuizApp.dll
+E:\C# SEM 5\QuizApp\bin\Debug\net8.0-windows\QuizApp.pdb
+E:\C# SEM 5\QuizApp\obj\Debug\net8.0-windows\QuizApp.Form1.resources
+E:\C# SEM 5\QuizApp\obj\Debug\net8.0-windows\QuizApp.csproj.GenerateResource.cache
+E:\C# SEM 5\QuizApp\obj\Debug\net8.0-windows\QuizApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\C# SEM 5\QuizApp\obj\Debug\net8.0-windows\QuizApp.AssemblyInfoInputs.cache
+E:\C# SEM 5\QuizApp\obj\Debug\net8.0-windows\QuizApp.AssemblyInfo.cs
+E:\C# SEM 5\QuizApp\obj\Debug\net8.0-windows\QuizApp.csproj.CoreCompileInputs.cache
+E:\C# SEM 5\QuizApp\obj\Debug\net8.0-windows\QuizApp.dll
+E:\C# SEM 5\QuizApp\obj\Debug\net8.0-windows\refint\QuizApp.dll
+E:\C# SEM 5\QuizApp\obj\Debug\net8.0-windows\QuizApp.pdb
+E:\C# SEM 5\QuizApp\obj\Debug\net8.0-windows\QuizApp.genruntimeconfig.cache
+E:\C# SEM 5\QuizApp\obj\Debug\net8.0-windows\ref\QuizApp.dll
+E:\C# SEM 5\QuizApp\obj\Debug\net8.0-windows\QuizApp.Form2.resources

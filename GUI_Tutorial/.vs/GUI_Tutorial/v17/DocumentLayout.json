@@ -1,0 +1,93 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\C# SEM 5\\GUI_Tutorial\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BB4E990A-1789-42DA-A676-6824B8DA0FDE}|GUI_Tutorial.csproj|e:\\c# sem 5\\gui_tutorial\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BB4E990A-1789-42DA-A676-6824B8DA0FDE}|GUI_Tutorial.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB4E990A-1789-42DA-A676-6824B8DA0FDE}|GUI_Tutorial.csproj|e:\\c# sem 5\\gui_tutorial\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB4E990A-1789-42DA-A676-6824B8DA0FDE}|GUI_Tutorial.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB4E990A-1789-42DA-A676-6824B8DA0FDE}|GUI_Tutorial.csproj|e:\\c# sem 5\\gui_tutorial\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BB4E990A-1789-42DA-A676-6824B8DA0FDE}|GUI_Tutorial.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB4E990A-1789-42DA-A676-6824B8DA0FDE}|GUI_Tutorial.csproj|e:\\c# sem 5\\gui_tutorial\\icon1.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{BB4E990A-1789-42DA-A676-6824B8DA0FDE}|GUI_Tutorial.csproj|solutionrelative:icon1.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Icon1.ico -  [English (United States)] - Icon [16x16, 8 bit, BMP]",
+              "DocumentMoniker": "E:\\C# SEM 5\\GUI_Tutorial\\Icon1.ico",
+              "RelativeDocumentMoniker": "Icon1.ico",
+              "ToolTip": "E:\\C# SEM 5\\GUI_Tutorial\\Icon1.ico -  [English (United States)] - Icon [16x16, 8 bit, BMP]",
+              "RelativeToolTip": "Icon1.ico -  [English (United States)] - Icon [16x16, 8 bit, BMP]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
+              "WhenOpened": "2024-10-07T03:17:47.522Z",
+              "EditorCaption": " -  [English (United States)] - Icon [16x16, 8 bit, BMP]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form2.cs [Design]",
+              "DocumentMoniker": "E:\\C# SEM 5\\GUI_Tutorial\\Form2.cs",
+              "RelativeDocumentMoniker": "Form2.cs",
+              "ToolTip": "E:\\C# SEM 5\\GUI_Tutorial\\Form2.cs [Design]",
+              "RelativeToolTip": "Form2.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T03:00:06.265Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "E:\\C# SEM 5\\GUI_Tutorial\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "E:\\C# SEM 5\\GUI_Tutorial\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAAwDoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T02:54:46.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "E:\\C# SEM 5\\GUI_Tutorial\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "E:\\C# SEM 5\\GUI_Tutorial\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T02:48:46.014Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

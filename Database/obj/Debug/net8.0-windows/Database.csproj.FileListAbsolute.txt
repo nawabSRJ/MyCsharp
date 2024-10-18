@@ -1,0 +1,50 @@
+C:\Users\Lenovo\source\repos\Database\bin\Debug\net8.0-windows\Database.exe
+C:\Users\Lenovo\source\repos\Database\bin\Debug\net8.0-windows\Database.deps.json
+C:\Users\Lenovo\source\repos\Database\bin\Debug\net8.0-windows\Database.runtimeconfig.json
+C:\Users\Lenovo\source\repos\Database\bin\Debug\net8.0-windows\Database.dll
+C:\Users\Lenovo\source\repos\Database\bin\Debug\net8.0-windows\Database.pdb
+C:\Users\Lenovo\source\repos\Database\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\Lenovo\source\repos\Database\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Lenovo\source\repos\Database\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Lenovo\source\repos\Database\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Lenovo\source\repos\Database\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Lenovo\source\repos\Database\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Lenovo\source\repos\Database\obj\Debug\net8.0-windows\Database.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\Database\obj\Debug\net8.0-windows\Database.Form1.resources
+C:\Users\Lenovo\source\repos\Database\obj\Debug\net8.0-windows\Database.csproj.GenerateResource.cache
+C:\Users\Lenovo\source\repos\Database\obj\Debug\net8.0-windows\Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\source\repos\Database\obj\Debug\net8.0-windows\Database.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\repos\Database\obj\Debug\net8.0-windows\Database.AssemblyInfo.cs
+C:\Users\Lenovo\source\repos\Database\obj\Debug\net8.0-windows\Database.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\Database\obj\Debug\net8.0-windows\Database.sourcelink.json
+C:\Users\Lenovo\source\repos\Database\obj\Debug\net8.0-windows\Database.csproj.Up2Date
+C:\Users\Lenovo\source\repos\Database\obj\Debug\net8.0-windows\Database.dll
+C:\Users\Lenovo\source\repos\Database\obj\Debug\net8.0-windows\refint\Database.dll
+C:\Users\Lenovo\source\repos\Database\obj\Debug\net8.0-windows\Database.pdb
+C:\Users\Lenovo\source\repos\Database\obj\Debug\net8.0-windows\Database.genruntimeconfig.cache
+C:\Users\Lenovo\source\repos\Database\obj\Debug\net8.0-windows\ref\Database.dll
+E:\C# SEM 5\Database\bin\Debug\net8.0-windows\Database.exe
+E:\C# SEM 5\Database\bin\Debug\net8.0-windows\Database.deps.json
+E:\C# SEM 5\Database\bin\Debug\net8.0-windows\Database.runtimeconfig.json
+E:\C# SEM 5\Database\bin\Debug\net8.0-windows\Database.dll
+E:\C# SEM 5\Database\bin\Debug\net8.0-windows\Database.pdb
+E:\C# SEM 5\Database\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+E:\C# SEM 5\Database\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+E:\C# SEM 5\Database\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+E:\C# SEM 5\Database\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+E:\C# SEM 5\Database\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\C# SEM 5\Database\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\C# SEM 5\Database\obj\Debug\net8.0-windows\Database.csproj.AssemblyReference.cache
+E:\C# SEM 5\Database\obj\Debug\net8.0-windows\Database.Form1.resources
+E:\C# SEM 5\Database\obj\Debug\net8.0-windows\Database.Form2.resources
+E:\C# SEM 5\Database\obj\Debug\net8.0-windows\Database.csproj.GenerateResource.cache
+E:\C# SEM 5\Database\obj\Debug\net8.0-windows\Database.GeneratedMSBuildEditorConfig.editorconfig
+E:\C# SEM 5\Database\obj\Debug\net8.0-windows\Database.AssemblyInfoInputs.cache
+E:\C# SEM 5\Database\obj\Debug\net8.0-windows\Database.AssemblyInfo.cs
+E:\C# SEM 5\Database\obj\Debug\net8.0-windows\Database.csproj.CoreCompileInputs.cache
+E:\C# SEM 5\Database\obj\Debug\net8.0-windows\Database.csproj.Up2Date
+E:\C# SEM 5\Database\obj\Debug\net8.0-windows\Database.dll
+E:\C# SEM 5\Database\obj\Debug\net8.0-windows\refint\Database.dll
+E:\C# SEM 5\Database\obj\Debug\net8.0-windows\Database.pdb
+E:\C# SEM 5\Database\obj\Debug\net8.0-windows\Database.genruntimeconfig.cache
+E:\C# SEM 5\Database\obj\Debug\net8.0-windows\ref\Database.dll

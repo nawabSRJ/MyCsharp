@@ -1,0 +1,28 @@
+D:\Srajan\C#\DDArray3\DDArray3\bin\Debug\net8.0\DDArray3.exe
+D:\Srajan\C#\DDArray3\DDArray3\bin\Debug\net8.0\DDArray3.deps.json
+D:\Srajan\C#\DDArray3\DDArray3\bin\Debug\net8.0\DDArray3.runtimeconfig.json
+D:\Srajan\C#\DDArray3\DDArray3\bin\Debug\net8.0\DDArray3.dll
+D:\Srajan\C#\DDArray3\DDArray3\bin\Debug\net8.0\DDArray3.pdb
+D:\Srajan\C#\DDArray3\DDArray3\obj\Debug\net8.0\DDArray3.GeneratedMSBuildEditorConfig.editorconfig
+D:\Srajan\C#\DDArray3\DDArray3\obj\Debug\net8.0\DDArray3.AssemblyInfoInputs.cache
+D:\Srajan\C#\DDArray3\DDArray3\obj\Debug\net8.0\DDArray3.AssemblyInfo.cs
+D:\Srajan\C#\DDArray3\DDArray3\obj\Debug\net8.0\DDArray3.csproj.CoreCompileInputs.cache
+D:\Srajan\C#\DDArray3\DDArray3\obj\Debug\net8.0\DDArray3.dll
+D:\Srajan\C#\DDArray3\DDArray3\obj\Debug\net8.0\refint\DDArray3.dll
+D:\Srajan\C#\DDArray3\DDArray3\obj\Debug\net8.0\DDArray3.pdb
+D:\Srajan\C#\DDArray3\DDArray3\obj\Debug\net8.0\DDArray3.genruntimeconfig.cache
+D:\Srajan\C#\DDArray3\DDArray3\obj\Debug\net8.0\ref\DDArray3.dll
+E:\C# SEM 5\DDArray3\DDArray3\bin\Debug\net8.0\DDArray3.exe
+E:\C# SEM 5\DDArray3\DDArray3\bin\Debug\net8.0\DDArray3.deps.json
+E:\C# SEM 5\DDArray3\DDArray3\bin\Debug\net8.0\DDArray3.runtimeconfig.json
+E:\C# SEM 5\DDArray3\DDArray3\bin\Debug\net8.0\DDArray3.dll
+E:\C# SEM 5\DDArray3\DDArray3\bin\Debug\net8.0\DDArray3.pdb
+E:\C# SEM 5\DDArray3\DDArray3\obj\Debug\net8.0\DDArray3.GeneratedMSBuildEditorConfig.editorconfig
+E:\C# SEM 5\DDArray3\DDArray3\obj\Debug\net8.0\DDArray3.AssemblyInfoInputs.cache
+E:\C# SEM 5\DDArray3\DDArray3\obj\Debug\net8.0\DDArray3.AssemblyInfo.cs
+E:\C# SEM 5\DDArray3\DDArray3\obj\Debug\net8.0\DDArray3.csproj.CoreCompileInputs.cache
+E:\C# SEM 5\DDArray3\DDArray3\obj\Debug\net8.0\DDArray3.dll
+E:\C# SEM 5\DDArray3\DDArray3\obj\Debug\net8.0\refint\DDArray3.dll
+E:\C# SEM 5\DDArray3\DDArray3\obj\Debug\net8.0\DDArray3.pdb
+E:\C# SEM 5\DDArray3\DDArray3\obj\Debug\net8.0\DDArray3.genruntimeconfig.cache
+E:\C# SEM 5\DDArray3\DDArray3\obj\Debug\net8.0\ref\DDArray3.dll

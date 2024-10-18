@@ -1,0 +1,14 @@
+F:\C# SEM 5\Questions C#\Questions Tested\bin\Debug\net8.0\Questions Tested.exe
+F:\C# SEM 5\Questions C#\Questions Tested\bin\Debug\net8.0\Questions Tested.deps.json
+F:\C# SEM 5\Questions C#\Questions Tested\bin\Debug\net8.0\Questions Tested.runtimeconfig.json
+F:\C# SEM 5\Questions C#\Questions Tested\bin\Debug\net8.0\Questions Tested.dll
+F:\C# SEM 5\Questions C#\Questions Tested\bin\Debug\net8.0\Questions Tested.pdb
+F:\C# SEM 5\Questions C#\Questions Tested\obj\Debug\net8.0\Questions Tested.GeneratedMSBuildEditorConfig.editorconfig
+F:\C# SEM 5\Questions C#\Questions Tested\obj\Debug\net8.0\Questions Tested.AssemblyInfoInputs.cache
+F:\C# SEM 5\Questions C#\Questions Tested\obj\Debug\net8.0\Questions Tested.AssemblyInfo.cs
+F:\C# SEM 5\Questions C#\Questions Tested\obj\Debug\net8.0\Questions Tested.csproj.CoreCompileInputs.cache
+F:\C# SEM 5\Questions C#\Questions Tested\obj\Debug\net8.0\Questions Tested.dll
+F:\C# SEM 5\Questions C#\Questions Tested\obj\Debug\net8.0\refint\Questions Tested.dll
+F:\C# SEM 5\Questions C#\Questions Tested\obj\Debug\net8.0\Questions Tested.pdb
+F:\C# SEM 5\Questions C#\Questions Tested\obj\Debug\net8.0\Questions Tested.genruntimeconfig.cache
+F:\C# SEM 5\Questions C#\Questions Tested\obj\Debug\net8.0\ref\Questions Tested.dll

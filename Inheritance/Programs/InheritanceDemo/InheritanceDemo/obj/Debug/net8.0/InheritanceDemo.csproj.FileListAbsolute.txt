@@ -1,0 +1,14 @@
+E:\C# SEM 5\Inheritance\Programs\InheritanceDemo\InheritanceDemo\bin\Debug\net8.0\InheritanceDemo.exe
+E:\C# SEM 5\Inheritance\Programs\InheritanceDemo\InheritanceDemo\bin\Debug\net8.0\InheritanceDemo.deps.json
+E:\C# SEM 5\Inheritance\Programs\InheritanceDemo\InheritanceDemo\bin\Debug\net8.0\InheritanceDemo.runtimeconfig.json
+E:\C# SEM 5\Inheritance\Programs\InheritanceDemo\InheritanceDemo\bin\Debug\net8.0\InheritanceDemo.dll
+E:\C# SEM 5\Inheritance\Programs\InheritanceDemo\InheritanceDemo\bin\Debug\net8.0\InheritanceDemo.pdb
+E:\C# SEM 5\Inheritance\Programs\InheritanceDemo\InheritanceDemo\obj\Debug\net8.0\InheritanceDemo.GeneratedMSBuildEditorConfig.editorconfig
+E:\C# SEM 5\Inheritance\Programs\InheritanceDemo\InheritanceDemo\obj\Debug\net8.0\InheritanceDemo.AssemblyInfoInputs.cache
+E:\C# SEM 5\Inheritance\Programs\InheritanceDemo\InheritanceDemo\obj\Debug\net8.0\InheritanceDemo.AssemblyInfo.cs
+E:\C# SEM 5\Inheritance\Programs\InheritanceDemo\InheritanceDemo\obj\Debug\net8.0\InheritanceDemo.csproj.CoreCompileInputs.cache
+E:\C# SEM 5\Inheritance\Programs\InheritanceDemo\InheritanceDemo\obj\Debug\net8.0\InheritanceDemo.dll
+E:\C# SEM 5\Inheritance\Programs\InheritanceDemo\InheritanceDemo\obj\Debug\net8.0\refint\InheritanceDemo.dll
+E:\C# SEM 5\Inheritance\Programs\InheritanceDemo\InheritanceDemo\obj\Debug\net8.0\InheritanceDemo.pdb
+E:\C# SEM 5\Inheritance\Programs\InheritanceDemo\InheritanceDemo\obj\Debug\net8.0\InheritanceDemo.genruntimeconfig.cache
+E:\C# SEM 5\Inheritance\Programs\InheritanceDemo\InheritanceDemo\obj\Debug\net8.0\ref\InheritanceDemo.dll
