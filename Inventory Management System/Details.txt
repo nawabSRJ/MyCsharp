@@ -1,0 +1,22 @@
+website for ER diagram : https://freeprojectz.com/entity-relationship/inventory-management-system-er-diagram
+
+Project is for 30 marks
+
+https://polar.sh/
+
+o Save your SQL queries for in a notepad file to backup the db in college
+o Make proper ER diagrams for the representation of the project
+o This Inventory Management System Project is of 30 marks.
+
+Task for today :
+
+Planning 
+ER diagram study
+Req. Analysis
+Learning about MDI 
+
+
+Approach :
+First make tables, perform Normalization and then run all the operations in SQL Server itself without software.
+Decide what classes to make , use OOPS and properties + exception handling + MessageBox to draw layout/design  
+

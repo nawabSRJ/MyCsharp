@@ -36,6 +36,9 @@
             label3 = new Label();
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
+            listBox1 = new ListBox();
+            textBox4 = new TextBox();
+            goBtn = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -111,11 +114,40 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "groupBox2";
             // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(57, 135);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(149, 229);
+            listBox1.TabIndex = 8;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(57, 106);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(109, 23);
+            textBox4.TabIndex = 9;
+            // 
+            // goBtn
+            // 
+            goBtn.Location = new Point(170, 106);
+            goBtn.Name = "goBtn";
+            goBtn.Size = new Size(33, 23);
+            goBtn.TabIndex = 10;
+            goBtn.Text = "Go";
+            goBtn.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(goBtn);
+            Controls.Add(textBox4);
+            Controls.Add(listBox1);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "Form2";
@@ -124,6 +156,7 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -136,5 +169,8 @@
         private Label label3;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
+        private ListBox listBox1;
+        private TextBox textBox4;
+        private Button goBtn;
     }
 }

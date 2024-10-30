@@ -15,8 +15,9 @@ namespace Database
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            string str = "Data Source=LAB4PC24\\SQLEXPRESS;Initial Catalog=SAMPLE;Integrated Security=True;";
+            string str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
             conn = new SqlConnection(str);
+            button2.Text = "Next";
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -30,7 +31,7 @@ namespace Database
             eid = Convert.ToInt32(textBox1.Text);
             uname = textBox2.Text;
             ucity = textBox3.Text;
-            string sql = $"insert into customers(id,name,city) values({eid},'{ uname}','{ ucity }')";
+            string sql = $"insert into employees(id,name,city) values({eid},'{uname}','{ucity}')";
             // if something in string will be in string as same in sql, you need to add '' for varchar or other in sql
             cmd = new SqlCommand(sql, conn);
             conn.Open();
@@ -53,6 +54,13 @@ namespace Database
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        // form1 button2
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 fm2 = new Form2();
+            fm2.ShowDialog();
         }
     }
 }

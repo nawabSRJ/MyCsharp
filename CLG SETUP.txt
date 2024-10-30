@@ -1,0 +1,3 @@
+connection string : Data Source=LAB4PC24\SQLEXPRESS;Initial Catalog=Employees;Integrated Security=True;Trust Server Certificate=True
+
+server name : LAB4PC24\SQLEXPRESS
