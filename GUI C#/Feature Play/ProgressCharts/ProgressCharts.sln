@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgressCharts", "ProgressCharts\ProgressCharts.csproj", "{BB88750C-93A7-4090-AB72-B97927511177}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB88750C-93A7-4090-AB72-B97927511177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB88750C-93A7-4090-AB72-B97927511177}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB88750C-93A7-4090-AB72-B97927511177}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB88750C-93A7-4090-AB72-B97927511177}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5EB92B5F-A902-4A99-AB06-EAE9D6F33CFE}
+	EndGlobalSection
+EndGlobal

@@ -23,3 +23,59 @@ INSERT INTO ADMIN VALUES(101 , 'Srajan Saxena' , 'srajan@gmail.com' , 9838726101
 
 SELECT * FROM ADMIN;
 -- Task - ALTER TABLE AND ADD A COLUMN WITH PASSWORD
+
+-- Customer Table
+
+
+CREATE TABLE CUSTOMER(
+	customer_id int IDENTITY(1,1) PRIMARY KEY,
+	customer_name varchar(20) not null,
+	customer_email varchar(50) not null unique,
+	customer_password varchar(20) not null ,
+	customer_phone decimal(10 , 0) not null unique,
+	customer_address varchar(50) not null,
+)
+
+INSERT INTO CUSTOMER VALUES 
+('John Doe', 'john.doe@example.com', 'password123', 9876543210, '123 Main St'),
+('Jane Smith', 'jane.smith@example.com', 'password456', 9123456789, '456 Oak St'),
+('Alice Johnson', 'alice.j@example.com', 'password789', 9234567890, '789 Pine St'),
+('Bob Brown', 'bob.b@example.com', 'password101', 9345678901, '101 Maple St'),
+('Charlie Davis', 'charlie.d@example.com', 'password202', 9456789012, '202 Birch St');
+
+SELECT * FROM CUSTOMER;
+
+CREATE TABLE STOCK(
+	product_id int IDENTITY(1,1) PRIMARY KEY,
+	product_name varchar(30) not null,
+	product_quantity int not null,
+	product_price int not null,
+	product_description varchar(100) not null
+);
+
+INSERT INTO STOCK VALUES 
+    ('Rin Bar', 50, 20, 'Laundry detergent bar for stain removal'),
+    ('Dettol Handwash', 30, 65, 'Liquid handwash with antibacterial properties'),
+    ('Lays Chips', 100, 10, 'Classic salted potato chips'),
+    ('Parle-G Biscuits', 200, 5, 'Popular glucose biscuits in India'),
+    ('Tata Salt', 80, 25, 'Iodized salt for cooking');
+
+SELECT * FROM STOCK;
+
+-- Order Table and some data
+
+CREATE TABLE Orders (								-- since 'Order is a keyword'
+    order_number INT IDENTITY(1,1) PRIMARY KEY,
+    customer_name VARCHAR(50) NOT NULL,
+    order_amount INT NOT NULL,
+    order_date DATETIME NOT NULL
+);
+
+INSERT INTO Orders (customer_name, order_amount, order_date) VALUES
+    ('John Doe', 500, '2024-10-15'),
+    ('Jane Smith', 1200, '2024-10-16'),
+    ('Alice Johnson', 750, '2024-10-17'),
+    ('Bob Brown', 1500, '2024-10-18'),
+    ('Charlie Davis', 300, '2024-10-19');
+
+SELECT * FROM Orders;

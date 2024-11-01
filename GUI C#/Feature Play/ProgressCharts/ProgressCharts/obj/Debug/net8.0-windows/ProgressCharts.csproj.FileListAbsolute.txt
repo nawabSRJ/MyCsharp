@@ -1,0 +1,17 @@
+F:\C# SEM 5\GUI C#\Feature Play\ProgressCharts\ProgressCharts\bin\Debug\net8.0-windows\ProgressCharts.exe
+F:\C# SEM 5\GUI C#\Feature Play\ProgressCharts\ProgressCharts\bin\Debug\net8.0-windows\ProgressCharts.deps.json
+F:\C# SEM 5\GUI C#\Feature Play\ProgressCharts\ProgressCharts\bin\Debug\net8.0-windows\ProgressCharts.runtimeconfig.json
+F:\C# SEM 5\GUI C#\Feature Play\ProgressCharts\ProgressCharts\bin\Debug\net8.0-windows\ProgressCharts.dll
+F:\C# SEM 5\GUI C#\Feature Play\ProgressCharts\ProgressCharts\bin\Debug\net8.0-windows\ProgressCharts.pdb
+F:\C# SEM 5\GUI C#\Feature Play\ProgressCharts\ProgressCharts\obj\Debug\net8.0-windows\ProgressCharts.Form1.resources
+F:\C# SEM 5\GUI C#\Feature Play\ProgressCharts\ProgressCharts\obj\Debug\net8.0-windows\ProgressCharts.csproj.GenerateResource.cache
+F:\C# SEM 5\GUI C#\Feature Play\ProgressCharts\ProgressCharts\obj\Debug\net8.0-windows\ProgressCharts.GeneratedMSBuildEditorConfig.editorconfig
+F:\C# SEM 5\GUI C#\Feature Play\ProgressCharts\ProgressCharts\obj\Debug\net8.0-windows\ProgressCharts.AssemblyInfoInputs.cache
+F:\C# SEM 5\GUI C#\Feature Play\ProgressCharts\ProgressCharts\obj\Debug\net8.0-windows\ProgressCharts.AssemblyInfo.cs
+F:\C# SEM 5\GUI C#\Feature Play\ProgressCharts\ProgressCharts\obj\Debug\net8.0-windows\ProgressCharts.csproj.CoreCompileInputs.cache
+F:\C# SEM 5\GUI C#\Feature Play\ProgressCharts\ProgressCharts\obj\Debug\net8.0-windows\ProgressCharts.sourcelink.json
+F:\C# SEM 5\GUI C#\Feature Play\ProgressCharts\ProgressCharts\obj\Debug\net8.0-windows\ProgressCharts.dll
+F:\C# SEM 5\GUI C#\Feature Play\ProgressCharts\ProgressCharts\obj\Debug\net8.0-windows\refint\ProgressCharts.dll
+F:\C# SEM 5\GUI C#\Feature Play\ProgressCharts\ProgressCharts\obj\Debug\net8.0-windows\ProgressCharts.pdb
+F:\C# SEM 5\GUI C#\Feature Play\ProgressCharts\ProgressCharts\obj\Debug\net8.0-windows\ProgressCharts.genruntimeconfig.cache
+F:\C# SEM 5\GUI C#\Feature Play\ProgressCharts\ProgressCharts\obj\Debug\net8.0-windows\ref\ProgressCharts.dll

@@ -19,6 +19,7 @@ namespace WinFormsApp1
             // load captcha
 
         }
+
         private void LoadCaptcha()
         {
             long d = r.NextInt64(4);
@@ -72,9 +73,9 @@ namespace WinFormsApp1
             if (usernameBox.Text == "admin" && passwdBox.Text == "admin")
             {
                 
-                Form2 fm2 = new Form2();
+               /* Form2 fm2 = new Form2();
                 fm2.ShowDialog();
-                
+                */
 
                 // show captcha
                 LoadCaptcha();
@@ -105,6 +106,10 @@ namespace WinFormsApp1
             {
                 MessageBox.Show("Right Answer");
                 // load Dashboard 
+                Form2 fm2 = new Form2();
+                fm2.StartPosition = FormStartPosition.CenterScreen;
+                fm2.ShowDialog();
+                this.Close();
             }
             else
             {
@@ -113,5 +118,93 @@ namespace WinFormsApp1
             }
 
         }
+    }
+
+    // ------------------------------ IMS Entities --------------------------------------------
+    public class Customer {
+        public string cutomer_name { get; set; }
+        public string customer_email { get; set; }
+        public string customer_password { get; set; }
+        public string customer_phone { get; set; }  // change in SQL
+
+        public string customer_address { get; set; }
+
+        public Customer(string name , string email , string password , string phone , string address)
+        {
+            this.cutomer_name = name;
+            this.customer_email = email;
+            this.customer_password = password;
+            this.customer_phone = phone;
+            this.customer_address = address;
+        }
+
+
+    } // Customer Class ends
+
+    class Admin {
+        int admin_id { get; }
+        string admin_name { get; set; }
+        string admin_email { get; set; }
+        string admin_password { get; set; }
+        
+        string admin_phone { get; set; }
+
+        string admin_address { get; set; }
+
+        public Admin(string name , string email , string password , string phone , string address)
+        {
+            this.admin_name = name;
+            this.admin_email = email;
+            this.admin_password = password;
+            this.admin_phone = phone;
+            this.admin_address = address;
+        }
+
+
+    } // Admin Class ends
+
+    class Supplier {
+        string supplier_name { get; set; }
+        string product_name { get; set; }   
+        string product_quantity { get; set; }
+        string product_price { get; set; }
+        string product_description {get; set; } 
+        DateTime dateOfSupply { get; set; }   // think about this
+        int total_payment { get; set; }
+
+    } // Supplier class ends
+
+    class Orders { 
+        
+        int order_number { get; set; }
+        
+
+        string customer_name { get; set; }
+        int order_amount { get; set; }
+        DateTime order_date { get; set; }
+
+    } // Order class ends
+
+    class Stock { 
+        int product_id { get; set; }    // automatically generated
+        string product_name { get; set; }
+        string product_quantity { get; set; }
+        string product_price { get; set; }
+        string product_description { get; set; }
+
+        public Stock(int id , string name , string quantity , string price , string desc)
+        {
+            this.product_id = id;
+            this.product_name = name;
+            this.product_price = price;
+            this.product_quantity = quantity;
+            this.product_description = desc;
+        }
+    
+    } // Stock class ends
+
+    // ----------------------------------- DB Operations Class
+    public class DBOperations { 
+            // SQL Class
     }
 }
