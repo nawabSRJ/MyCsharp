@@ -24,7 +24,7 @@ namespace WinFormsApp1
         {
             long d = r.NextInt64(4);
             int d1 = Convert.ToInt32(d);
-            
+
             str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
             conn = new SqlConnection(str);
             query = "SELECT ImgName , ImgPath FROM ImageCaptcha";
@@ -34,14 +34,14 @@ namespace WinFormsApp1
             List<string> captchaImages = new List<string>();
             while (dr.Read())
             {
-            
+
                 string path = dr["ImgPath"].ToString();
                 string name = dr["ImgName"].ToString();
                 if (name == "Car")
                 {
                     carCount++;
                     captchaImages.Add(path);
-                    
+
                 }
                 else if (name == "Road")
                 {
@@ -51,7 +51,7 @@ namespace WinFormsApp1
                 if (carCount == 3 && roadCount == 3)
                 {
                     break;
-                }             
+                }
 
             }
             dr.Close();
@@ -72,10 +72,10 @@ namespace WinFormsApp1
         {
             if (usernameBox.Text == "admin" && passwdBox.Text == "admin")
             {
-                
-               /* Form2 fm2 = new Form2();
-                fm2.ShowDialog();
-                */
+
+                /* Form2 fm2 = new Form2();
+                 fm2.ShowDialog();
+                 */
 
                 // show captcha
                 LoadCaptcha();
@@ -102,7 +102,7 @@ namespace WinFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             int user_ans = Convert.ToInt32(captchaAnswer.Value);
-            if(user_ans == carCount)
+            if (user_ans == carCount)
             {
                 MessageBox.Show("Right Answer");
                 // load Dashboard 
@@ -121,15 +121,16 @@ namespace WinFormsApp1
     }
 
     // ------------------------------ IMS Entities --------------------------------------------
-    public class Customer {
+    public class Customer
+    {
         public string cutomer_name { get; set; }
         public string customer_email { get; set; }
         public string customer_password { get; set; }
-        public string customer_phone { get; set; }  // change in SQL
+        public decimal customer_phone { get; set; }  // change in SQL
 
         public string customer_address { get; set; }
 
-        public Customer(string name , string email , string password , string phone , string address)
+        public Customer(string name, string email, string password, decimal phone, string address)
         {
             this.cutomer_name = name;
             this.customer_email = email;
@@ -141,17 +142,18 @@ namespace WinFormsApp1
 
     } // Customer Class ends
 
-    class Admin {
+    class Admin
+    {
         int admin_id { get; }
         string admin_name { get; set; }
         string admin_email { get; set; }
         string admin_password { get; set; }
-        
+
         string admin_phone { get; set; }
 
         string admin_address { get; set; }
 
-        public Admin(string name , string email , string password , string phone , string address)
+        public Admin(string name, string email, string password, string phone, string address)
         {
             this.admin_name = name;
             this.admin_email = email;
@@ -163,36 +165,46 @@ namespace WinFormsApp1
 
     } // Admin Class ends
 
-    class Supplier {
+    class Supplier
+    {
         string supplier_name { get; set; }
-        string product_name { get; set; }   
+        string product_name { get; set; }
         string product_quantity { get; set; }
         string product_price { get; set; }
-        string product_description {get; set; } 
+        string product_description { get; set; }
         DateTime dateOfSupply { get; set; }   // think about this
         int total_payment { get; set; }
 
     } // Supplier class ends
 
-    class Orders { 
-        
-        int order_number { get; set; }
-        
+    public class Orders
+    {
 
-        string customer_name { get; set; }
-        int order_amount { get; set; }
-        DateTime order_date { get; set; }
+        public int order_number { get; set; }
+        public string customer_name { get; set; }
+        public decimal order_amount { get; set; }
+        public DateTime order_date { get; set; }
+
+        // constructor
+        public Orders(int orderNum, string custName, decimal orderAmt, DateTime orderDate)
+        {
+            this.order_number = orderNum;
+            this.customer_name = custName;
+            this.order_amount = orderAmt;
+            this.order_date = orderDate;
+        }
 
     } // Order class ends
 
-    class Stock { 
+    class Stock
+    {
         int product_id { get; set; }    // automatically generated
         string product_name { get; set; }
         string product_quantity { get; set; }
         string product_price { get; set; }
         string product_description { get; set; }
 
-        public Stock(int id , string name , string quantity , string price , string desc)
+        public Stock(int id, string name, string quantity, string price, string desc)
         {
             this.product_id = id;
             this.product_name = name;
@@ -200,11 +212,52 @@ namespace WinFormsApp1
             this.product_quantity = quantity;
             this.product_description = desc;
         }
-    
+
     } // Stock class ends
 
     // ----------------------------------- DB Operations Class
-    public class DBOperations { 
-            // SQL Class
+    public class DBOperations
+    {
+        // SQL Class
+        private string str = "";
+        public SqlConnection conn;
+        public DBOperations()
+        {
+            str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
+            conn = new SqlConnection(str);
+        }
+
+        public void NewOrder(Orders obj)
+        {
+            // commit the order on click of Done button
+            string query = $"INSERT INTO ORDERS  (customer_name, order_amount, order_date) VALUES ('{obj.customer_name}', {obj.order_amount}, '{obj.order_date.ToString("dd-MM-yyyy")}')";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            conn.Open();
+            cmd.ExecuteScalar();
+            conn.Close();
+            MessageBox.Show("Order Commited Successfully");
+        }
+
+        public void NewCustomer(Customer obj)
+        {
+            try
+            {
+                string query = $"INSERT INTO CUSTOMER VALUES ('{obj.cutomer_name}', '{obj.customer_email}', '{obj.customer_password}', {obj.customer_phone}, '{obj.customer_address}')";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteScalar();
+                
+                MessageBox.Show("New Customer Created Successfully");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An Exception Occured : {ex}");
+            }
+            finally { 
+                conn.Close();
+            }
+        }
+
     }
 }

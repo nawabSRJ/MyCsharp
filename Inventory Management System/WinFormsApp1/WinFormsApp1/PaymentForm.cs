@@ -13,9 +13,13 @@ namespace WinFormsApp1
 {
     public partial class PaymentForm : Form
     {
-        private string customerName;
-        private decimal totalAmount;
-
+        DBOperations ops = new DBOperations();
+        public string customerName;
+        public decimal totalAmount;
+        // Variable to store the next order number
+        int nextOrderNumber = 1;  // Default to 1 in case there are no previous orders
+        // Get current date
+        DateTime currentDate = DateTime.Now;
 
         SqlConnection conn;
         SqlCommand cmd;
@@ -41,16 +45,14 @@ namespace WinFormsApp1
         }
         private void getDetails()
         {
-            // Get current date
-            DateTime currentDate = DateTime.Now;
+            
             orderDateBox.Text = currentDate.ToString("dd-MM-yyyy");
 
             // Connection string
             str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
             conn = new SqlConnection(str);
 
-            // Variable to store the next order number
-            int nextOrderNumber = 1;  // Default to 1 in case there are no previous orders
+            
 
             try
             {
@@ -98,9 +100,22 @@ namespace WinFormsApp1
         {
             // Check whether payment method is chosen and then commit the order table
 
-            // Step 1: Validate that all entries are filled
-            // Step 2 : 
+            // Step 1: Validate that all entries are filled and one payment method is selected
+            if (string.IsNullOrWhiteSpace(orderNumBox.Text) ||
+                string.IsNullOrWhiteSpace(orderDateBox.Text) ||
+                string.IsNullOrWhiteSpace(custNameBox.Text) ||
+                string.IsNullOrWhiteSpace(totalAmtBox.Text) ||
+                (!radioButton1.Checked && !radioButton2.Checked))
+            {
+                MessageBox.Show("Order Summary Incomplete! Please select a Payment Method.");
+                return;
+            }
+
+            // Step 2: Commit the order
+            ops.NewOrder(new Orders(nextOrderNumber, customerName, totalAmount, currentDate));
+            this.Close(); // close the payment form
         }
+
 
         // cross Btn
         private void button2_Click(object sender, EventArgs e)

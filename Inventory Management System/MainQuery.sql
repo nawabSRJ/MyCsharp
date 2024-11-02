@@ -68,7 +68,7 @@ CREATE TABLE Orders (								-- since 'Order is a keyword'
     order_number INT IDENTITY(1,1) PRIMARY KEY,
     customer_name VARCHAR(50) NOT NULL,
     order_amount INT NOT NULL,
-    order_date DATETIME NOT NULL
+    order_date DATE NOT NULL
 );
 
 INSERT INTO Orders (customer_name, order_amount, order_date) VALUES

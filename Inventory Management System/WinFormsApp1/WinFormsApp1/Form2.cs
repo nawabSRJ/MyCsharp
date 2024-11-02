@@ -18,7 +18,7 @@ namespace WinFormsApp1
         SqlDataReader dr;
         string query, str;
         string customerName = "";
-        
+        DBOperations ops = new DBOperations();
         public Form2()
         {
             InitializeComponent();
@@ -29,10 +29,29 @@ namespace WinFormsApp1
             // set the values for stock alert and most selling products
             // set the values for the listBoxes : productListBoxes
 
+            // set what comes first :
+            setVisibilityStatus();
+
             // for productListBox : 
             LoadProductListBox();
 
 
+        }
+        private void setVisibilityStatus()
+        {
+            // initially only login
+            customerLoginBox.Visible = true;
+            customerLoginBox.Enabled = true;
+            //custRegisterBox.Visible = true;
+            //custRegisterBox.Enabled = true;
+
+
+            // disable these :
+            orderDetailsBox.Visible = false;
+            orderDetailsBox.Enabled = false;
+
+            productSearchBox.Visible = false;
+            productSearchBox.Enabled = false;
         }
         private void LoadProductListBox()
         {
@@ -93,14 +112,18 @@ namespace WinFormsApp1
                 if (dr.HasRows && dr.Read())
                 {
                     // record exists
-                    
+
                     customerName = dr["customer_name"].ToString();
                     MessageBox.Show("Logged In Successfully");
                     customerLoginBox.Visible = false;
                     customerLoginBox.Enabled = false;
-                    // display the Customer Services Portal
+
+                    // display + enable the Customer Services Portal
                     productSearchBox.Visible = true;
+                    productSearchBox.Enabled = true;
                     orderDetailsBox.Visible = true;
+                    orderDetailsBox.Enabled = true;
+                    
                 }
                 else
                 {
@@ -117,6 +140,7 @@ namespace WinFormsApp1
                 dr.Close();
                 conn.Close();
                 cmd.Dispose();
+                button19.Visible = true; // show logout button 
             }
 
 
@@ -227,7 +251,7 @@ namespace WinFormsApp1
                                 // Update existing entry with new quantity
                                 decimal updatedPrice = prodPrice * updatedQuantity;
                                 receiptBox.Items[i] = $"{prodName}\t{updatedQuantity}\t{updatedPrice:F2}";
-                                
+
                             }
                             else
                             {
@@ -345,7 +369,7 @@ namespace WinFormsApp1
         private void button16_Click(object sender, EventArgs e)
         {
             receiptBox.Items.Clear();
-     
+
         }
 
         // refresh list button
@@ -391,7 +415,7 @@ namespace WinFormsApp1
                 // Code to place the order
                 decimal totalAmount = getTotalAmount();
                 MessageBox.Show("Order placed successfully!"); // show Payment Form
-                PaymentForm pfm = new PaymentForm(customerName , totalAmount);
+                PaymentForm pfm = new PaymentForm(customerName, totalAmount);
                 pfm.ShowDialog(); //  Customer Name Total Amount to be sent to Payment Form
             }
             else
@@ -402,6 +426,52 @@ namespace WinFormsApp1
 
 
 
+        }
+
+        // Logout button at Customer Services Portal
+        private void button19_Click(object sender, EventArgs e)
+        {
+            orderDetailsBox.Visible = false;
+            orderDetailsBox.Enabled = false;
+            productSearchBox.Visible = false;
+            productSearchBox.Enabled = false;
+
+
+            cust_email.Text = "";
+            cust_password.Text = "";
+            customerLoginBox.Visible = true;
+            customerLoginBox.Enabled = true;
+
+            button19.Visible = false; // hide this button as well
+        }
+
+        // Add New Customer Button (in customer Register Form)
+        private void button21_Click(object sender, EventArgs e)
+        {
+
+            // get all the values from the text boxes -> Validate
+            // call the DBOperations func
+            string newName = newCustName.Text;
+            string newEmail = newCustEmail.Text;
+            string newPasswd = newCustPassword.Text;
+            decimal newPhone = Convert.ToDecimal(newCustPhone.Text);
+            string newAddress = newCustAddress.Text;
+
+            // please validate here
+
+            ops.NewCustomer(new Customer(newName, newEmail, newPasswd, newPhone, newAddress));
+
+            // make visibility changes
+            custRegisterBox.Visible = false;
+            customerLoginBox.Visible= true;
+
+        }
+
+        // Register btn in Customer Login Form
+        private void button20_Click(object sender, EventArgs e)
+        {
+            custRegisterBox.Visible = true;
+            customerLoginBox.Visible = false;
         }
     } // Form 2 class ends
 }

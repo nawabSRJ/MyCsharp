@@ -201,8 +201,8 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(598, 392);
-            Controls.Add(crossBtn);
             Controls.Add(qrBox);
+            Controls.Add(crossBtn);
             Controls.Add(button1);
             Controls.Add(groupBox1);
             Controls.Add(label5);
