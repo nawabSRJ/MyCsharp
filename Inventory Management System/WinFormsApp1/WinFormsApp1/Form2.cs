@@ -123,7 +123,7 @@ namespace WinFormsApp1
                     productSearchBox.Enabled = true;
                     orderDetailsBox.Visible = true;
                     orderDetailsBox.Enabled = true;
-                    
+
                 }
                 else
                 {
@@ -463,7 +463,7 @@ namespace WinFormsApp1
 
             // make visibility changes
             custRegisterBox.Visible = false;
-            customerLoginBox.Visible= true;
+            customerLoginBox.Visible = true;
 
         }
 
@@ -472,6 +472,145 @@ namespace WinFormsApp1
         {
             custRegisterBox.Visible = true;
             customerLoginBox.Visible = false;
+        }
+
+        // no use
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // no use
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        // New Stock Entry Click
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+            stockEntryForm.Visible = true;
+            stockEntryForm.Enabled = true;
+
+            purchaseHistoryForm.Visible = false;
+            purchaseHistoryForm.Enabled = false;
+        }
+        // New Stock Entry Click
+        private void label20_Click(object sender, EventArgs e)
+        {
+            stockEntryForm.Visible = true;
+            stockEntryForm.Enabled = true;
+
+            purchaseHistoryForm.Visible = false;
+            purchaseHistoryForm.Enabled = false;
+        }
+        // Purchase History Click
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+            stockEntryForm.Visible = false;
+            stockEntryForm.Enabled = false;
+
+            purchaseHistoryForm.Visible = true;
+            purchaseHistoryForm.Enabled = true;
+
+
+        }
+        // Purchase History
+        private void label22_Click(object sender, EventArgs e)
+        {
+            stockEntryForm.Visible = false;
+            stockEntryForm.Enabled = false;
+
+            purchaseHistoryForm.Visible = true;
+            purchaseHistoryForm.Enabled = true;
+        }
+
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+
+        // Purchase Button 
+        private void button23_Click(object sender, EventArgs e)
+        {
+            // check if all values are filled
+            // validate
+
+
+            // commit (2 tables)
+            string supplierName = textBox3.Text;
+            DateTime supplyDate = supDate.Value;
+            decimal totalAmt = Convert.ToDecimal(textBox5.Text);
+
+            int latestPurchaseId = ops.NewPurchase(new Purchase(supplierName, supplyDate, totalAmt));
+
+            // commit in PurchaseDetails (validate at start only)
+
+            // Task : get latest purchase id -> get data from data grid view
+            // Commit to PurchaseDetails for each product in the DataGridView
+            foreach (DataGridViewRow row in stockDataGrid.Rows)
+            {
+                // Ensure the row is not empty
+                if (!row.IsNewRow)
+                {
+                    string productName = row.Cells["ProductName"].Value?.ToString();
+                    int productQuantity = Convert.ToInt32(row.Cells["ProductQuantity"].Value);
+                    decimal productPrice = Convert.ToDecimal(row.Cells["ProductPrice"].Value);
+                    string productDescription = row.Cells["ProductDescription"].Value?.ToString();
+
+                    // Call NewPurchaseDetails for each product in the DataGridView
+                    ops.NewPurchaseDetails(new PurchaseDetails(latestPurchaseId, productName, productQuantity, productPrice, productDescription));
+                }
+            }
+
+            MessageBox.Show("Purchase and product details added successfully.");
+
+
+        }
+
+        // Submit button to append products 
+        private void stockSubmitBtn_Click(object sender, EventArgs e)
+        {
+            // Validate inputs 
+            if (string.IsNullOrWhiteSpace(textBox8.Text) ||
+                numericUpDown1.Value <= 0 ||
+                string.IsNullOrWhiteSpace(textBox6.Text) ||
+                string.IsNullOrWhiteSpace(textBox9.Text))
+            {
+                MessageBox.Show("Please enter all product details.");
+                return;
+            }
+
+            // get data from inputs 
+            string productName = textBox8.Text;
+            int productQuantity = (int)numericUpDown1.Value;
+            decimal productPrice = Convert.ToDecimal(textBox6.Text);
+            string productDescription = textBox9.Text;
+
+
+            // Add a new row to the DataGridView + increase total Payment textBox
+            stockDataGrid.Rows.Add(productName, productQuantity, productPrice, productDescription);
+            textBox5.Text = (Convert.ToInt32(textBox5.Text) + (productQuantity * productPrice)).ToString();
+            // Clear input fields for the next entry
+            textBox8.Clear();
+            numericUpDown1.Value = 0;
+            textBox6.Clear();
+            textBox9.Clear();
+
+            //MessageBox.Show("Product added to the list.");
+        }
+
+        // clear filters button in purchase history form
+        private void button26_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox7_Enter(object sender, EventArgs e)
+        {
+
         }
     } // Form 2 class ends
 }

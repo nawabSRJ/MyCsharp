@@ -165,7 +165,7 @@ namespace WinFormsApp1
 
     } // Admin Class ends
 
-    class Supplier
+    class Supplier  // change name to purchase
     {
         string supplier_name { get; set; }
         string product_name { get; set; }
@@ -200,11 +200,11 @@ namespace WinFormsApp1
     {
         int product_id { get; set; }    // automatically generated
         string product_name { get; set; }
-        string product_quantity { get; set; }
-        string product_price { get; set; }
+        int product_quantity { get; set; }
+        decimal product_price { get; set; }
         string product_description { get; set; }
 
-        public Stock(int id, string name, string quantity, string price, string desc)
+        public Stock(int id, string name, int quantity, decimal price, string desc)
         {
             this.product_id = id;
             this.product_name = name;
@@ -214,6 +214,43 @@ namespace WinFormsApp1
         }
 
     } // Stock class ends
+
+    public class Purchase
+    {
+        public int purchase_id { get; }
+        public string supplier_name { get; set; }
+        public DateTime dateOfSupply { get; set; }
+        public decimal totalPayment { get; set; }
+
+        // Constructor
+        public Purchase(string supplierName, DateTime supplyDate, decimal payment)
+        {
+
+            this.supplier_name = supplierName;
+            this.dateOfSupply = supplyDate;
+            this.totalPayment = payment;
+        }
+
+    }
+
+    public class PurchaseDetails
+    {
+        public int purchase_id { get; set; } // you need to set purchase id here 
+        public string product_name { get; set; }
+        public int product_quantity { get; set; }
+        public decimal product_price { get; set; }
+        public string product_description { get; set; }
+
+        public PurchaseDetails(int purId, string prodName, int prodQuantity, decimal prodPrice, string desc)
+        {
+            this.purchase_id = purId;
+            this.product_name = prodName;
+            this.product_quantity = prodQuantity;
+            this.product_price = prodPrice;
+            this.product_description = desc;
+        }
+    }
+
 
     // ----------------------------------- DB Operations Class
     public class DBOperations
@@ -236,6 +273,8 @@ namespace WinFormsApp1
             cmd.ExecuteScalar();
             conn.Close();
             MessageBox.Show("Order Commited Successfully");
+
+            // update stock table (decrease stock)
         }
 
         public void NewCustomer(Customer obj)
@@ -246,7 +285,7 @@ namespace WinFormsApp1
                 SqlCommand cmd = new SqlCommand(query, conn);
                 conn.Open();
                 cmd.ExecuteScalar();
-                
+
                 MessageBox.Show("New Customer Created Successfully");
 
             }
@@ -254,9 +293,55 @@ namespace WinFormsApp1
             {
                 MessageBox.Show($"An Exception Occured : {ex}");
             }
-            finally { 
+            finally
+            {
                 conn.Close();
             }
+        }
+
+        public int NewPurchase(Purchase obj)
+        {
+            int id = -1; // initially
+            try
+            {
+                string query = $"INSERT INTO Purchase (supplier_name, date_of_supply, total_payment) VALUES ('{obj.supplier_name}', '{obj.dateOfSupply.ToString("dd-MM-yyyy")}' , {obj.totalPayment}); " + "SELECT SCOPE_IDENTITY();";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                id = Convert.ToInt32(cmd.ExecuteScalar());
+                
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex}");
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+            return id; // latest purchase id
+        }
+
+        public void NewPurchaseDetails(PurchaseDetails obj)
+        {
+            try
+            {
+                string query = $"INSERT INTO PurchaseDetails (purchase_id, product_name, product_quantity, product_price, product_description) VALUES ({obj.purchase_id}, '{obj.product_name}', {obj.product_quantity}, {obj.product_price}, '{obj.product_description}');";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteScalar();
+
+            }
+            catch (Exception ex) {
+                MessageBox.Show($"{ex}");
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            // update stock table (increase stock)
         }
 
     }

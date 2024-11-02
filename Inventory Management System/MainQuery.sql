@@ -79,3 +79,27 @@ INSERT INTO Orders (customer_name, order_amount, order_date) VALUES
     ('Charlie Davis', 300, '2024-10-19');
 
 SELECT * FROM Orders;
+
+
+--------------------------- Purchase Table and PurchaseDetails Table
+
+CREATE TABLE Purchase (
+    purchase_id INT IDENTITY(1,1) PRIMARY KEY,
+    supplier_name VARCHAR(50) NOT NULL,
+    date_of_supply DATE NOT NULL,
+    total_payment DECIMAL(10, 2) NOT NULL
+);
+SELECT * FROM Purchase;
+-- no need to set product id here as it will be set automatically in STOCK table
+-- no need for supplier name also as it can be evaluated from the purchase table
+CREATE TABLE PurchaseDetails (
+    purchase_id INT FOREIGN KEY REFERENCES Purchase(purchase_id) ON DELETE CASCADE,
+    product_name VARCHAR(50) NOT NULL,
+    product_quantity INT NOT NULL,
+    product_price DECIMAL(10, 2) NOT NULL,
+    product_description VARCHAR(100),
+    total_payment AS (product_quantity * product_price) -- calculated column
+); -- after insertion in this table -> stock table should be updated
+
+SELECT * FROM PurchaseDetails;
+
