@@ -30,12 +30,18 @@ namespace WinFormsApp1
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             tabPage1 = new TabPage();
+            dayLbl = new Label();
+            timeLbl = new Label();
             button1 = new Button();
             groupBox2 = new GroupBox();
             groupBox1 = new GroupBox();
             listBox1 = new ListBox();
-            dataGridView1 = new DataGridView();
+            stockAlertGrid = new DataGridView();
             product_id = new DataGridViewTextBoxColumn();
             product_name = new DataGridViewTextBoxColumn();
             product_quantity = new DataGridViewTextBoxColumn();
@@ -50,18 +56,6 @@ namespace WinFormsApp1
             button13 = new Button();
             button12 = new Button();
             searchProdBox = new TextBox();
-            custRegisterBox = new GroupBox();
-            newCustPhone = new MaskedTextBox();
-            newCustAddress = new TextBox();
-            newCustPassword = new TextBox();
-            newCustEmail = new TextBox();
-            label16 = new Label();
-            label14 = new Label();
-            label15 = new Label();
-            button21 = new Button();
-            label17 = new Label();
-            label18 = new Label();
-            newCustName = new TextBox();
             customerLoginBox = new GroupBox();
             button20 = new Button();
             label13 = new Label();
@@ -75,6 +69,22 @@ namespace WinFormsApp1
             button19 = new Button();
             orderDetailsBox = new GroupBox();
             label10 = new Label();
+            custRegisterBox = new GroupBox();
+            button6 = new Button();
+            label38 = new Label();
+            label39 = new Label();
+            label40 = new Label();
+            newCustPhone = new MaskedTextBox();
+            newCustAddress = new TextBox();
+            newCustPassword = new TextBox();
+            newCustEmail = new TextBox();
+            label16 = new Label();
+            label14 = new Label();
+            label15 = new Label();
+            button21 = new Button();
+            label17 = new Label();
+            label18 = new Label();
+            newCustName = new TextBox();
             label9 = new Label();
             label8 = new Label();
             label7 = new Label();
@@ -106,29 +116,6 @@ namespace WinFormsApp1
             button4 = new Button();
             flowLayoutPanel1 = new FlowLayoutPanel();
             tabPage4 = new TabPage();
-            purchaseHistoryForm = new GroupBox();
-            button27 = new Button();
-            purchaseFilters = new GroupBox();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker1 = new DateTimePicker();
-            label35 = new Label();
-            label34 = new Label();
-            label33 = new Label();
-            textBox10 = new TextBox();
-            label32 = new Label();
-            textBox7 = new TextBox();
-            label31 = new Label();
-            textBox4 = new TextBox();
-            dataGridView2 = new DataGridView();
-            purchaseId = new DataGridViewTextBoxColumn();
-            supplierName = new DataGridViewTextBoxColumn();
-            supplyDate = new DataGridViewTextBoxColumn();
-            totalPayment = new DataGridViewTextBoxColumn();
-            label30 = new Label();
-            comboBox1 = new ComboBox();
-            groupBox4 = new GroupBox();
-            button26 = new Button();
-            button25 = new Button();
             stockEntryForm = new GroupBox();
             button24 = new Button();
             supDate = new DateTimePicker();
@@ -152,7 +139,6 @@ namespace WinFormsApp1
             textBox8 = new TextBox();
             label24 = new Label();
             textBox5 = new TextBox();
-            checkBox1 = new CheckBox();
             label23 = new Label();
             label21 = new Label();
             textBox3 = new TextBox();
@@ -162,43 +148,69 @@ namespace WinFormsApp1
             label20 = new Label();
             flowLayoutPanel2 = new FlowLayoutPanel();
             label19 = new Label();
+            purchaseHistoryForm = new GroupBox();
+            button27 = new Button();
+            purchaseFilters = new GroupBox();
+            dateTimePicker2 = new DateTimePicker();
+            dateTimePicker1 = new DateTimePicker();
+            label35 = new Label();
+            label34 = new Label();
+            label33 = new Label();
+            textBox10 = new TextBox();
+            label32 = new Label();
+            textBox7 = new TextBox();
+            label31 = new Label();
+            textBox4 = new TextBox();
+            dataGridView2 = new DataGridView();
+            purchaseId = new DataGridViewTextBoxColumn();
+            supplierName = new DataGridViewTextBoxColumn();
+            supplyDate = new DataGridViewTextBoxColumn();
+            totalPayment = new DataGridViewTextBoxColumn();
+            label30 = new Label();
+            comboBox1 = new ComboBox();
+            groupBox4 = new GroupBox();
+            button26 = new Button();
+            button25 = new Button();
             dBOperationsBindingSource = new BindingSource(components);
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             label1 = new Label();
             label2 = new Label();
             button2 = new Button();
+            timer1 = new System.Windows.Forms.Timer(components);
             tabPage1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)stockAlertGrid).BeginInit();
             tabControl1.SuspendLayout();
             tabPage2.SuspendLayout();
             productSearchBox.SuspendLayout();
-            custRegisterBox.SuspendLayout();
             customerLoginBox.SuspendLayout();
             orderDetailsBox.SuspendLayout();
+            custRegisterBox.SuspendLayout();
             tabPage3.SuspendLayout();
             stockDataForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)stockSearchGrid).BeginInit();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             tabPage4.SuspendLayout();
-            purchaseHistoryForm.SuspendLayout();
-            purchaseFilters.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            groupBox4.SuspendLayout();
             stockEntryForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)stockDataGrid).BeginInit();
             groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             panel7.SuspendLayout();
             panel5.SuspendLayout();
+            purchaseHistoryForm.SuspendLayout();
+            purchaseFilters.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dBOperationsBindingSource).BeginInit();
             SuspendLayout();
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(dayLbl);
+            tabPage1.Controls.Add(timeLbl);
             tabPage1.Controls.Add(button1);
             tabPage1.Controls.Add(groupBox2);
             tabPage1.Controls.Add(groupBox3);
@@ -210,6 +222,27 @@ namespace WinFormsApp1
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Dashboard";
             tabPage1.UseVisualStyleBackColor = true;
+            tabPage1.Click += tabPage1_Click;
+            // 
+            // dayLbl
+            // 
+            dayLbl.AutoSize = true;
+            dayLbl.Font = new Font("Segoe UI Semibold", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dayLbl.Location = new Point(717, 62);
+            dayLbl.Name = "dayLbl";
+            dayLbl.Size = new Size(171, 45);
+            dayLbl.TabIndex = 6;
+            dayLbl.Text = "Day Today";
+            // 
+            // timeLbl
+            // 
+            timeLbl.AutoSize = true;
+            timeLbl.Font = new Font("Segoe UI Semibold", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            timeLbl.Location = new Point(18, 63);
+            timeLbl.Name = "timeLbl";
+            timeLbl.Size = new Size(144, 45);
+            timeLbl.TabIndex = 5;
+            timeLbl.Text = "00:00:00";
             // 
             // button1
             // 
@@ -226,10 +259,10 @@ namespace WinFormsApp1
             // 
             // groupBox2
             // 
+            groupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             groupBox2.BackColor = Color.Red;
             groupBox2.Controls.Add(groupBox1);
-            groupBox2.Controls.Add(dataGridView1);
-            groupBox2.Dock = DockStyle.Bottom;
+            groupBox2.Controls.Add(stockAlertGrid);
             groupBox2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox2.ForeColor = SystemColors.ButtonFace;
             groupBox2.Location = new Point(3, 463);
@@ -263,18 +296,21 @@ namespace WinFormsApp1
             listBox1.TabIndex = 0;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
-            // dataGridView1
+            // stockAlertGrid
             // 
-            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { product_id, product_name, product_quantity, product_price });
-            dataGridView1.Location = new Point(0, 28);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(701, 211);
-            dataGridView1.TabIndex = 0;
+            stockAlertGrid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            stockAlertGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            stockAlertGrid.Columns.AddRange(new DataGridViewColumn[] { product_id, product_name, product_quantity, product_price });
+            stockAlertGrid.Location = new Point(0, 28);
+            stockAlertGrid.Name = "stockAlertGrid";
+            stockAlertGrid.Size = new Size(701, 211);
+            stockAlertGrid.TabIndex = 0;
             // 
             // product_id
             // 
+            product_id.DataPropertyName = "product_id";
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            product_id.DefaultCellStyle = dataGridViewCellStyle1;
             product_id.HeaderText = "ID";
             product_id.Name = "product_id";
             product_id.ReadOnly = true;
@@ -283,6 +319,9 @@ namespace WinFormsApp1
             // 
             // product_name
             // 
+            product_name.DataPropertyName = "product_name";
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            product_name.DefaultCellStyle = dataGridViewCellStyle2;
             product_name.HeaderText = "Product";
             product_name.Name = "product_name";
             product_name.ReadOnly = true;
@@ -291,6 +330,9 @@ namespace WinFormsApp1
             // 
             // product_quantity
             // 
+            product_quantity.DataPropertyName = "product_quantity";
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            product_quantity.DefaultCellStyle = dataGridViewCellStyle3;
             product_quantity.HeaderText = "Current Quantity";
             product_quantity.Name = "product_quantity";
             product_quantity.ReadOnly = true;
@@ -300,6 +342,9 @@ namespace WinFormsApp1
             // product_price
             // 
             product_price.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            product_price.DataPropertyName = "product_price";
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            product_price.DefaultCellStyle = dataGridViewCellStyle4;
             product_price.HeaderText = "Price (per unit)";
             product_price.Name = "product_price";
             product_price.ReadOnly = true;
@@ -331,8 +376,8 @@ namespace WinFormsApp1
             // 
             // tabControl1
             // 
-            tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
             tabControl1.Controls.Add(tabPage4);
             tabControl1.Dock = DockStyle.Fill;
@@ -423,131 +468,6 @@ namespace WinFormsApp1
             searchProdBox.Name = "searchProdBox";
             searchProdBox.Size = new Size(229, 35);
             searchProdBox.TabIndex = 4;
-            // 
-            // custRegisterBox
-            // 
-            custRegisterBox.BackColor = Color.LightSkyBlue;
-            custRegisterBox.Controls.Add(newCustPhone);
-            custRegisterBox.Controls.Add(newCustAddress);
-            custRegisterBox.Controls.Add(newCustPassword);
-            custRegisterBox.Controls.Add(newCustEmail);
-            custRegisterBox.Controls.Add(label16);
-            custRegisterBox.Controls.Add(label14);
-            custRegisterBox.Controls.Add(label15);
-            custRegisterBox.Controls.Add(button21);
-            custRegisterBox.Controls.Add(label17);
-            custRegisterBox.Controls.Add(label18);
-            custRegisterBox.Controls.Add(newCustName);
-            custRegisterBox.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            custRegisterBox.Location = new Point(420, 133);
-            custRegisterBox.Name = "custRegisterBox";
-            custRegisterBox.Size = new Size(502, 435);
-            custRegisterBox.TabIndex = 9;
-            custRegisterBox.TabStop = false;
-            custRegisterBox.Text = "Customer Register";
-            custRegisterBox.Visible = false;
-            // 
-            // newCustPhone
-            // 
-            newCustPhone.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            newCustPhone.Location = new Point(162, 233);
-            newCustPhone.Mask = "0000000000";
-            newCustPhone.Name = "newCustPhone";
-            newCustPhone.Size = new Size(279, 33);
-            newCustPhone.TabIndex = 19;
-            // 
-            // newCustAddress
-            // 
-            newCustAddress.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            newCustAddress.Location = new Point(162, 295);
-            newCustAddress.Name = "newCustAddress";
-            newCustAddress.Size = new Size(279, 33);
-            newCustAddress.TabIndex = 18;
-            // 
-            // newCustPassword
-            // 
-            newCustPassword.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            newCustPassword.Location = new Point(162, 179);
-            newCustPassword.Name = "newCustPassword";
-            newCustPassword.Size = new Size(279, 33);
-            newCustPassword.TabIndex = 16;
-            // 
-            // newCustEmail
-            // 
-            newCustEmail.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            newCustEmail.Location = new Point(162, 121);
-            newCustEmail.Name = "newCustEmail";
-            newCustEmail.Size = new Size(279, 33);
-            newCustEmail.TabIndex = 15;
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.Location = new Point(65, 298);
-            label16.Name = "label16";
-            label16.Size = new Size(80, 25);
-            label16.TabIndex = 14;
-            label16.Text = "Address";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.Location = new Point(79, 240);
-            label14.Name = "label14";
-            label14.Size = new Size(66, 25);
-            label14.TabIndex = 12;
-            label14.Text = "Phone";
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label15.Location = new Point(86, 124);
-            label15.Name = "label15";
-            label15.Size = new Size(59, 25);
-            label15.TabIndex = 11;
-            label15.Text = "Email";
-            // 
-            // button21
-            // 
-            button21.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button21.Location = new Point(135, 362);
-            button21.Name = "button21";
-            button21.Size = new Size(236, 42);
-            button21.TabIndex = 8;
-            button21.Text = "Register New Customer";
-            button21.UseVisualStyleBackColor = true;
-            button21.Click += button21_Click;
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label17.Location = new Point(54, 182);
-            label17.Name = "label17";
-            label17.Size = new Size(91, 25);
-            label17.TabIndex = 3;
-            label17.Text = "Password";
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label18.Location = new Point(81, 68);
-            label18.Name = "label18";
-            label18.Size = new Size(64, 25);
-            label18.TabIndex = 2;
-            label18.Text = "Name";
-            // 
-            // newCustName
-            // 
-            newCustName.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            newCustName.Location = new Point(162, 63);
-            newCustName.Name = "newCustName";
-            newCustName.Size = new Size(279, 33);
-            newCustName.TabIndex = 0;
             // 
             // customerLoginBox
             // 
@@ -699,6 +619,176 @@ namespace WinFormsApp1
             label10.Size = new Size(188, 25);
             label10.TabIndex = 14;
             label10.Text = "Price (per unit)";
+            // 
+            // custRegisterBox
+            // 
+            custRegisterBox.BackColor = Color.LightSkyBlue;
+            custRegisterBox.Controls.Add(button6);
+            custRegisterBox.Controls.Add(label38);
+            custRegisterBox.Controls.Add(label39);
+            custRegisterBox.Controls.Add(label40);
+            custRegisterBox.Controls.Add(newCustPhone);
+            custRegisterBox.Controls.Add(newCustAddress);
+            custRegisterBox.Controls.Add(newCustPassword);
+            custRegisterBox.Controls.Add(newCustEmail);
+            custRegisterBox.Controls.Add(label16);
+            custRegisterBox.Controls.Add(label14);
+            custRegisterBox.Controls.Add(label15);
+            custRegisterBox.Controls.Add(button21);
+            custRegisterBox.Controls.Add(label17);
+            custRegisterBox.Controls.Add(label18);
+            custRegisterBox.Controls.Add(newCustName);
+            custRegisterBox.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            custRegisterBox.Location = new Point(382, 104);
+            custRegisterBox.Name = "custRegisterBox";
+            custRegisterBox.Size = new Size(531, 523);
+            custRegisterBox.TabIndex = 9;
+            custRegisterBox.TabStop = false;
+            custRegisterBox.Text = "Customer Register";
+            custRegisterBox.Visible = false;
+            // 
+            // button6
+            // 
+            button6.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button6.Location = new Point(209, 458);
+            button6.Name = "button6";
+            button6.Size = new Size(100, 42);
+            button6.TabIndex = 23;
+            button6.Text = "Login";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click_1;
+            // 
+            // label38
+            // 
+            label38.AutoSize = true;
+            label38.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label38.Location = new Point(240, 419);
+            label38.Name = "label38";
+            label38.Size = new Size(32, 21);
+            label38.TabIndex = 22;
+            label38.Text = "OR";
+            // 
+            // label39
+            // 
+            label39.AutoSize = true;
+            label39.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label39.Location = new Point(278, 415);
+            label39.Name = "label39";
+            label39.Size = new Size(103, 17);
+            label39.TabIndex = 21;
+            label39.Text = "___________________";
+            // 
+            // label40
+            // 
+            label40.AutoSize = true;
+            label40.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label40.Location = new Point(132, 415);
+            label40.Name = "label40";
+            label40.Size = new Size(103, 17);
+            label40.TabIndex = 20;
+            label40.Text = "___________________";
+            // 
+            // newCustPhone
+            // 
+            newCustPhone.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            newCustPhone.Location = new Point(162, 233);
+            newCustPhone.Mask = "0000000000";
+            newCustPhone.Name = "newCustPhone";
+            newCustPhone.Size = new Size(279, 33);
+            newCustPhone.TabIndex = 19;
+            // 
+            // newCustAddress
+            // 
+            newCustAddress.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            newCustAddress.Location = new Point(162, 295);
+            newCustAddress.Name = "newCustAddress";
+            newCustAddress.Size = new Size(279, 33);
+            newCustAddress.TabIndex = 18;
+            // 
+            // newCustPassword
+            // 
+            newCustPassword.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            newCustPassword.Location = new Point(162, 179);
+            newCustPassword.Name = "newCustPassword";
+            newCustPassword.Size = new Size(279, 33);
+            newCustPassword.TabIndex = 16;
+            // 
+            // newCustEmail
+            // 
+            newCustEmail.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            newCustEmail.Location = new Point(162, 121);
+            newCustEmail.Name = "newCustEmail";
+            newCustEmail.Size = new Size(279, 33);
+            newCustEmail.TabIndex = 15;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label16.Location = new Point(65, 298);
+            label16.Name = "label16";
+            label16.Size = new Size(80, 25);
+            label16.TabIndex = 14;
+            label16.Text = "Address";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.Location = new Point(79, 240);
+            label14.Name = "label14";
+            label14.Size = new Size(66, 25);
+            label14.TabIndex = 12;
+            label14.Text = "Phone";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label15.Location = new Point(86, 124);
+            label15.Name = "label15";
+            label15.Size = new Size(59, 25);
+            label15.TabIndex = 11;
+            label15.Text = "Email";
+            // 
+            // button21
+            // 
+            button21.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button21.Location = new Point(135, 362);
+            button21.Name = "button21";
+            button21.Size = new Size(236, 42);
+            button21.TabIndex = 8;
+            button21.Text = "Register New Customer";
+            button21.UseVisualStyleBackColor = true;
+            button21.Click += button21_Click;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label17.Location = new Point(54, 182);
+            label17.Name = "label17";
+            label17.Size = new Size(91, 25);
+            label17.TabIndex = 3;
+            label17.Text = "Password";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label18.Location = new Point(81, 68);
+            label18.Name = "label18";
+            label18.Size = new Size(64, 25);
+            label18.TabIndex = 2;
+            label18.Text = "Name";
+            // 
+            // newCustName
+            // 
+            newCustName.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            newCustName.Location = new Point(162, 63);
+            newCustName.Name = "newCustName";
+            newCustName.Size = new Size(279, 33);
+            newCustName.TabIndex = 0;
             // 
             // label9
             // 
@@ -1006,12 +1096,12 @@ namespace WinFormsApp1
             // 
             // tabPage4
             // 
-            tabPage4.Controls.Add(purchaseHistoryForm);
             tabPage4.Controls.Add(stockEntryForm);
             tabPage4.Controls.Add(panel7);
             tabPage4.Controls.Add(panel5);
             tabPage4.Controls.Add(flowLayoutPanel2);
             tabPage4.Controls.Add(label19);
+            tabPage4.Controls.Add(purchaseHistoryForm);
             tabPage4.Location = new Point(4, 24);
             tabPage4.Name = "tabPage4";
             tabPage4.Size = new Size(1342, 701);
@@ -1019,6 +1109,315 @@ namespace WinFormsApp1
             tabPage4.Text = "Purchase";
             tabPage4.UseVisualStyleBackColor = true;
             tabPage4.Click += tabPage4_Click;
+            // 
+            // stockEntryForm
+            // 
+            stockEntryForm.Controls.Add(button24);
+            stockEntryForm.Controls.Add(supDate);
+            stockEntryForm.Controls.Add(button23);
+            stockEntryForm.Controls.Add(button22);
+            stockEntryForm.Controls.Add(label29);
+            stockEntryForm.Controls.Add(stockDataGrid);
+            stockEntryForm.Controls.Add(groupBox5);
+            stockEntryForm.Controls.Add(label24);
+            stockEntryForm.Controls.Add(textBox5);
+            stockEntryForm.Controls.Add(label23);
+            stockEntryForm.Controls.Add(label21);
+            stockEntryForm.Controls.Add(textBox3);
+            stockEntryForm.Location = new Point(247, 61);
+            stockEntryForm.Name = "stockEntryForm";
+            stockEntryForm.Size = new Size(1068, 632);
+            stockEntryForm.TabIndex = 6;
+            stockEntryForm.TabStop = false;
+            stockEntryForm.Text = "Stock Entry Form";
+            // 
+            // button24
+            // 
+            button24.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button24.Location = new Point(675, 223);
+            button24.Name = "button24";
+            button24.Size = new Size(125, 35);
+            button24.TabIndex = 20;
+            button24.Text = "Remove Item";
+            button24.UseVisualStyleBackColor = true;
+            // 
+            // supDate
+            // 
+            supDate.Location = new Point(470, 41);
+            supDate.Name = "supDate";
+            supDate.Size = new Size(200, 23);
+            supDate.TabIndex = 19;
+            // 
+            // button23
+            // 
+            button23.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button23.Location = new Point(943, 222);
+            button23.Name = "button23";
+            button23.Size = new Size(85, 35);
+            button23.TabIndex = 18;
+            button23.Text = "Purchase";
+            button23.UseVisualStyleBackColor = true;
+            button23.Click += button23_Click;
+            // 
+            // button22
+            // 
+            button22.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button22.Location = new Point(827, 223);
+            button22.Name = "button22";
+            button22.Size = new Size(85, 35);
+            button22.TabIndex = 17;
+            button22.Text = "Clear";
+            button22.UseVisualStyleBackColor = true;
+            button22.Click += button22_Click;
+            // 
+            // label29
+            // 
+            label29.AutoSize = true;
+            label29.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label29.Location = new Point(32, 222);
+            label29.Name = "label29";
+            label29.Size = new Size(196, 30);
+            label29.TabIndex = 9;
+            label29.Text = "Purchase Summary";
+            // 
+            // stockDataGrid
+            // 
+            stockDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            stockDataGrid.Columns.AddRange(new DataGridViewColumn[] { ProductName, ProductQuantity, ProductPrice, ProductDescription });
+            stockDataGrid.Dock = DockStyle.Bottom;
+            stockDataGrid.Location = new Point(3, 271);
+            stockDataGrid.Name = "stockDataGrid";
+            stockDataGrid.Size = new Size(1062, 358);
+            stockDataGrid.TabIndex = 8;
+            // 
+            // ProductName
+            // 
+            ProductName.HeaderText = "Product Name";
+            ProductName.Name = "ProductName";
+            ProductName.ReadOnly = true;
+            ProductName.Resizable = DataGridViewTriState.True;
+            ProductName.Width = 250;
+            // 
+            // ProductQuantity
+            // 
+            ProductQuantity.HeaderText = "Product Quantity";
+            ProductQuantity.Name = "ProductQuantity";
+            ProductQuantity.ReadOnly = true;
+            ProductQuantity.Width = 150;
+            // 
+            // ProductPrice
+            // 
+            ProductPrice.HeaderText = "Price / Unit";
+            ProductPrice.Name = "ProductPrice";
+            ProductPrice.ReadOnly = true;
+            ProductPrice.Width = 200;
+            // 
+            // ProductDescription
+            // 
+            ProductDescription.HeaderText = "Description";
+            ProductDescription.Name = "ProductDescription";
+            ProductDescription.ReadOnly = true;
+            ProductDescription.Width = 400;
+            // 
+            // groupBox5
+            // 
+            groupBox5.Controls.Add(stockSubmitBtn);
+            groupBox5.Controls.Add(numericUpDown1);
+            groupBox5.Controls.Add(label28);
+            groupBox5.Controls.Add(textBox9);
+            groupBox5.Controls.Add(label25);
+            groupBox5.Controls.Add(textBox6);
+            groupBox5.Controls.Add(label26);
+            groupBox5.Controls.Add(label27);
+            groupBox5.Controls.Add(textBox8);
+            groupBox5.Location = new Point(22, 99);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Size = new Size(1022, 109);
+            groupBox5.TabIndex = 7;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "Product Data";
+            groupBox5.Enter += groupBox5_Enter;
+            // 
+            // stockSubmitBtn
+            // 
+            stockSubmitBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            stockSubmitBtn.Location = new Point(827, 61);
+            stockSubmitBtn.Name = "stockSubmitBtn";
+            stockSubmitBtn.Size = new Size(85, 35);
+            stockSubmitBtn.TabIndex = 16;
+            stockSubmitBtn.Text = "Submit";
+            stockSubmitBtn.UseVisualStyleBackColor = true;
+            stockSubmitBtn.Click += stockSubmitBtn_Click;
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(473, 23);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(167, 23);
+            numericUpDown1.TabIndex = 15;
+            // 
+            // label28
+            // 
+            label28.AutoSize = true;
+            label28.Location = new Point(19, 73);
+            label28.Name = "label28";
+            label28.Size = new Size(112, 15);
+            label28.TabIndex = 14;
+            label28.Text = "Product Description";
+            // 
+            // textBox9
+            // 
+            textBox9.Location = new Point(140, 67);
+            textBox9.Name = "textBox9";
+            textBox9.Size = new Size(625, 23);
+            textBox9.TabIndex = 13;
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Location = new Point(693, 26);
+            label25.Name = "label25";
+            label25.Size = new Size(111, 15);
+            label25.TabIndex = 12;
+            label25.Text = "Product Price / Unit";
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(811, 20);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(175, 23);
+            textBox6.TabIndex = 11;
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Location = new Point(362, 27);
+            label26.Name = "label26";
+            label26.Size = new Size(98, 15);
+            label26.TabIndex = 10;
+            label26.Text = "Product Quantity";
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Location = new Point(21, 27);
+            label27.Name = "label27";
+            label27.Size = new Size(84, 15);
+            label27.TabIndex = 8;
+            label27.Text = "Product Name";
+            // 
+            // textBox8
+            // 
+            textBox8.Location = new Point(109, 22);
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(201, 23);
+            textBox8.TabIndex = 7;
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Location = new Point(705, 43);
+            label24.Name = "label24";
+            label24.Size = new Size(82, 15);
+            label24.TabIndex = 6;
+            label24.Text = "Total Payment";
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(795, 38);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(175, 23);
+            textBox5.TabIndex = 5;
+            textBox5.Text = "0";
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Location = new Point(375, 43);
+            label23.Name = "label23";
+            label23.Size = new Size(86, 15);
+            label23.TabIndex = 3;
+            label23.Text = "Date Of Supply";
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Location = new Point(48, 45);
+            label21.Name = "label21";
+            label21.Size = new Size(85, 15);
+            label21.TabIndex = 1;
+            label21.Text = "Supplier Name";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(136, 40);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(201, 23);
+            textBox3.TabIndex = 0;
+            // 
+            // panel7
+            // 
+            panel7.BackColor = Color.LightCoral;
+            panel7.Controls.Add(label22);
+            panel7.Cursor = Cursors.Hand;
+            panel7.Location = new Point(11, 128);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(197, 52);
+            panel7.TabIndex = 5;
+            panel7.Paint += panel7_Paint;
+            // 
+            // label22
+            // 
+            label22.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label22.Location = new Point(11, 9);
+            label22.Name = "label22";
+            label22.Size = new Size(173, 36);
+            label22.TabIndex = 0;
+            label22.Text = "Purchase History";
+            label22.TextAlign = ContentAlignment.MiddleCenter;
+            label22.Click += label22_Click;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.LightCoral;
+            panel5.Controls.Add(label20);
+            panel5.Cursor = Cursors.Hand;
+            panel5.Location = new Point(11, 52);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(197, 52);
+            panel5.TabIndex = 4;
+            panel5.Paint += panel5_Paint;
+            // 
+            // label20
+            // 
+            label20.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label20.Location = new Point(11, 9);
+            label20.Name = "label20";
+            label20.Size = new Size(173, 36);
+            label20.TabIndex = 0;
+            label20.Text = "New Stock Entry";
+            label20.TextAlign = ContentAlignment.MiddleCenter;
+            label20.Click += label20_Click;
+            // 
+            // flowLayoutPanel2
+            // 
+            flowLayoutPanel2.Dock = DockStyle.Left;
+            flowLayoutPanel2.Location = new Point(0, 40);
+            flowLayoutPanel2.Name = "flowLayoutPanel2";
+            flowLayoutPanel2.Size = new Size(221, 661);
+            flowLayoutPanel2.TabIndex = 3;
+            flowLayoutPanel2.Paint += flowLayoutPanel2_Paint;
+            // 
+            // label19
+            // 
+            label19.BackColor = Color.DeepSkyBlue;
+            label19.Dock = DockStyle.Top;
+            label19.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label19.Location = new Point(0, 0);
+            label19.Name = "label19";
+            label19.Size = new Size(1342, 40);
+            label19.TabIndex = 2;
+            label19.Text = "Supplier and Purchase Data";
             // 
             // purchaseHistoryForm
             // 
@@ -1247,325 +1646,6 @@ namespace WinFormsApp1
             button25.UseVisualStyleBackColor = true;
             button25.Click += button25_Click;
             // 
-            // stockEntryForm
-            // 
-            stockEntryForm.Controls.Add(button24);
-            stockEntryForm.Controls.Add(supDate);
-            stockEntryForm.Controls.Add(button23);
-            stockEntryForm.Controls.Add(button22);
-            stockEntryForm.Controls.Add(label29);
-            stockEntryForm.Controls.Add(stockDataGrid);
-            stockEntryForm.Controls.Add(groupBox5);
-            stockEntryForm.Controls.Add(label24);
-            stockEntryForm.Controls.Add(textBox5);
-            stockEntryForm.Controls.Add(checkBox1);
-            stockEntryForm.Controls.Add(label23);
-            stockEntryForm.Controls.Add(label21);
-            stockEntryForm.Controls.Add(textBox3);
-            stockEntryForm.Location = new Point(247, 61);
-            stockEntryForm.Name = "stockEntryForm";
-            stockEntryForm.Size = new Size(1068, 632);
-            stockEntryForm.TabIndex = 6;
-            stockEntryForm.TabStop = false;
-            stockEntryForm.Text = "Stock Entry Form";
-            // 
-            // button24
-            // 
-            button24.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button24.Location = new Point(675, 223);
-            button24.Name = "button24";
-            button24.Size = new Size(125, 35);
-            button24.TabIndex = 20;
-            button24.Text = "Remove Item";
-            button24.UseVisualStyleBackColor = true;
-            // 
-            // supDate
-            // 
-            supDate.Location = new Point(470, 41);
-            supDate.Name = "supDate";
-            supDate.Size = new Size(200, 23);
-            supDate.TabIndex = 19;
-            // 
-            // button23
-            // 
-            button23.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button23.Location = new Point(943, 222);
-            button23.Name = "button23";
-            button23.Size = new Size(85, 35);
-            button23.TabIndex = 18;
-            button23.Text = "Purchase";
-            button23.UseVisualStyleBackColor = true;
-            button23.Click += button23_Click;
-            // 
-            // button22
-            // 
-            button22.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button22.Location = new Point(827, 223);
-            button22.Name = "button22";
-            button22.Size = new Size(85, 35);
-            button22.TabIndex = 17;
-            button22.Text = "Discard";
-            button22.UseVisualStyleBackColor = true;
-            // 
-            // label29
-            // 
-            label29.AutoSize = true;
-            label29.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label29.Location = new Point(32, 222);
-            label29.Name = "label29";
-            label29.Size = new Size(196, 30);
-            label29.TabIndex = 9;
-            label29.Text = "Purchase Summary";
-            // 
-            // stockDataGrid
-            // 
-            stockDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            stockDataGrid.Columns.AddRange(new DataGridViewColumn[] { ProductName, ProductQuantity, ProductPrice, ProductDescription });
-            stockDataGrid.Dock = DockStyle.Bottom;
-            stockDataGrid.Location = new Point(3, 271);
-            stockDataGrid.Name = "stockDataGrid";
-            stockDataGrid.Size = new Size(1062, 358);
-            stockDataGrid.TabIndex = 8;
-            // 
-            // ProductName
-            // 
-            ProductName.HeaderText = "Product Name";
-            ProductName.Name = "ProductName";
-            ProductName.ReadOnly = true;
-            ProductName.Resizable = DataGridViewTriState.True;
-            ProductName.Width = 250;
-            // 
-            // ProductQuantity
-            // 
-            ProductQuantity.HeaderText = "Product Quantity";
-            ProductQuantity.Name = "ProductQuantity";
-            ProductQuantity.ReadOnly = true;
-            ProductQuantity.Width = 150;
-            // 
-            // ProductPrice
-            // 
-            ProductPrice.HeaderText = "Price / Unit";
-            ProductPrice.Name = "ProductPrice";
-            ProductPrice.ReadOnly = true;
-            ProductPrice.Width = 200;
-            // 
-            // ProductDescription
-            // 
-            ProductDescription.HeaderText = "Description";
-            ProductDescription.Name = "ProductDescription";
-            ProductDescription.ReadOnly = true;
-            ProductDescription.Width = 400;
-            // 
-            // groupBox5
-            // 
-            groupBox5.Controls.Add(stockSubmitBtn);
-            groupBox5.Controls.Add(numericUpDown1);
-            groupBox5.Controls.Add(label28);
-            groupBox5.Controls.Add(textBox9);
-            groupBox5.Controls.Add(label25);
-            groupBox5.Controls.Add(textBox6);
-            groupBox5.Controls.Add(label26);
-            groupBox5.Controls.Add(label27);
-            groupBox5.Controls.Add(textBox8);
-            groupBox5.Location = new Point(22, 99);
-            groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(1022, 109);
-            groupBox5.TabIndex = 7;
-            groupBox5.TabStop = false;
-            groupBox5.Text = "Product Data";
-            groupBox5.Enter += groupBox5_Enter;
-            // 
-            // stockSubmitBtn
-            // 
-            stockSubmitBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            stockSubmitBtn.Location = new Point(827, 61);
-            stockSubmitBtn.Name = "stockSubmitBtn";
-            stockSubmitBtn.Size = new Size(85, 35);
-            stockSubmitBtn.TabIndex = 16;
-            stockSubmitBtn.Text = "Submit";
-            stockSubmitBtn.UseVisualStyleBackColor = true;
-            stockSubmitBtn.Click += stockSubmitBtn_Click;
-            // 
-            // numericUpDown1
-            // 
-            numericUpDown1.Location = new Point(473, 23);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(167, 23);
-            numericUpDown1.TabIndex = 15;
-            // 
-            // label28
-            // 
-            label28.AutoSize = true;
-            label28.Location = new Point(19, 73);
-            label28.Name = "label28";
-            label28.Size = new Size(112, 15);
-            label28.TabIndex = 14;
-            label28.Text = "Product Description";
-            // 
-            // textBox9
-            // 
-            textBox9.Location = new Point(140, 67);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(625, 23);
-            textBox9.TabIndex = 13;
-            // 
-            // label25
-            // 
-            label25.AutoSize = true;
-            label25.Location = new Point(693, 26);
-            label25.Name = "label25";
-            label25.Size = new Size(111, 15);
-            label25.TabIndex = 12;
-            label25.Text = "Product Price / Unit";
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(811, 20);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(175, 23);
-            textBox6.TabIndex = 11;
-            // 
-            // label26
-            // 
-            label26.AutoSize = true;
-            label26.Location = new Point(362, 27);
-            label26.Name = "label26";
-            label26.Size = new Size(98, 15);
-            label26.TabIndex = 10;
-            label26.Text = "Product Quantity";
-            // 
-            // label27
-            // 
-            label27.AutoSize = true;
-            label27.Location = new Point(21, 27);
-            label27.Name = "label27";
-            label27.Size = new Size(84, 15);
-            label27.TabIndex = 8;
-            label27.Text = "Product Name";
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(109, 22);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(201, 23);
-            textBox8.TabIndex = 7;
-            // 
-            // label24
-            // 
-            label24.AutoSize = true;
-            label24.Location = new Point(705, 43);
-            label24.Name = "label24";
-            label24.Size = new Size(82, 15);
-            label24.TabIndex = 6;
-            label24.Text = "Total Payment";
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(795, 38);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(175, 23);
-            textBox5.TabIndex = 5;
-            textBox5.Text = "0";
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(610, 67);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(57, 19);
-            checkBox1.TabIndex = 4;
-            checkBox1.Text = "Today";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label23
-            // 
-            label23.AutoSize = true;
-            label23.Location = new Point(375, 43);
-            label23.Name = "label23";
-            label23.Size = new Size(86, 15);
-            label23.TabIndex = 3;
-            label23.Text = "Date Of Supply";
-            // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Location = new Point(48, 45);
-            label21.Name = "label21";
-            label21.Size = new Size(85, 15);
-            label21.TabIndex = 1;
-            label21.Text = "Supplier Name";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(136, 40);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(201, 23);
-            textBox3.TabIndex = 0;
-            // 
-            // panel7
-            // 
-            panel7.BackColor = Color.LightCoral;
-            panel7.Controls.Add(label22);
-            panel7.Cursor = Cursors.Hand;
-            panel7.Location = new Point(11, 128);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(197, 52);
-            panel7.TabIndex = 5;
-            panel7.Paint += panel7_Paint;
-            // 
-            // label22
-            // 
-            label22.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label22.Location = new Point(11, 9);
-            label22.Name = "label22";
-            label22.Size = new Size(173, 36);
-            label22.TabIndex = 0;
-            label22.Text = "Purchase History";
-            label22.TextAlign = ContentAlignment.MiddleCenter;
-            label22.Click += label22_Click;
-            // 
-            // panel5
-            // 
-            panel5.BackColor = Color.LightCoral;
-            panel5.Controls.Add(label20);
-            panel5.Cursor = Cursors.Hand;
-            panel5.Location = new Point(11, 52);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(197, 52);
-            panel5.TabIndex = 4;
-            panel5.Paint += panel5_Paint;
-            // 
-            // label20
-            // 
-            label20.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label20.Location = new Point(11, 9);
-            label20.Name = "label20";
-            label20.Size = new Size(173, 36);
-            label20.TabIndex = 0;
-            label20.Text = "New Stock Entry";
-            label20.TextAlign = ContentAlignment.MiddleCenter;
-            label20.Click += label20_Click;
-            // 
-            // flowLayoutPanel2
-            // 
-            flowLayoutPanel2.Dock = DockStyle.Left;
-            flowLayoutPanel2.Location = new Point(0, 40);
-            flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(221, 661);
-            flowLayoutPanel2.TabIndex = 3;
-            flowLayoutPanel2.Paint += flowLayoutPanel2_Paint;
-            // 
-            // label19
-            // 
-            label19.BackColor = Color.DeepSkyBlue;
-            label19.Dock = DockStyle.Top;
-            label19.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label19.Location = new Point(0, 0);
-            label19.Name = "label19";
-            label19.Size = new Size(1342, 40);
-            label19.TabIndex = 2;
-            label19.Text = "Supplier and Purchase Data";
-            // 
             // dBOperationsBindingSource
             // 
             dBOperationsBindingSource.DataSource = typeof(DBOperations);
@@ -1609,6 +1689,11 @@ namespace WinFormsApp1
             button2.Text = "Log in";
             button2.UseVisualStyleBackColor = true;
             // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Tick += timer1_Tick;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1616,22 +1701,23 @@ namespace WinFormsApp1
             ClientSize = new Size(1350, 729);
             Controls.Add(tabControl1);
             Name = "Form2";
-            Text = "Form2";
+            Text = "Inventory Manager";
             Load += Form2_Load;
             tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)stockAlertGrid).EndInit();
             tabControl1.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
             productSearchBox.ResumeLayout(false);
             productSearchBox.PerformLayout();
-            custRegisterBox.ResumeLayout(false);
-            custRegisterBox.PerformLayout();
             customerLoginBox.ResumeLayout(false);
             customerLoginBox.PerformLayout();
             orderDetailsBox.ResumeLayout(false);
             orderDetailsBox.PerformLayout();
+            custRegisterBox.ResumeLayout(false);
+            custRegisterBox.PerformLayout();
             tabPage3.ResumeLayout(false);
             stockDataForm.ResumeLayout(false);
             stockDataForm.PerformLayout();
@@ -1639,12 +1725,6 @@ namespace WinFormsApp1
             panel3.ResumeLayout(false);
             panel2.ResumeLayout(false);
             tabPage4.ResumeLayout(false);
-            purchaseHistoryForm.ResumeLayout(false);
-            purchaseHistoryForm.PerformLayout();
-            purchaseFilters.ResumeLayout(false);
-            purchaseFilters.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            groupBox4.ResumeLayout(false);
             stockEntryForm.ResumeLayout(false);
             stockEntryForm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)stockDataGrid).EndInit();
@@ -1653,6 +1733,12 @@ namespace WinFormsApp1
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             panel7.ResumeLayout(false);
             panel5.ResumeLayout(false);
+            purchaseHistoryForm.ResumeLayout(false);
+            purchaseHistoryForm.PerformLayout();
+            purchaseFilters.ResumeLayout(false);
+            purchaseFilters.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dBOperationsBindingSource).EndInit();
             ResumeLayout(false);
         }
@@ -1663,11 +1749,7 @@ namespace WinFormsApp1
         private GroupBox groupBox2;
         private GroupBox groupBox1;
         private ListBox listBox1;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn product_id;
-        private DataGridViewTextBoxColumn product_name;
-        private DataGridViewTextBoxColumn product_quantity;
-        private DataGridViewTextBoxColumn product_price;
+        private DataGridView stockAlertGrid;
         private GroupBox groupBox3;
         private Label dashLbl;
         private TabControl tabControl1;
@@ -1737,7 +1819,6 @@ namespace WinFormsApp1
         private TextBox textBox3;
         private Label label24;
         private TextBox textBox5;
-        private CheckBox checkBox1;
         private Label label23;
         private Label label21;
         private GroupBox groupBox5;
@@ -1796,5 +1877,16 @@ namespace WinFormsApp1
         private DataGridViewTextBoxColumn supplierName;
         private DataGridViewTextBoxColumn supplyDate;
         private DataGridViewTextBoxColumn totalPayment;
+        private DataGridViewTextBoxColumn product_id;
+        private DataGridViewTextBoxColumn product_name;
+        private DataGridViewTextBoxColumn product_quantity;
+        private DataGridViewTextBoxColumn product_price;
+        private Label dayLbl;
+        private Label timeLbl;
+        private System.Windows.Forms.Timer timer1;
+        private Button button6;
+        private Label label38;
+        private Label label39;
+        private Label label40;
     }
 }

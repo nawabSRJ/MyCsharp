@@ -27,9 +27,11 @@ namespace WinFormsApp1
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            timer1.Start();
+            setDateDay();
             // set the values for stock alert and most selling products
             // set the values for the listBoxes : productListBoxes
-
+            setStockAlert();
             // set what comes first :
             setVisibilityStatus();
 
@@ -37,6 +39,16 @@ namespace WinFormsApp1
             LoadProductListBox();
 
 
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            setDateDay();
+            timer1.Start();
+        }
+        private void setDateDay()
+        {
+            timeLbl.Text = DateTime.Now.ToLongTimeString();
+            dayLbl.Text = DateTime.Now.ToLongDateString();
         }
         private void setVisibilityStatus()
         {
@@ -151,7 +163,7 @@ namespace WinFormsApp1
         // logout button form2 (dashboard)
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -326,20 +338,6 @@ namespace WinFormsApp1
         }
 
 
-        /* Remove All from cart
-        private void button15_Click(object sender, EventArgs e)
-        {
-            if (receiptBox.SelectedItem == null)
-            {
-                MessageBox.Show("Please select an item to remove.");
-                return;
-            }
-
-            // Remove the selected item entirely from receiptBox
-            receiptBox.Items.RemoveAt(receiptBox.SelectedIndex);
-            totalAmount -= totalItemPrice;
-        }*/
-
         // Remove All from cart
         private void button15_Click(object sender, EventArgs e)
         {
@@ -418,6 +416,27 @@ namespace WinFormsApp1
                 MessageBox.Show("Order placed successfully!"); // show Payment Form
                 PaymentForm pfm = new PaymentForm(customerName, totalAmount);
                 pfm.ShowDialog(); //  Customer Name Total Amount to be sent to Payment Form
+
+
+                Dictionary<string, int> ItemsBought = new Dictionary<string, int>();
+
+                // Iterate over each item in the receiptBox
+                foreach (var item in receiptBox.Items)
+                {
+                    // Split the string by tabs to extract prodName and updatedQuantity
+                    string[] parts = item.ToString().Split('\t');
+
+                    if (parts.Length >= 2)
+                    {
+                        string prodName = parts[0];
+                        int quantity = int.Parse(parts[1]); // Directly parse the quantity as an integer
+
+                        // Add to the dictionary
+                        ItemsBought[prodName] = quantity;
+                    }
+                }
+
+                ops.DecreaseStock(ItemsBought);
             }
             else
             {
@@ -446,16 +465,51 @@ namespace WinFormsApp1
             button19.Visible = false; // hide this button as well
         }
 
-        // Add New Customer Button (in customer Register Form)
-        private void button21_Click(object sender, EventArgs e)
+        private bool validPhoneNumber(string phn)
         {
+            if (phn.Length != 10) { return false; }
+            foreach (char s in phn)
+            {
+                if (!char.IsDigit(s))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
 
+            // Add New Customer Button (in customer Register Form)
+            private void button21_Click(object sender, EventArgs e)
+            {
+            // Validate inputs 
+            if (string.IsNullOrWhiteSpace(newCustName.Text) ||
+                string.IsNullOrWhiteSpace(newCustAddress.Text) ||
+                string.IsNullOrWhiteSpace(newCustEmail.Text) ||
+                string.IsNullOrWhiteSpace(newCustPassword.Text) ||
+                !validPhoneNumber(newCustPhone.Text.ToString()))
+            {
+                MessageBox.Show("Please enter all details properly");
+                return;
+            }
+            
+            
+            decimal newPhone;
+            try
+            {
+                newPhone = Convert.ToDecimal(newCustPhone.Text);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Please enter a valid phone number.");
+                newCustPhone.Focus(); // Set focus back to the masked text box
+                return;
+            }
+            
             // get all the values from the text boxes -> Validate
             // call the DBOperations func
             string newName = newCustName.Text;
             string newEmail = newCustEmail.Text;
             string newPasswd = newCustPassword.Text;
-            decimal newPhone = Convert.ToDecimal(newCustPhone.Text);
             string newAddress = newCustAddress.Text;
 
             // please validate here
@@ -681,8 +735,8 @@ namespace WinFormsApp1
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             // set the disable and enable things here
-            
-            if(comboBox1.SelectedItem.ToString() == "Supplier")
+
+            if (comboBox1.SelectedItem.ToString() == "Supplier")
             {
                 foreach (Control ctrl in purchaseFilters.Controls)
                 {
@@ -691,9 +745,9 @@ namespace WinFormsApp1
                         ctrl.Enabled = false;
                     }
                 }
-                textBox4.Enabled = true; 
+                textBox4.Enabled = true;
             }
-            else if(comboBox1.SelectedItem.ToString() == "Date")
+            else if (comboBox1.SelectedItem.ToString() == "Date")
             {
                 foreach (Control ctrl in purchaseFilters.Controls)
                 {
@@ -705,7 +759,7 @@ namespace WinFormsApp1
                 dateTimePicker1.Enabled = true;
                 label34.Text = "Pick Date : ";
             }
-            else if(comboBox1.SelectedItem.ToString() == "Minimum Price")
+            else if (comboBox1.SelectedItem.ToString() == "Minimum Price")
             {
                 foreach (Control ctrl in purchaseFilters.Controls)
                 {
@@ -716,7 +770,7 @@ namespace WinFormsApp1
                 }
                 textBox7.Enabled = true;
             }
-            else if(comboBox1.SelectedItem.ToString() == "Maximum Price")
+            else if (comboBox1.SelectedItem.ToString() == "Maximum Price")
             {
                 foreach (Control ctrl in purchaseFilters.Controls)
                 {
@@ -767,38 +821,38 @@ namespace WinFormsApp1
             string paraType = comboBox1.Text;
             string paraEntry = "";
             // supplier -> date , min , max 
-            if(paraType == "Supplier")
+            if (paraType == "Supplier")
             {
                 if (string.IsNullOrWhiteSpace(textBox4.Text))
                 {
                     MessageBox.Show("Please enter the Supplier Name");
                     return;
                 }
-                 paraEntry = textBox4.Text;
+                paraEntry = textBox4.Text;
             }
-            else if(paraType == "Date")
+            else if (paraType == "Date")
             {
                 DateTime startDate = dateTimePicker1.Value;
-                 paraEntry = startDate.ToString("yyyy-MM-dd");
+                paraEntry = startDate.ToString("yyyy-MM-dd");
 
             }
-            else if(paraType == "Minimum Price")
+            else if (paraType == "Minimum Price")
             {
                 if (string.IsNullOrWhiteSpace(textBox7.Text))
                 {
                     MessageBox.Show("Please enter the Min Price");
                     return;
                 }
-                 paraEntry = textBox7.Text; // later convert to decimal
+                paraEntry = textBox7.Text; // later convert to decimal
             }
-            else if(paraType == "Maximum Price")
+            else if (paraType == "Maximum Price")
             {
                 if (string.IsNullOrWhiteSpace(textBox10.Text))
                 {
                     MessageBox.Show("Please enter the Max Price");
                     return;
                 }
-                 paraEntry = textBox10.Text;  // later convert to decimal
+                paraEntry = textBox10.Text;  // later convert to decimal
             }
             else if (paraType == "Date Range")
             {
@@ -837,7 +891,8 @@ namespace WinFormsApp1
 
             DataTable purchaseData = ops.ShowPurchaseData(paraType, paraEntry);
 
-            if (purchaseData.Rows.Count > 0) { 
+            if (purchaseData.Rows.Count > 0)
+            {
                 dataGridView2.DataSource = purchaseData;
                 MessageBox.Show("Data Loaded Successfully");
             }
@@ -863,6 +918,65 @@ namespace WinFormsApp1
             {
                 MessageBox.Show("No data found.");
             }
+        }
+
+        // clear button in Stock Entry Form
+        private void button22_Click(object sender, EventArgs e)
+        {
+            foreach (Control ctrl in stockEntryForm.Controls)
+            {
+                if (ctrl is TextBox textBox)
+                {
+
+                    textBox.Clear();
+                }
+                else if (ctrl is DateTimePicker dateTimePicker)
+                {
+
+                    dateTimePicker.Value = DateTime.Now;
+                }
+                else if (ctrl is NumericUpDown numericUpDown)
+                {
+
+                    numericUpDown.Value = numericUpDown.Minimum; // reset
+                }
+                else if (ctrl is DataGridView dataGridView)
+                {
+
+                    dataGridView.Rows.Clear();
+                }
+            }
+
+        }
+
+        // load the stock alert , 
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+            // Set the Stock Alert
+            setStockAlert();
+
+            // set the most selling product
+
+        }
+        private void setStockAlert()
+        {
+            DataTable stockAlertData = ops.StockAlert();
+            stockAlertGrid.DataSource = stockAlertData;
+        }
+        private void mostSellingProduct()
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            custRegisterBox.Visible = false;
+            customerLoginBox.Visible = true;
         }
     } // Form 2 class ends
 }

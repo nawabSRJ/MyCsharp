@@ -10,7 +10,7 @@ namespace WinFormsApp1
         SqlDataReader dr;
         string query, str;
         int carCount = 0, roadCount = 0;
-       
+
         public Form1()
         {
             InitializeComponent();
@@ -127,7 +127,7 @@ namespace WinFormsApp1
                 dr.Close();
                 cmd.Dispose();
                 // !string.IsNullOrEmpty(usernameBox.Text) || !string.IsNullOrEmpty(passwdBox.Text) && 
-               
+
             }
 
         }
@@ -156,7 +156,11 @@ namespace WinFormsApp1
                 Form2 fm2 = new Form2();
                 fm2.StartPosition = FormStartPosition.CenterScreen;
                 fm2.ShowDialog();
-                this.Close();
+                //this.Close();
+                captchaBox1.Visible = false;
+                usernameBox.Clear();
+                passwdBox.Clear();
+
             }
             else
             {
@@ -310,6 +314,75 @@ namespace WinFormsApp1
             str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
             conn = new SqlConnection(str);
         }
+        public void DecreaseStock(Dictionary<string, int> dict)
+        {
+            int affect = 0;
+            try
+            {
+                conn.Open(); // Open the connection once for all updates
+
+                foreach (var item in dict)
+                {
+                    string productName = item.Key;
+                    int quantityToDecrease = item.Value;
+
+                    // Update query to decrease the stock based on product_name
+                    string query = $"UPDATE STOCK SET product_quantity = product_quantity - {quantityToDecrease} WHERE product_name = '{productName}'";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    affect += cmd.ExecuteNonQuery(); // foreach execution
+                }
+                MessageBox.Show($"Rows Affected : {affect}");
+
+                MessageBox.Show("Stock quantities have been updated successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while updating stock: {ex.Message}");
+            }
+            finally
+            {
+                conn.Close(); // Ensure the connection is closed
+            }
+        }
+
+        public void IncreaseStock(string productName, int quantityToAdd, decimal productPrice, string productDescription)
+        {
+            try
+            {
+                conn.Open();
+
+                // Check if the product already exists in the stock (case-insensitive)
+                string checkQuery = $"SELECT COUNT(*) FROM STOCK WHERE LOWER(product_name) = '{productName.ToLower()}'";
+                SqlCommand checkCmd = new SqlCommand(checkQuery, conn);
+                int productExists = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+                if (productExists > 0)
+                {
+                    // Update existing product's quantity
+                    string updateQuery = $"UPDATE STOCK SET product_quantity = product_quantity + {quantityToAdd} WHERE LOWER(product_name) = '{productName.ToLower()}'";
+                    SqlCommand updateCmd = new SqlCommand(updateQuery, conn);
+                    int rowsUpdated = updateCmd.ExecuteNonQuery();
+                    MessageBox.Show($"Product '{productName}' quantity increased. Rows Affected: {rowsUpdated}");
+                }
+                else
+                {
+                    // Insert new product 
+                    string insertQuery = $"INSERT INTO STOCK (product_name, product_quantity, product_price, product_description) VALUES ('{productName}', {quantityToAdd}, {productPrice}, '{productDescription}')";
+                    SqlCommand insertCmd = new SqlCommand(insertQuery, conn);
+                    int rowsInserted = insertCmd.ExecuteNonQuery();
+                    MessageBox.Show($"New product '{productName}' added to stock. Rows Affected: {rowsInserted}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while updating stock: {ex}");
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
 
         public void NewOrder(Orders obj)
         {
@@ -320,8 +393,6 @@ namespace WinFormsApp1
             cmd.ExecuteScalar();
             conn.Close();
             MessageBox.Show("Order Commited Successfully");
-
-            // update stock table (decrease stock)
         }
 
         public void NewCustomer(Customer obj)
@@ -390,6 +461,8 @@ namespace WinFormsApp1
             }
 
             // update stock table (increase stock)
+            IncreaseStock(obj.product_name, obj.product_quantity, obj.product_price, obj.product_description);
+
         }
 
         public DataTable ShowStockData(string paraType, string paraEntry)
@@ -500,6 +573,26 @@ namespace WinFormsApp1
             return dt;
         }
 
-
+        public DataTable StockAlert()
+        {
+            DataTable dt = new DataTable();  // Create a DataTable to hold the data
+            string query = "";
+            try
+            {
+                query = "SELECT product_id , product_name , product_quantity, product_price FROM STOCK WHERE product_quantity < 80 ";
+                conn.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter(query, conn);
+                sqlDa.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex}");
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dt;
+        }
     }
 }

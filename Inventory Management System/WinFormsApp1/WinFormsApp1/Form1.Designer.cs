@@ -130,20 +130,20 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(133, 162);
+            label3.Location = new Point(80, 164);
             label3.Name = "label3";
-            label3.Size = new Size(96, 26);
+            label3.Size = new Size(159, 26);
             label3.TabIndex = 4;
-            label3.Text = "Password";
+            label3.Text = "Admin Password";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(129, 101);
+            label2.Location = new Point(114, 101);
             label2.Name = "label2";
-            label2.Size = new Size(100, 26);
+            label2.Size = new Size(122, 26);
             label2.TabIndex = 3;
-            label2.Text = "Username";
+            label2.Text = "Admin Email";
             // 
             // captchaBox1
             // 
@@ -260,7 +260,7 @@
             Controls.Add(groupBox1);
             Controls.Add(label1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Inventory Manager";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             captchaBox1.ResumeLayout(false);
