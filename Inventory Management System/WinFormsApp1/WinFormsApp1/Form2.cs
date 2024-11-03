@@ -727,6 +727,32 @@ namespace WinFormsApp1
                 }
                 textBox10.Enabled = true;
             }
+            else if (comboBox1.SelectedItem.ToString() == "Date Range")
+            {
+                foreach (Control ctrl in purchaseFilters.Controls)
+                {
+                    if (ctrl is TextBox || ctrl is DateTimePicker)
+                    {
+                        ctrl.Enabled = false;
+                    }
+                }
+                dateTimePicker1.Enabled = true;
+                dateTimePicker2.Enabled = true;
+                label34.Text = "Start Date";
+                label35.Text = "End Date";
+            }
+            else if (comboBox1.SelectedItem.ToString() == "Price Range")
+            {
+                foreach (Control ctrl in purchaseFilters.Controls)
+                {
+                    if (ctrl is TextBox || ctrl is DateTimePicker)
+                    {
+                        ctrl.Enabled = false;
+                    }
+                }
+                textBox7.Enabled = true;
+                textBox10.Enabled = true;
+            }
         }
 
         // Purchase Tab Search Button
@@ -753,7 +779,7 @@ namespace WinFormsApp1
             else if(paraType == "Date")
             {
                 DateTime startDate = dateTimePicker1.Value;
-                 paraEntry = startDate.ToString("dd-MM-yyyy");
+                 paraEntry = startDate.ToString("yyyy-MM-dd");
 
             }
             else if(paraType == "Minimum Price")
@@ -774,6 +800,41 @@ namespace WinFormsApp1
                 }
                  paraEntry = textBox10.Text;  // later convert to decimal
             }
+            else if (paraType == "Date Range")
+            {
+                DateTime startDate = dateTimePicker1.Value;
+                DateTime endDate = dateTimePicker2.Value;
+                DataTable ans = ops.ShowPurchaseData(paraType, startDate.ToString("yyyy-MM-dd"), endDate.ToString("yyyy-MM-dd"));
+                if (ans.Rows.Count > 0)
+                {
+                    dataGridView2.DataSource = ans;
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("No data found.");
+                    return;
+                }
+            }
+            else if (paraType == "Price Range")
+            {
+                string minPrice = textBox7.Text;
+                string maxPrice = textBox10.Text;   // later convert to decimal
+                DataTable ans = ops.ShowPurchaseData(paraType, minPrice, maxPrice);
+                if (ans.Rows.Count > 0)
+                {
+                    dataGridView2.DataSource = ans;
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("No data found.");
+                    return;
+                }
+            }
+
+
+
             DataTable purchaseData = ops.ShowPurchaseData(paraType, paraEntry);
 
             if (purchaseData.Rows.Count > 0) { 

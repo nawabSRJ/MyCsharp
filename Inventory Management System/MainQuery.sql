@@ -1,13 +1,36 @@
 use sample;
 
 create table ImageCaptcha(
+	imgId INT not null,
 	ImgName varchar(20) not null,
-	ImgPath varchar(20) not null
+	ImgPath varchar(20) not null unique,
 )
-INSERT INTO ImageCaptcha Values ('Car','car1.jpg'),('Car' , 'car2.jpg'),('Car','car3.jpg'),
-('Road','road1.jpg'),('Road','road2.jpg'),('Road','road3.jpg');
+
+INSERT INTO ImageCaptcha (imgId, ImgName, ImgPath) VALUES 
+(1, 'Car', 'car4.jpg'),
+(2, 'Road', 'road7.jpg'),
+(3, 'Road', 'road3.jpg'),
+(4, 'Car', 'car1.jpg'),
+(5, 'Car', 'car8.jpg'),
+(6, 'Road', 'road1.jpg'),
+(7, 'Car', 'car6.jpg'),
+(8, 'Car', 'car5.jpg'),
+(9, 'Road', 'road5.jpg'),
+(10, 'Road', 'road2.jpg'),
+(11, 'Car', 'car3.jpg'),
+(12, 'Road', 'road10.jpg'),
+(13, 'Road', 'road8.jpg'),
+(14, 'Car', 'car9.jpg'),
+(15, 'Road', 'road4.jpg'),
+(16, 'Car', 'car2.jpg'),
+(17, 'Road', 'road9.jpg'),
+(18, 'Car', 'car7.jpg'),
+(19, 'Road', 'road6.jpg'),
+(20, 'Car', 'car10.jpg');
+
 
 SELECT * FROM ImageCaptcha;
+
 --UPDATE ImageCaptcha SET ImgPath = 'car1.jpg' where ImgPath = 'car1.webp';
 
 -- Admin Table
@@ -15,10 +38,11 @@ CREATE TABLE ADMIN(
 	admin_id int not null ,
 	admin_name varchar(20) not null,
 	admin_email varchar(50) not null unique,
+	admin_password varchar(50) not null,
 	admin_phone DECIMAL(10, 0) not null unique,
 	admin_address Varchar(50) not null,
 );
-INSERT INTO ADMIN VALUES(101 , 'Srajan Saxena' , 'srajan@gmail.com' , 9838726101 ,
+INSERT INTO ADMIN VALUES(101 , 'Srajan Saxena' , 'srajan@gmail.com','srj12345' , 9838726101 ,
 'E-0000 , Rajajipuram,Lucknow');
 
 SELECT * FROM ADMIN;
@@ -90,6 +114,7 @@ CREATE TABLE Purchase (
     total_payment DECIMAL(10, 2) NOT NULL
 );
 SELECT * FROM Purchase;
+SELECT * FROM Purchase where total_payment between 500 AND 2000;
 -- no need to set product id here as it will be set automatically in STOCK table
 -- no need for supplier name also as it can be evaluated from the purchase table
 CREATE TABLE PurchaseDetails (
@@ -102,4 +127,6 @@ CREATE TABLE PurchaseDetails (
 ); -- after insertion in this table -> stock table should be updated
 
 SELECT * FROM PurchaseDetails;
+
+
 

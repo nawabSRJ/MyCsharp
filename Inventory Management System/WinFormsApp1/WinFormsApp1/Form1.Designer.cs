@@ -201,6 +201,7 @@
             pictureBox4.Location = new Point(324, 209);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(129, 98);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 5;
             pictureBox4.TabStop = false;
             // 
@@ -209,6 +210,7 @@
             pictureBox5.Location = new Point(189, 209);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(129, 98);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 4;
             pictureBox5.TabStop = false;
             // 
@@ -217,6 +219,7 @@
             pictureBox6.Location = new Point(54, 209);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(129, 98);
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 3;
             pictureBox6.TabStop = false;
             // 
@@ -225,6 +228,7 @@
             pictureBox3.Location = new Point(324, 105);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(129, 98);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
             // 
@@ -233,6 +237,7 @@
             pictureBox2.Location = new Point(189, 105);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(129, 98);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             // 
@@ -241,6 +246,7 @@
             pictureBox1.Location = new Point(54, 105);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(129, 98);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 

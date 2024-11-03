@@ -1207,7 +1207,7 @@ namespace WinFormsApp1
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Complete", "Supplier", "Date", "Date Range", "Minimum Price", "Maximum Price", "Price Range" });
+            comboBox1.Items.AddRange(new object[] { "Supplier", "Date", "Date Range", "Minimum Price", "Maximum Price", "Price Range" });
             comboBox1.Location = new Point(469, 66);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(159, 23);

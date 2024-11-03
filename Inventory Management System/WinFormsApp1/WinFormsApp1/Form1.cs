@@ -1,3 +1,4 @@
+using System;
 using System.Data;
 using System.Data.SqlClient;
 namespace WinFormsApp1
@@ -9,7 +10,7 @@ namespace WinFormsApp1
         SqlDataReader dr;
         string query, str;
         int carCount = 0, roadCount = 0;
-        Random r = new Random();
+       
         public Form1()
         {
             InitializeComponent();
@@ -23,12 +24,24 @@ namespace WinFormsApp1
 
         private void LoadCaptcha()
         {
-            long d = r.NextInt64(4);
-            int d1 = Convert.ToInt32(d);
+            Random r = new Random();
+            int[] randomIds = new int[6];
+            HashSet<int> generatedIds = new HashSet<int>(); // for random Ids
+                                                            // Populate the array with random integers between 1 and 20
+            for (int i = 0; i < 6; i++)
+            {
+                int newId;
+                do
+                {
+                    newId = r.Next(1, 21); // Generates a number between 1 and 20
+                } while (generatedIds.Contains(newId)); // Ensure no duplicates
+                generatedIds.Add(newId);
+                randomIds[i] = newId;
+            }
 
             str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
             conn = new SqlConnection(str);
-            query = "SELECT ImgName , ImgPath FROM ImageCaptcha";
+            query = $"SELECT ImgName , ImgPath FROM ImageCaptcha WHERE ImgId in ({randomIds[0]},{randomIds[1]}, {randomIds[2]},{randomIds[3]},{randomIds[4]},{randomIds[5]})";
             cmd = new SqlCommand(query, conn);
             conn.Open();
             dr = cmd.ExecuteReader();
@@ -49,7 +62,7 @@ namespace WinFormsApp1
                     roadCount++;
                     captchaImages.Add(path);
                 }
-                if (carCount == 3 && roadCount == 3)
+                if (carCount + roadCount == 6)
                 {
                     break;
                 }
@@ -68,22 +81,55 @@ namespace WinFormsApp1
             pictureBox6.Image = Image.FromFile(captchaImages.ElementAt(5));
         }
 
+
         // submit button on the login page
         private void button1_Click(object sender, EventArgs e)
         {
-            if (usernameBox.Text == "admin" && passwdBox.Text == "admin")
+            // read data from admin table
+            str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
+            conn = new SqlConnection(str);
+            string query = $"SELECT * FROM Admin where admin_email = '{usernameBox.Text}' and admin_password = '{passwdBox.Text}' ";
+            string adminEmail = "", adminPassword = "";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            conn.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            try
             {
+                if (dr.HasRows)
+                {
+                    dr.Read(); // only one record to read
+                    adminEmail = dr["admin_email"].ToString();
+                    adminPassword = dr["admin_password"].ToString();
+                    if (usernameBox.Text == adminEmail && passwdBox.Text == adminPassword)
+                    {
+                        // show captcha
+                        LoadCaptcha();
+                        captchaBox1.Visible = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Wrong Credentials!! Please try again");
+                    }
 
-                /* Form2 fm2 = new Form2();
-                 fm2.ShowDialog();
-                 */
-
-                // show captcha
-                LoadCaptcha();
-                captchaBox1.Visible = true;
-
-
+                }
+                else
+                {
+                    MessageBox.Show("No Admin Record Found");
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex}");
+            }
+            finally
+            {
+                conn.Close();
+                dr.Close();
+                cmd.Dispose();
+                // !string.IsNullOrEmpty(usernameBox.Text) || !string.IsNullOrEmpty(passwdBox.Text) && 
+               
+            }
+
         }
 
         // show password checkbox
@@ -268,7 +314,7 @@ namespace WinFormsApp1
         public void NewOrder(Orders obj)
         {
             // commit the order on click of Done button
-            string query = $"INSERT INTO ORDERS  (customer_name, order_amount, order_date) VALUES ('{obj.customer_name}', {obj.order_amount}, '{obj.order_date.ToString("dd-MM-yyyy")}')";
+            string query = $"INSERT INTO ORDERS  (customer_name, order_amount, order_date) VALUES ('{obj.customer_name}', {obj.order_amount}, '{obj.order_date.ToString("yyyy-MM-dd")}')";
             SqlCommand cmd = new SqlCommand(query, conn);
             conn.Open();
             cmd.ExecuteScalar();
@@ -305,7 +351,7 @@ namespace WinFormsApp1
             int id = -1; // initially
             try
             {
-                string query = $"INSERT INTO Purchase (supplier_name, date_of_supply, total_payment) VALUES ('{obj.supplier_name}', '{obj.dateOfSupply.ToString("dd-MM-yyyy")}' , {obj.totalPayment}); " + "SELECT SCOPE_IDENTITY();";
+                string query = $"INSERT INTO Purchase (supplier_name, date_of_supply, total_payment) VALUES ('{obj.supplier_name}', '{obj.dateOfSupply.ToString("yyyy-MM-dd")}' , {obj.totalPayment}); " + "SELECT SCOPE_IDENTITY();";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 conn.Open();
                 id = Convert.ToInt32(cmd.ExecuteScalar());
@@ -414,6 +460,34 @@ namespace WinFormsApp1
                 SqlDataAdapter sqlDa = new SqlDataAdapter(query, conn);
                 sqlDa.Fill(dt);
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex}");
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dt;
+        }
+        public DataTable ShowPurchaseData(string paraType, string paraEntry1, string paraEntry2)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                string query = "";
+                if (paraType == "Date Range")
+                {
+                    query = $"SELECT * FROM Purchase WHERE date_of_supply between '{paraEntry1}' AND '{paraEntry2}' ";
+                }
+                else if (paraType == "Price Range")
+                {
+                    query = $"SELECT * FROM Purchase WHERE total_payment between '{Convert.ToDecimal(paraEntry1)}' AND '{Convert.ToDecimal(paraEntry2)}' ";
+                }
+                conn.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter(query, conn);
+                sqlDa.Fill(dt);
             }
             catch (Exception ex)
             {
