@@ -85,6 +85,7 @@ namespace WinFormsApp1
         // submit button on the login page
         private void button1_Click(object sender, EventArgs e)
         {
+            DBOperations dbobj = new DBOperations();
             // read data from admin table
             str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
             conn = new SqlConnection(str);
@@ -102,6 +103,7 @@ namespace WinFormsApp1
                     adminPassword = dr["admin_password"].ToString();
                     if (usernameBox.Text == adminEmail && passwdBox.Text == adminPassword)
                     {
+                        dbobj.setAdminLogs(dr["admin_id"].ToString(), dr["admin_name"].ToString() , dr["admin_email"].ToString() , dr["admin_phone"].ToString(), DateTime.Now);
                         // show captcha
                         LoadCaptcha();
                         captchaBox1.Visible = true;
@@ -594,5 +596,51 @@ namespace WinFormsApp1
             }
             return dt;
         }
+
+        public void setAdminLogs(string id, string name, string email, string phone, DateTime loginTime)
+        {
+            string query = "";
+            try
+            {
+
+                string formattedDate = loginTime.ToString("yyyy-MM-dd HH:mm:ss");
+                
+                query = $"INSERT INTO AdminLogs VALUES ({Convert.ToInt32(id)}, '{name}', '{email}', {Convert.ToDecimal(phone)}, '{formattedDate}')";
+
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex}");
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public DataTable getAdminLogs()
+        {
+            DataTable dt = new DataTable();
+            string query = "";
+            try
+            {
+                query = "SELECT * FROM AdminLogs";
+                conn.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter(query, conn);
+                sqlDa.Fill(dt);
+            }
+            catch (Exception ex) {
+                MessageBox.Show($"{ex}");
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dt;
+        }
+
     }
 }

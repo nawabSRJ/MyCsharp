@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0AB66F57-F900-4E27-B90B-0F2180A4422E}|WinFormsApp1\\WinFormsApp1.csproj|f:\\c# sem 5\\inventory management system\\winformsapp1\\winformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AB66F57-F900-4E27-B90B-0F2180A4422E}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0AB66F57-F900-4E27-B90B-0F2180A4422E}|WinFormsApp1\\WinFormsApp1.csproj|F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\winformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0AB66F57-F900-4E27-B90B-0F2180A4422E}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AB66F57-F900-4E27-B90B-0F2180A4422E}|WinFormsApp1\\WinFormsApp1.csproj|F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\winformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0AB66F57-F900-4E27-B90B-0F2180A4422E}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0AB66F57-F900-4E27-B90B-0F2180A4422E}|WinFormsApp1\\WinFormsApp1.csproj|f:\\c# sem 5\\inventory management system\\winformsapp1\\winformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AB66F57-F900-4E27-B90B-0F2180A4422E}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0AB66F57-F900-4E27-B90B-0F2180A4422E}|WinFormsApp1\\WinFormsApp1.csproj|f:\\c# sem 5\\inventory management system\\winformsapp1\\winformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,6 +17,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{0AB66F57-F900-4E27-B90B-0F2180A4422E}|WinFormsApp1\\WinFormsApp1.csproj|F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\winformsapp1\\paymentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0AB66F57-F900-4E27-B90B-0F2180A4422E}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\paymentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AB66F57-F900-4E27-B90B-0F2180A4422E}|WinFormsApp1\\WinFormsApp1.csproj|F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\winformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0AB66F57-F900-4E27-B90B-0F2180A4422E}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0AB66F57-F900-4E27-B90B-0F2180A4422E}|WinFormsApp1\\WinFormsApp1.csproj|f:\\c# sem 5\\inventory management system\\winformsapp1\\winformsapp1\\paymentform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form2.cs [Design]",
               "DocumentMoniker": "F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\Form2.cs",
               "RelativeDocumentMoniker": "WinFormsApp1\\Form2.cs",
@@ -82,27 +82,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\Form1.cs",
               "RelativeDocumentMoniker": "WinFormsApp1\\Form1.cs",
               "ToolTip": "F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\Form1.cs",
               "RelativeToolTip": "WinFormsApp1\\Form1.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAKEAAAAiAAAA",
+              "ViewState": "AQIAAFcCAAAAAAAAAAAIwGMCAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-27T14:27:42.804Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "PaymentForm.cs [Design]",
               "DocumentMoniker": "F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\PaymentForm.cs",
               "RelativeDocumentMoniker": "WinFormsApp1\\PaymentForm.cs",
               "ToolTip": "F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\PaymentForm.cs [Design]",
               "RelativeToolTip": "WinFormsApp1\\PaymentForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T12:31:02.534Z"
+              "WhenOpened": "2024-11-01T12:31:02.534Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -114,7 +115,8 @@
               "RelativeToolTip": "WinFormsApp1\\PaymentForm.Designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T15:55:45.445Z"
+              "WhenOpened": "2024-10-31T15:55:45.445Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -125,11 +127,12 @@
               "ToolTip": "F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\PaymentForm.resx",
               "RelativeToolTip": "WinFormsApp1\\PaymentForm.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-10-31T15:55:45.341Z"
+              "WhenOpened": "2024-10-31T15:55:45.341Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\Form1.cs",
               "RelativeDocumentMoniker": "WinFormsApp1\\Form1.cs",
@@ -153,13 +156,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form2.cs",
               "DocumentMoniker": "F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\Form2.cs",
               "RelativeDocumentMoniker": "WinFormsApp1\\Form2.cs",
               "ToolTip": "F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\Form2.cs",
               "RelativeToolTip": "WinFormsApp1\\Form2.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAAADIAAACbAAAA",
+              "ViewState": "AQIAABMDAAAAAAAAAAAawCIDAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T05:58:16.017Z",
               "EditorCaption": ""

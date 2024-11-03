@@ -33,6 +33,7 @@ namespace WinFormsApp1
 
             timer1.Start();
             setDateDay();
+            setHighlights();
             // set the values for stock alert and most selling products
             // set the values for the listBoxes : productListBoxes
             setStockAlert();
@@ -45,6 +46,59 @@ namespace WinFormsApp1
 
 
         }
+        public void setHighlights()
+        {
+            string str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
+            SqlConnection conn = new SqlConnection(str);
+            
+            int totalOrders = 0;
+            decimal totalSales = 0;
+
+            
+            string today = DateTime.Now.ToString("yyyy-MM-dd");
+            MessageBox.Show(today);
+
+            // using aliases here for single query
+            string query = $"SELECT COUNT(*) AS TotalOrders, SUM(order_amount) AS TotalSales FROM Orders WHERE order_date = '{today}' ";
+
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    totalOrders = reader.GetInt32(0); // The first column is TotalOrders
+                                                      // Check if the second column (TotalSales) is null
+                    if (!reader.IsDBNull(1))
+                    {
+                        totalSales = reader.GetInt32(1); // The second column is TotalSales
+                    }
+                    else
+                    {
+                        totalSales = 0; // Set to 0 if it's null
+                    }
+                }
+
+                reader.Close();
+
+                // setting the labels
+                label42.Text = totalOrders.ToString();
+                label45.Text = totalSales.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error retrieving order highlights: {ex.Message}");
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+
         public void addImagesCarousel()
         {
             // absolute path
@@ -58,7 +112,7 @@ namespace WinFormsApp1
         private void timer2_Tick(object sender, EventArgs e)
         {
             imageIndex++;
-            imageIndex %= images.Count; // returns len of list<>
+            imageIndex %= 4; // returns len of list<>
             pictureBox1.Image = images[imageIndex];
         }
         private void timer1_Tick(object sender, EventArgs e)
@@ -744,11 +798,24 @@ namespace WinFormsApp1
         {
             stockDataForm.Visible = true;
             stockDataForm.Enabled = true;
+
+            adminLogBox.Visible = false;
+            adminLogBox.Enabled = false;
         }
 
         // Analytics Button Click
         private void button7_Click(object sender, EventArgs e)
         {
+            stockDataForm.Visible = false;
+            stockDataForm.Enabled = true;
+
+
+            adminLogBox.Visible = true;
+            adminLogBox.Enabled = true;
+
+            // load Admin Logs Grid
+            DataTable logsData = ops.getAdminLogs();
+            adminLogsGrid.DataSource = logsData;
 
         }
 
@@ -1000,6 +1067,6 @@ namespace WinFormsApp1
             customerLoginBox.Visible = true;
         }
 
-        
+
     } // Form 2 class ends
 }

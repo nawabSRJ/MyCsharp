@@ -30,11 +30,17 @@ namespace WinFormsApp1
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
             tabPage1 = new TabPage();
+            label41 = new Label();
             pictureBox1 = new PictureBox();
             dayLbl = new Label();
             timeLbl = new Label();
@@ -48,6 +54,10 @@ namespace WinFormsApp1
             product_quantity = new DataGridViewTextBoxColumn();
             product_price = new DataGridViewTextBoxColumn();
             groupBox3 = new GroupBox();
+            label44 = new Label();
+            label45 = new Label();
+            label43 = new Label();
+            label42 = new Label();
             dashLbl = new Label();
             tabControl1 = new TabControl();
             tabPage2 = new TabPage();
@@ -97,6 +107,13 @@ namespace WinFormsApp1
             receiptBox = new ListBox();
             label5 = new Label();
             tabPage3 = new TabPage();
+            adminLogBox = new GroupBox();
+            adminLogsGrid = new DataGridView();
+            AdminId = new DataGridViewTextBoxColumn();
+            AdminName = new DataGridViewTextBoxColumn();
+            AdminEmail = new DataGridViewTextBoxColumn();
+            AdminPhone = new DataGridViewTextBoxColumn();
+            LoginTime = new DataGridViewTextBoxColumn();
             stockDataForm = new GroupBox();
             stockSearchGrid = new DataGridView();
             productId = new DataGridViewTextBoxColumn();
@@ -180,12 +197,12 @@ namespace WinFormsApp1
             button2 = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
             timer2 = new System.Windows.Forms.Timer(components);
-            label41 = new Label();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)stockAlertGrid).BeginInit();
+            groupBox3.SuspendLayout();
             tabControl1.SuspendLayout();
             tabPage2.SuspendLayout();
             productSearchBox.SuspendLayout();
@@ -193,6 +210,8 @@ namespace WinFormsApp1
             customerLoginBox.SuspendLayout();
             orderDetailsBox.SuspendLayout();
             tabPage3.SuspendLayout();
+            adminLogBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)adminLogsGrid).BeginInit();
             stockDataForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)stockSearchGrid).BeginInit();
             panel3.SuspendLayout();
@@ -229,6 +248,16 @@ namespace WinFormsApp1
             tabPage1.Text = "Dashboard";
             tabPage1.UseVisualStyleBackColor = true;
             tabPage1.Click += tabPage1_Click;
+            // 
+            // label41
+            // 
+            label41.AutoSize = true;
+            label41.Font = new Font("Segoe Print", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label41.Location = new Point(345, 48);
+            label41.Name = "label41";
+            label41.Size = new Size(359, 47);
+            label41.TabIndex = 8;
+            label41.Text = "<<< Our Testimonials >>>";
             // 
             // pictureBox1
             // 
@@ -325,8 +354,8 @@ namespace WinFormsApp1
             // product_id
             // 
             product_id.DataPropertyName = "product_id";
-            dataGridViewCellStyle5.ForeColor = Color.Black;
-            product_id.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            product_id.DefaultCellStyle = dataGridViewCellStyle1;
             product_id.HeaderText = "ID";
             product_id.Name = "product_id";
             product_id.ReadOnly = true;
@@ -336,8 +365,8 @@ namespace WinFormsApp1
             // product_name
             // 
             product_name.DataPropertyName = "product_name";
-            dataGridViewCellStyle6.ForeColor = Color.Black;
-            product_name.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            product_name.DefaultCellStyle = dataGridViewCellStyle2;
             product_name.HeaderText = "Product";
             product_name.Name = "product_name";
             product_name.ReadOnly = true;
@@ -347,8 +376,8 @@ namespace WinFormsApp1
             // product_quantity
             // 
             product_quantity.DataPropertyName = "product_quantity";
-            dataGridViewCellStyle7.ForeColor = Color.Black;
-            product_quantity.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            product_quantity.DefaultCellStyle = dataGridViewCellStyle3;
             product_quantity.HeaderText = "Current Quantity";
             product_quantity.Name = "product_quantity";
             product_quantity.ReadOnly = true;
@@ -359,8 +388,8 @@ namespace WinFormsApp1
             // 
             product_price.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             product_price.DataPropertyName = "product_price";
-            dataGridViewCellStyle8.ForeColor = Color.Black;
-            product_price.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            product_price.DefaultCellStyle = dataGridViewCellStyle4;
             product_price.HeaderText = "Price (per unit)";
             product_price.Name = "product_price";
             product_price.ReadOnly = true;
@@ -370,6 +399,10 @@ namespace WinFormsApp1
             // groupBox3
             // 
             groupBox3.BackColor = Color.PapayaWhip;
+            groupBox3.Controls.Add(label44);
+            groupBox3.Controls.Add(label45);
+            groupBox3.Controls.Add(label43);
+            groupBox3.Controls.Add(label42);
             groupBox3.Dock = DockStyle.Right;
             groupBox3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox3.Location = new Point(1010, 44);
@@ -377,7 +410,47 @@ namespace WinFormsApp1
             groupBox3.Size = new Size(329, 654);
             groupBox3.TabIndex = 2;
             groupBox3.TabStop = false;
-            groupBox3.Text = "Weekly Report";
+            groupBox3.Text = "Highlights Today";
+            // 
+            // label44
+            // 
+            label44.AutoSize = true;
+            label44.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label44.Location = new Point(71, 345);
+            label44.Name = "label44";
+            label44.Size = new Size(47, 21);
+            label44.TabIndex = 3;
+            label44.Text = "Sales";
+            // 
+            // label45
+            // 
+            label45.AutoSize = true;
+            label45.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label45.Location = new Point(61, 272);
+            label45.Name = "label45";
+            label45.Size = new Size(140, 47);
+            label45.TabIndex = 2;
+            label45.Text = "label45";
+            // 
+            // label43
+            // 
+            label43.AutoSize = true;
+            label43.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label43.Location = new Point(61, 168);
+            label43.Name = "label43";
+            label43.Size = new Size(60, 21);
+            label43.TabIndex = 1;
+            label43.Text = "Orders";
+            // 
+            // label42
+            // 
+            label42.AutoSize = true;
+            label42.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label42.Location = new Point(51, 95);
+            label42.Name = "label42";
+            label42.Size = new Size(140, 47);
+            label42.TabIndex = 0;
+            label42.Text = "label42";
             // 
             // dashLbl
             // 
@@ -909,6 +982,7 @@ namespace WinFormsApp1
             // 
             // tabPage3
             // 
+            tabPage3.Controls.Add(adminLogBox);
             tabPage3.Controls.Add(stockDataForm);
             tabPage3.Controls.Add(panel3);
             tabPage3.Controls.Add(panel2);
@@ -917,9 +991,80 @@ namespace WinFormsApp1
             tabPage3.Name = "tabPage3";
             tabPage3.Size = new Size(1342, 701);
             tabPage3.TabIndex = 2;
-            tabPage3.Text = "Search Panel";
+            tabPage3.Text = "Stock Data";
             tabPage3.UseVisualStyleBackColor = true;
             tabPage3.Click += tabPage3_Click;
+            // 
+            // adminLogBox
+            // 
+            adminLogBox.Controls.Add(adminLogsGrid);
+            adminLogBox.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            adminLogBox.Location = new Point(214, 17);
+            adminLogBox.Name = "adminLogBox";
+            adminLogBox.Size = new Size(1108, 676);
+            adminLogBox.TabIndex = 9;
+            adminLogBox.TabStop = false;
+            adminLogBox.Text = "Admin Login Records";
+            // 
+            // adminLogsGrid
+            // 
+            adminLogsGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            adminLogsGrid.Columns.AddRange(new DataGridViewColumn[] { AdminId, AdminName, AdminEmail, AdminPhone, LoginTime });
+            adminLogsGrid.Dock = DockStyle.Bottom;
+            adminLogsGrid.Location = new Point(3, 94);
+            adminLogsGrid.Name = "adminLogsGrid";
+            adminLogsGrid.Size = new Size(1102, 579);
+            adminLogsGrid.TabIndex = 0;
+            // 
+            // AdminId
+            // 
+            AdminId.DataPropertyName = "admin_id";
+            dataGridViewCellStyle5.ForeColor = Color.Black;
+            AdminId.DefaultCellStyle = dataGridViewCellStyle5;
+            AdminId.HeaderText = "Admin Id";
+            AdminId.Name = "AdminId";
+            AdminId.ReadOnly = true;
+            AdminId.Width = 80;
+            // 
+            // AdminName
+            // 
+            AdminName.DataPropertyName = "admin_name";
+            dataGridViewCellStyle6.ForeColor = Color.Black;
+            AdminName.DefaultCellStyle = dataGridViewCellStyle6;
+            AdminName.HeaderText = "Admin Name";
+            AdminName.Name = "AdminName";
+            AdminName.ReadOnly = true;
+            AdminName.Width = 200;
+            // 
+            // AdminEmail
+            // 
+            AdminEmail.DataPropertyName = "admin_email";
+            dataGridViewCellStyle7.ForeColor = Color.Black;
+            AdminEmail.DefaultCellStyle = dataGridViewCellStyle7;
+            AdminEmail.HeaderText = "Admin Email ";
+            AdminEmail.Name = "AdminEmail";
+            AdminEmail.ReadOnly = true;
+            AdminEmail.Width = 300;
+            // 
+            // AdminPhone
+            // 
+            AdminPhone.DataPropertyName = "admin_phone";
+            dataGridViewCellStyle8.ForeColor = Color.Black;
+            AdminPhone.DefaultCellStyle = dataGridViewCellStyle8;
+            AdminPhone.HeaderText = "Admin Phone No.";
+            AdminPhone.Name = "AdminPhone";
+            AdminPhone.ReadOnly = true;
+            AdminPhone.Width = 175;
+            // 
+            // LoginTime
+            // 
+            LoginTime.DataPropertyName = "login_time";
+            dataGridViewCellStyle9.ForeColor = Color.Black;
+            LoginTime.DefaultCellStyle = dataGridViewCellStyle9;
+            LoginTime.HeaderText = "Login Date & Time";
+            LoginTime.Name = "LoginTime";
+            LoginTime.ReadOnly = true;
+            LoginTime.Width = 300;
             // 
             // stockDataForm
             // 
@@ -1048,11 +1193,11 @@ namespace WinFormsApp1
             button7.BackColor = Color.LightCoral;
             button7.Cursor = Cursors.Hand;
             button7.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button7.Location = new Point(-9, -19);
+            button7.Location = new Point(-2, -19);
             button7.Name = "button7";
-            button7.Size = new Size(233, 78);
+            button7.Size = new Size(197, 78);
             button7.TabIndex = 1;
-            button7.Text = "Analytics";
+            button7.Text = "Log Records";
             button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
@@ -1340,6 +1485,7 @@ namespace WinFormsApp1
             // 
             // textBox5
             // 
+            textBox5.Enabled = false;
             textBox5.Location = new Point(795, 38);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(175, 23);
@@ -1716,16 +1862,6 @@ namespace WinFormsApp1
             timer2.Interval = 4000;
             timer2.Tick += timer2_Tick;
             // 
-            // label41
-            // 
-            label41.AutoSize = true;
-            label41.Font = new Font("Segoe Print", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label41.Location = new Point(345, 48);
-            label41.Name = "label41";
-            label41.Size = new Size(359, 47);
-            label41.TabIndex = 8;
-            label41.Text = "<<< Our Testimonials >>>";
-            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1741,6 +1877,8 @@ namespace WinFormsApp1
             groupBox2.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)stockAlertGrid).EndInit();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             tabControl1.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
             productSearchBox.ResumeLayout(false);
@@ -1752,6 +1890,8 @@ namespace WinFormsApp1
             orderDetailsBox.ResumeLayout(false);
             orderDetailsBox.PerformLayout();
             tabPage3.ResumeLayout(false);
+            adminLogBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)adminLogsGrid).EndInit();
             stockDataForm.ResumeLayout(false);
             stockDataForm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)stockSearchGrid).EndInit();
@@ -1924,5 +2064,16 @@ namespace WinFormsApp1
         private PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer2;
         private Label label41;
+        private Label label44;
+        private Label label45;
+        private Label label43;
+        private Label label42;
+        private GroupBox adminLogBox;
+        private DataGridView adminLogsGrid;
+        private DataGridViewTextBoxColumn AdminId;
+        private DataGridViewTextBoxColumn AdminName;
+        private DataGridViewTextBoxColumn AdminEmail;
+        private DataGridViewTextBoxColumn AdminPhone;
+        private DataGridViewTextBoxColumn LoginTime;
     }
 }
