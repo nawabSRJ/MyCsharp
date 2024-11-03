@@ -1,3 +1,4 @@
+using System.Data;
 using System.Data.SqlClient;
 namespace WinFormsApp1
 {
@@ -308,7 +309,7 @@ namespace WinFormsApp1
                 SqlCommand cmd = new SqlCommand(query, conn);
                 conn.Open();
                 id = Convert.ToInt32(cmd.ExecuteScalar());
-                
+
 
             }
             catch (Exception ex)
@@ -333,7 +334,8 @@ namespace WinFormsApp1
                 cmd.ExecuteScalar();
 
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show($"{ex}");
             }
             finally
@@ -343,6 +345,87 @@ namespace WinFormsApp1
 
             // update stock table (increase stock)
         }
+
+        public DataTable ShowStockData(string paraType, string paraEntry)
+        {
+            DataTable dt = new DataTable();  // Create a DataTable to hold the data
+            try
+            {
+                string query = "";
+
+                if (paraType == "Complete Stock")
+                {
+                    query = "SELECT * FROM STOCK";
+                }
+                else if (paraType == "Product Name")
+                {
+                    query = $"SELECT * FROM STOCK WHERE product_name LIKE '%{paraEntry}%'";
+                }
+                else if (paraType == "Product Quantity")
+                {
+                    query = $"SELECT * FROM STOCK WHERE product_quantity = '{paraEntry}'";
+                }
+
+                conn.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter(query, conn);
+                sqlDa.Fill(dt);
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An exception occurred: {ex.Message}");
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dt;
+        }
+
+        // overload this function for different paraEntries
+        public DataTable ShowPurchaseData(string paraType, string paraEntry) // single paraEntry
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                string query = "";
+                if (paraType == "All")
+                {
+                    query = $"SELECT * FROM Purchase";
+                }
+                else if (paraType == "Date")
+                {
+                    query = $"SELECT * FROM Purchase WHERE date_of_supply = '{paraEntry}'";
+                }
+                else if (paraType == "Supplier")
+                {
+                    query = $"SELECT * FROM Purchase WHERE supplier_name LIKE '%{paraEntry}%' ";
+                }
+                else if (paraType == "Minimum Price")
+                {
+                    query = $"SELECT * FROM Purchase WHERE total_payment > {Convert.ToDecimal(paraEntry)} ";
+                }
+                else if (paraType == "Maximum Price")
+                {
+                    query = $"SELECT * FROM Purchase WHERE total_payment < {Convert.ToDecimal(paraEntry)} ";
+                }
+                conn.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter(query, conn);
+                sqlDa.Fill(dt);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex}");
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dt;
+        }
+
 
     }
 }

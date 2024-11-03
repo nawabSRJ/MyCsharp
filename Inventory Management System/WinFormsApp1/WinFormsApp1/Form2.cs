@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Formats.Tar;
 
 namespace WinFormsApp1
 {
@@ -611,6 +612,196 @@ namespace WinFormsApp1
         private void groupBox7_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        // no use
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        // Search button Stock section
+        private void button28_Click(object sender, EventArgs e)
+        {
+            // Take parameter type and value from stockParameterBox and stockParameter
+            if (string.IsNullOrWhiteSpace(stockParameterBox.SelectedItem?.ToString()) || string.IsNullOrWhiteSpace(stockParameter.Text))
+            {
+                MessageBox.Show("Please select a parameter and enter the values");
+                return;
+            }
+
+            string paraType = stockParameterBox.Text;
+            string paraEntry = stockParameter.Text;
+            DataTable stockData = ops.ShowStockData(paraType, paraEntry);
+
+            stockSearchGrid.DefaultCellStyle.ForeColor = Color.Black;
+            stockSearchGrid.DefaultCellStyle.BackColor = Color.White;
+
+
+            if (stockData.Rows.Count > 0)
+            {
+                stockSearchGrid.DataSource = stockData;
+                MessageBox.Show("Data loaded successfully.");
+            }
+            else
+            {
+                MessageBox.Show("No data found.");
+            }
+        }
+
+
+        private void stockParameterBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (stockParameterBox.SelectedItem.ToString() == "Complete Stock")
+            {
+                stockParameter.Text = "All";
+                stockParameter.Enabled = false;
+            }
+            else
+            {
+                stockParameter.Text = "";
+                stockParameter.Enabled = true;
+            }
+        }
+
+        // Stock Button in Searh Panel
+        private void button5_Click(object sender, EventArgs e)
+        {
+            stockDataForm.Visible = true;
+            stockDataForm.Enabled = true;
+        }
+
+        // Analytics Button Click
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // set the disable and enable things here
+            
+            if(comboBox1.SelectedItem.ToString() == "Supplier")
+            {
+                foreach (Control ctrl in purchaseFilters.Controls)
+                {
+                    if (ctrl is TextBox || ctrl is DateTimePicker)
+                    {
+                        ctrl.Enabled = false;
+                    }
+                }
+                textBox4.Enabled = true; 
+            }
+            else if(comboBox1.SelectedItem.ToString() == "Date")
+            {
+                foreach (Control ctrl in purchaseFilters.Controls)
+                {
+                    if (ctrl is TextBox || ctrl is DateTimePicker)
+                    {
+                        ctrl.Enabled = false;
+                    }
+                }
+                dateTimePicker1.Enabled = true;
+                label34.Text = "Pick Date : ";
+            }
+            else if(comboBox1.SelectedItem.ToString() == "Minimum Price")
+            {
+                foreach (Control ctrl in purchaseFilters.Controls)
+                {
+                    if (ctrl is TextBox || ctrl is DateTimePicker)
+                    {
+                        ctrl.Enabled = false;
+                    }
+                }
+                textBox7.Enabled = true;
+            }
+            else if(comboBox1.SelectedItem.ToString() == "Maximum Price")
+            {
+                foreach (Control ctrl in purchaseFilters.Controls)
+                {
+                    if (ctrl is TextBox || ctrl is DateTimePicker)
+                    {
+                        ctrl.Enabled = false;
+                    }
+                }
+                textBox10.Enabled = true;
+            }
+        }
+
+        // Purchase Tab Search Button
+        private void button27_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(comboBox1.SelectedItem?.ToString()))
+            {
+                MessageBox.Show("Please select a parameter and enter the values");
+                return;
+            }
+
+            string paraType = comboBox1.Text;
+            string paraEntry = "";
+            // supplier -> date , min , max 
+            if(paraType == "Supplier")
+            {
+                if (string.IsNullOrWhiteSpace(textBox4.Text))
+                {
+                    MessageBox.Show("Please enter the Supplier Name");
+                    return;
+                }
+                 paraEntry = textBox4.Text;
+            }
+            else if(paraType == "Date")
+            {
+                DateTime startDate = dateTimePicker1.Value;
+                 paraEntry = startDate.ToString("dd-MM-yyyy");
+
+            }
+            else if(paraType == "Minimum Price")
+            {
+                if (string.IsNullOrWhiteSpace(textBox7.Text))
+                {
+                    MessageBox.Show("Please enter the Min Price");
+                    return;
+                }
+                 paraEntry = textBox7.Text; // later convert to decimal
+            }
+            else if(paraType == "Maximum Price")
+            {
+                if (string.IsNullOrWhiteSpace(textBox10.Text))
+                {
+                    MessageBox.Show("Please enter the Max Price");
+                    return;
+                }
+                 paraEntry = textBox10.Text;  // later convert to decimal
+            }
+            DataTable purchaseData = ops.ShowPurchaseData(paraType, paraEntry);
+
+            if (purchaseData.Rows.Count > 0) { 
+                dataGridView2.DataSource = purchaseData;
+                MessageBox.Show("Data Loaded Successfully");
+            }
+            else
+            {
+                MessageBox.Show("No data found.");
+            }
+
+        }
+
+        // Show Complete History Button in Purchase Tab
+        private void button25_Click(object sender, EventArgs e)
+        {
+            //ops.ShowPurchaseData("All" , "*");
+            DataTable purchaseData = ops.ShowPurchaseData("All", "*");
+
+            if (purchaseData.Rows.Count > 0)
+            {
+                dataGridView2.DataSource = purchaseData;
+                MessageBox.Show("Data Loaded Successfully");
+            }
+            else
+            {
+                MessageBox.Show("No data found.");
+            }
         }
     } // Form 2 class ends
 }
