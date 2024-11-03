@@ -20,6 +20,9 @@ namespace WinFormsApp1
         string query, str;
         string customerName = "";
         DBOperations ops = new DBOperations();
+
+        List<Image> images = new List<Image>();
+        int imageIndex;
         public Form2()
         {
             InitializeComponent();
@@ -27,11 +30,13 @@ namespace WinFormsApp1
 
         private void Form2_Load(object sender, EventArgs e)
         {
+
             timer1.Start();
             setDateDay();
             // set the values for stock alert and most selling products
             // set the values for the listBoxes : productListBoxes
             setStockAlert();
+            addImagesCarousel();
             // set what comes first :
             setVisibilityStatus();
 
@@ -39,6 +44,22 @@ namespace WinFormsApp1
             LoadProductListBox();
 
 
+        }
+        public void addImagesCarousel()
+        {
+            // absolute path
+            images.Add(Image.FromFile("F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\bin\\Debug\\net8.0-windows\\feedback3.jpg"));
+            images.Add(Image.FromFile("F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\bin\\Debug\\net8.0-windows\\feedback1.jpg"));
+            images.Add(Image.FromFile("F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\bin\\Debug\\net8.0-windows\\feedback2.jpg"));
+            images.Add(Image.FromFile("F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\bin\\Debug\\net8.0-windows\\feedback4.jpg"));
+            imageIndex = 0;
+            pictureBox1.Image = images[imageIndex];
+        }
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            imageIndex++;
+            imageIndex %= images.Count; // returns len of list<>
+            pictureBox1.Image = images[imageIndex];
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -478,9 +499,9 @@ namespace WinFormsApp1
             return true;
         }
 
-            // Add New Customer Button (in customer Register Form)
-            private void button21_Click(object sender, EventArgs e)
-            {
+        // Add New Customer Button (in customer Register Form)
+        private void button21_Click(object sender, EventArgs e)
+        {
             // Validate inputs 
             if (string.IsNullOrWhiteSpace(newCustName.Text) ||
                 string.IsNullOrWhiteSpace(newCustAddress.Text) ||
@@ -491,8 +512,8 @@ namespace WinFormsApp1
                 MessageBox.Show("Please enter all details properly");
                 return;
             }
-            
-            
+
+
             decimal newPhone;
             try
             {
@@ -504,7 +525,7 @@ namespace WinFormsApp1
                 newCustPhone.Focus(); // Set focus back to the masked text box
                 return;
             }
-            
+
             // get all the values from the text boxes -> Validate
             // call the DBOperations func
             string newName = newCustName.Text;
@@ -978,5 +999,7 @@ namespace WinFormsApp1
             custRegisterBox.Visible = false;
             customerLoginBox.Visible = true;
         }
+
+        
     } // Form 2 class ends
 }

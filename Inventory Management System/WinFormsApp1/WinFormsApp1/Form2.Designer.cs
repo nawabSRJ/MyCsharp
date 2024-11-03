@@ -30,11 +30,12 @@ namespace WinFormsApp1
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             tabPage1 = new TabPage();
+            pictureBox1 = new PictureBox();
             dayLbl = new Label();
             timeLbl = new Label();
             button1 = new Button();
@@ -56,19 +57,6 @@ namespace WinFormsApp1
             button13 = new Button();
             button12 = new Button();
             searchProdBox = new TextBox();
-            customerLoginBox = new GroupBox();
-            button20 = new Button();
-            label13 = new Label();
-            label12 = new Label();
-            label11 = new Label();
-            button3 = new Button();
-            label4 = new Label();
-            label3 = new Label();
-            cust_password = new TextBox();
-            cust_email = new TextBox();
-            button19 = new Button();
-            orderDetailsBox = new GroupBox();
-            label10 = new Label();
             custRegisterBox = new GroupBox();
             button6 = new Button();
             label38 = new Label();
@@ -85,6 +73,19 @@ namespace WinFormsApp1
             label17 = new Label();
             label18 = new Label();
             newCustName = new TextBox();
+            customerLoginBox = new GroupBox();
+            button20 = new Button();
+            label13 = new Label();
+            label12 = new Label();
+            label11 = new Label();
+            button3 = new Button();
+            label4 = new Label();
+            label3 = new Label();
+            cust_password = new TextBox();
+            cust_email = new TextBox();
+            button19 = new Button();
+            orderDetailsBox = new GroupBox();
+            label10 = new Label();
             label9 = new Label();
             label8 = new Label();
             label7 = new Label();
@@ -178,16 +179,19 @@ namespace WinFormsApp1
             label2 = new Label();
             button2 = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
+            timer2 = new System.Windows.Forms.Timer(components);
+            label41 = new Label();
             tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)stockAlertGrid).BeginInit();
             tabControl1.SuspendLayout();
             tabPage2.SuspendLayout();
             productSearchBox.SuspendLayout();
+            custRegisterBox.SuspendLayout();
             customerLoginBox.SuspendLayout();
             orderDetailsBox.SuspendLayout();
-            custRegisterBox.SuspendLayout();
             tabPage3.SuspendLayout();
             stockDataForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)stockSearchGrid).BeginInit();
@@ -209,6 +213,8 @@ namespace WinFormsApp1
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(label41);
+            tabPage1.Controls.Add(pictureBox1);
             tabPage1.Controls.Add(dayLbl);
             tabPage1.Controls.Add(timeLbl);
             tabPage1.Controls.Add(button1);
@@ -224,23 +230,33 @@ namespace WinFormsApp1
             tabPage1.UseVisualStyleBackColor = true;
             tabPage1.Click += tabPage1_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(3, 98);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(1007, 322);
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
+            // 
             // dayLbl
             // 
             dayLbl.AutoSize = true;
-            dayLbl.Font = new Font("Segoe UI Semibold", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dayLbl.Location = new Point(717, 62);
+            dayLbl.BackColor = Color.PapayaWhip;
+            dayLbl.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dayLbl.Location = new Point(655, 5);
             dayLbl.Name = "dayLbl";
-            dayLbl.Size = new Size(171, 45);
+            dayLbl.Size = new Size(152, 37);
             dayLbl.TabIndex = 6;
             dayLbl.Text = "Day Today";
             // 
             // timeLbl
             // 
             timeLbl.AutoSize = true;
-            timeLbl.Font = new Font("Segoe UI Semibold", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            timeLbl.Location = new Point(18, 63);
+            timeLbl.BackColor = Color.PapayaWhip;
+            timeLbl.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            timeLbl.Location = new Point(342, 5);
             timeLbl.Name = "timeLbl";
-            timeLbl.Size = new Size(144, 45);
+            timeLbl.Size = new Size(127, 37);
             timeLbl.TabIndex = 5;
             timeLbl.Text = "00:00:00";
             // 
@@ -249,7 +265,7 @@ namespace WinFormsApp1
             button1.BackColor = Color.Black;
             button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.PapayaWhip;
-            button1.Location = new Point(925, 6);
+            button1.Location = new Point(1255, 7);
             button1.Name = "button1";
             button1.Size = new Size(79, 31);
             button1.TabIndex = 4;
@@ -265,9 +281,9 @@ namespace WinFormsApp1
             groupBox2.Controls.Add(stockAlertGrid);
             groupBox2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox2.ForeColor = SystemColors.ButtonFace;
-            groupBox2.Location = new Point(3, 463);
+            groupBox2.Location = new Point(3, 426);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(1007, 235);
+            groupBox2.Size = new Size(1007, 272);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Stock Alert";
@@ -309,8 +325,8 @@ namespace WinFormsApp1
             // product_id
             // 
             product_id.DataPropertyName = "product_id";
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            product_id.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.ForeColor = Color.Black;
+            product_id.DefaultCellStyle = dataGridViewCellStyle5;
             product_id.HeaderText = "ID";
             product_id.Name = "product_id";
             product_id.ReadOnly = true;
@@ -320,8 +336,8 @@ namespace WinFormsApp1
             // product_name
             // 
             product_name.DataPropertyName = "product_name";
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            product_name.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.ForeColor = Color.Black;
+            product_name.DefaultCellStyle = dataGridViewCellStyle6;
             product_name.HeaderText = "Product";
             product_name.Name = "product_name";
             product_name.ReadOnly = true;
@@ -331,8 +347,8 @@ namespace WinFormsApp1
             // product_quantity
             // 
             product_quantity.DataPropertyName = "product_quantity";
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            product_quantity.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.ForeColor = Color.Black;
+            product_quantity.DefaultCellStyle = dataGridViewCellStyle7;
             product_quantity.HeaderText = "Current Quantity";
             product_quantity.Name = "product_quantity";
             product_quantity.ReadOnly = true;
@@ -343,8 +359,8 @@ namespace WinFormsApp1
             // 
             product_price.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             product_price.DataPropertyName = "product_price";
-            dataGridViewCellStyle4.ForeColor = Color.Black;
-            product_price.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.ForeColor = Color.Black;
+            product_price.DefaultCellStyle = dataGridViewCellStyle8;
             product_price.HeaderText = "Price (per unit)";
             product_price.Name = "product_price";
             product_price.ReadOnly = true;
@@ -468,157 +484,6 @@ namespace WinFormsApp1
             searchProdBox.Name = "searchProdBox";
             searchProdBox.Size = new Size(229, 35);
             searchProdBox.TabIndex = 4;
-            // 
-            // customerLoginBox
-            // 
-            customerLoginBox.BackColor = Color.LightSkyBlue;
-            customerLoginBox.Controls.Add(button20);
-            customerLoginBox.Controls.Add(label13);
-            customerLoginBox.Controls.Add(label12);
-            customerLoginBox.Controls.Add(label11);
-            customerLoginBox.Controls.Add(button3);
-            customerLoginBox.Controls.Add(label4);
-            customerLoginBox.Controls.Add(label3);
-            customerLoginBox.Controls.Add(cust_password);
-            customerLoginBox.Controls.Add(cust_email);
-            customerLoginBox.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            customerLoginBox.Location = new Point(424, 118);
-            customerLoginBox.Name = "customerLoginBox";
-            customerLoginBox.Size = new Size(495, 465);
-            customerLoginBox.TabIndex = 0;
-            customerLoginBox.TabStop = false;
-            customerLoginBox.Text = "Customer Login";
-            customerLoginBox.Enter += groupBox4_Enter;
-            // 
-            // button20
-            // 
-            button20.Location = new Point(184, 376);
-            button20.Name = "button20";
-            button20.Size = new Size(133, 49);
-            button20.TabIndex = 8;
-            button20.Text = "Register";
-            button20.UseVisualStyleBackColor = true;
-            button20.Click += button20_Click;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label13.Location = new Point(238, 342);
-            label13.Name = "label13";
-            label13.Size = new Size(32, 21);
-            label13.TabIndex = 7;
-            label13.Text = "OR";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label12.Location = new Point(276, 338);
-            label12.Name = "label12";
-            label12.Size = new Size(103, 17);
-            label12.TabIndex = 6;
-            label12.Text = "___________________";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label11.Location = new Point(130, 338);
-            label11.Name = "label11";
-            label11.Size = new Size(103, 17);
-            label11.TabIndex = 5;
-            label11.Text = "___________________";
-            // 
-            // button3
-            // 
-            button3.Location = new Point(183, 286);
-            button3.Name = "button3";
-            button3.Size = new Size(133, 49);
-            button3.TabIndex = 4;
-            button3.Text = "Log in";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold);
-            label4.Location = new Point(68, 190);
-            label4.Name = "label4";
-            label4.Size = new Size(91, 25);
-            label4.TabIndex = 3;
-            label4.Text = "Password";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold);
-            label3.Location = new Point(85, 118);
-            label3.Name = "label3";
-            label3.Size = new Size(59, 25);
-            label3.TabIndex = 2;
-            label3.Text = "Email";
-            // 
-            // cust_password
-            // 
-            cust_password.Location = new Point(169, 182);
-            cust_password.Name = "cust_password";
-            cust_password.Size = new Size(279, 39);
-            cust_password.TabIndex = 1;
-            // 
-            // cust_email
-            // 
-            cust_email.Location = new Point(169, 109);
-            cust_email.Name = "cust_email";
-            cust_email.Size = new Size(279, 39);
-            cust_email.TabIndex = 0;
-            // 
-            // button19
-            // 
-            button19.BackColor = Color.Black;
-            button19.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button19.ForeColor = Color.PapayaWhip;
-            button19.Location = new Point(1253, 7);
-            button19.Name = "button19";
-            button19.Size = new Size(79, 31);
-            button19.TabIndex = 8;
-            button19.Text = "Logout";
-            button19.UseVisualStyleBackColor = false;
-            button19.Visible = false;
-            button19.Click += button19_Click;
-            // 
-            // orderDetailsBox
-            // 
-            orderDetailsBox.Controls.Add(label10);
-            orderDetailsBox.Controls.Add(label9);
-            orderDetailsBox.Controls.Add(label8);
-            orderDetailsBox.Controls.Add(label7);
-            orderDetailsBox.Controls.Add(label6);
-            orderDetailsBox.Controls.Add(button17);
-            orderDetailsBox.Controls.Add(button16);
-            orderDetailsBox.Controls.Add(button15);
-            orderDetailsBox.Controls.Add(button14);
-            orderDetailsBox.Controls.Add(receiptBox);
-            orderDetailsBox.Enabled = false;
-            orderDetailsBox.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            orderDetailsBox.Location = new Point(392, 63);
-            orderDetailsBox.Name = "orderDetailsBox";
-            orderDetailsBox.Size = new Size(817, 604);
-            orderDetailsBox.TabIndex = 7;
-            orderDetailsBox.TabStop = false;
-            orderDetailsBox.Text = "Order Details";
-            orderDetailsBox.Visible = false;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Cascadia Code SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(582, 41);
-            label10.Name = "label10";
-            label10.Size = new Size(188, 25);
-            label10.TabIndex = 14;
-            label10.Text = "Price (per unit)";
             // 
             // custRegisterBox
             // 
@@ -789,6 +654,157 @@ namespace WinFormsApp1
             newCustName.Name = "newCustName";
             newCustName.Size = new Size(279, 33);
             newCustName.TabIndex = 0;
+            // 
+            // customerLoginBox
+            // 
+            customerLoginBox.BackColor = Color.LightSkyBlue;
+            customerLoginBox.Controls.Add(button20);
+            customerLoginBox.Controls.Add(label13);
+            customerLoginBox.Controls.Add(label12);
+            customerLoginBox.Controls.Add(label11);
+            customerLoginBox.Controls.Add(button3);
+            customerLoginBox.Controls.Add(label4);
+            customerLoginBox.Controls.Add(label3);
+            customerLoginBox.Controls.Add(cust_password);
+            customerLoginBox.Controls.Add(cust_email);
+            customerLoginBox.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            customerLoginBox.Location = new Point(424, 118);
+            customerLoginBox.Name = "customerLoginBox";
+            customerLoginBox.Size = new Size(495, 465);
+            customerLoginBox.TabIndex = 0;
+            customerLoginBox.TabStop = false;
+            customerLoginBox.Text = "Customer Login";
+            customerLoginBox.Enter += groupBox4_Enter;
+            // 
+            // button20
+            // 
+            button20.Location = new Point(184, 376);
+            button20.Name = "button20";
+            button20.Size = new Size(133, 49);
+            button20.TabIndex = 8;
+            button20.Text = "Register";
+            button20.UseVisualStyleBackColor = true;
+            button20.Click += button20_Click;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label13.Location = new Point(238, 342);
+            label13.Name = "label13";
+            label13.Size = new Size(32, 21);
+            label13.TabIndex = 7;
+            label13.Text = "OR";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label12.Location = new Point(276, 338);
+            label12.Name = "label12";
+            label12.Size = new Size(103, 17);
+            label12.TabIndex = 6;
+            label12.Text = "___________________";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.Location = new Point(130, 338);
+            label11.Name = "label11";
+            label11.Size = new Size(103, 17);
+            label11.TabIndex = 5;
+            label11.Text = "___________________";
+            // 
+            // button3
+            // 
+            button3.Location = new Point(183, 286);
+            button3.Name = "button3";
+            button3.Size = new Size(133, 49);
+            button3.TabIndex = 4;
+            button3.Text = "Log in";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold);
+            label4.Location = new Point(68, 190);
+            label4.Name = "label4";
+            label4.Size = new Size(91, 25);
+            label4.TabIndex = 3;
+            label4.Text = "Password";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold);
+            label3.Location = new Point(85, 118);
+            label3.Name = "label3";
+            label3.Size = new Size(59, 25);
+            label3.TabIndex = 2;
+            label3.Text = "Email";
+            // 
+            // cust_password
+            // 
+            cust_password.Location = new Point(169, 182);
+            cust_password.Name = "cust_password";
+            cust_password.Size = new Size(279, 39);
+            cust_password.TabIndex = 1;
+            // 
+            // cust_email
+            // 
+            cust_email.Location = new Point(169, 109);
+            cust_email.Name = "cust_email";
+            cust_email.Size = new Size(279, 39);
+            cust_email.TabIndex = 0;
+            // 
+            // button19
+            // 
+            button19.BackColor = Color.Black;
+            button19.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button19.ForeColor = Color.PapayaWhip;
+            button19.Location = new Point(1253, 7);
+            button19.Name = "button19";
+            button19.Size = new Size(79, 31);
+            button19.TabIndex = 8;
+            button19.Text = "Logout";
+            button19.UseVisualStyleBackColor = false;
+            button19.Visible = false;
+            button19.Click += button19_Click;
+            // 
+            // orderDetailsBox
+            // 
+            orderDetailsBox.Controls.Add(label10);
+            orderDetailsBox.Controls.Add(label9);
+            orderDetailsBox.Controls.Add(label8);
+            orderDetailsBox.Controls.Add(label7);
+            orderDetailsBox.Controls.Add(label6);
+            orderDetailsBox.Controls.Add(button17);
+            orderDetailsBox.Controls.Add(button16);
+            orderDetailsBox.Controls.Add(button15);
+            orderDetailsBox.Controls.Add(button14);
+            orderDetailsBox.Controls.Add(receiptBox);
+            orderDetailsBox.Enabled = false;
+            orderDetailsBox.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            orderDetailsBox.Location = new Point(392, 63);
+            orderDetailsBox.Name = "orderDetailsBox";
+            orderDetailsBox.Size = new Size(817, 604);
+            orderDetailsBox.TabIndex = 7;
+            orderDetailsBox.TabStop = false;
+            orderDetailsBox.Text = "Order Details";
+            orderDetailsBox.Visible = false;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Cascadia Code SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.Location = new Point(582, 41);
+            label10.Name = "label10";
+            label10.Size = new Size(188, 25);
+            label10.TabIndex = 14;
+            label10.Text = "Price (per unit)";
             // 
             // label9
             // 
@@ -1694,6 +1710,22 @@ namespace WinFormsApp1
             timer1.Enabled = true;
             timer1.Tick += timer1_Tick;
             // 
+            // timer2
+            // 
+            timer2.Enabled = true;
+            timer2.Interval = 4000;
+            timer2.Tick += timer2_Tick;
+            // 
+            // label41
+            // 
+            label41.AutoSize = true;
+            label41.Font = new Font("Segoe Print", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label41.Location = new Point(345, 48);
+            label41.Name = "label41";
+            label41.Size = new Size(359, 47);
+            label41.TabIndex = 8;
+            label41.Text = "<<< Our Testimonials >>>";
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1705,6 +1737,7 @@ namespace WinFormsApp1
             Load += Form2_Load;
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)stockAlertGrid).EndInit();
@@ -1712,12 +1745,12 @@ namespace WinFormsApp1
             tabPage2.ResumeLayout(false);
             productSearchBox.ResumeLayout(false);
             productSearchBox.PerformLayout();
+            custRegisterBox.ResumeLayout(false);
+            custRegisterBox.PerformLayout();
             customerLoginBox.ResumeLayout(false);
             customerLoginBox.PerformLayout();
             orderDetailsBox.ResumeLayout(false);
             orderDetailsBox.PerformLayout();
-            custRegisterBox.ResumeLayout(false);
-            custRegisterBox.PerformLayout();
             tabPage3.ResumeLayout(false);
             stockDataForm.ResumeLayout(false);
             stockDataForm.PerformLayout();
@@ -1888,5 +1921,8 @@ namespace WinFormsApp1
         private Label label38;
         private Label label39;
         private Label label40;
+        private PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer2;
+        private Label label41;
     }
 }
