@@ -48,7 +48,8 @@ namespace WinFormsApp1
         }
         public void setHighlights()
         {
-            string str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
+            //string str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
+                string str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;";
             SqlConnection conn = new SqlConnection(str);
             
             int totalOrders = 0;
@@ -102,17 +103,16 @@ namespace WinFormsApp1
         public void addImagesCarousel()
         {
             // absolute path
-            images.Add(Image.FromFile("F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\bin\\Debug\\net8.0-windows\\feedback3.jpg"));
-            images.Add(Image.FromFile("F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\bin\\Debug\\net8.0-windows\\feedback1.jpg"));
-            images.Add(Image.FromFile("F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\bin\\Debug\\net8.0-windows\\feedback2.jpg"));
-            images.Add(Image.FromFile("F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\bin\\Debug\\net8.0-windows\\feedback4.jpg"));
+            images.Add(Image.FromFile("E:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\bin\\Debug\\net8.0-windows\\feedback3.jpg"));
+            images.Add(Image.FromFile("E:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\bin\\Debug\\net8.0-windows\\feedback1.jpg"));
+            images.Add(Image.FromFile("E:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\bin\\Debug\\net8.0-windows\\feedback4.jpg"));
             imageIndex = 0;
             pictureBox1.Image = images[imageIndex];
         }
         private void timer2_Tick(object sender, EventArgs e)
         {
             imageIndex++;
-            imageIndex %= 4; // returns len of list<>
+            imageIndex %= 3; // returns len of list<>
             pictureBox1.Image = images[imageIndex];
         }
         private void timer1_Tick(object sender, EventArgs e)
@@ -144,7 +144,8 @@ namespace WinFormsApp1
         private void LoadProductListBox()
         {
 
-            str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
+            //str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
+            str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;";
             conn = new SqlConnection(str);
             // only loading products in stock
             query = "SELECT product_name, product_quantity FROM STOCK WHERE product_quantity > 0";
@@ -187,7 +188,8 @@ namespace WinFormsApp1
         // CUSTOMER LOGIN click button
         private void button3_Click(object sender, EventArgs e)
         {
-            str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
+            //str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
+            str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;";
             conn = new SqlConnection(str);
             string custEmail = cust_email.Text;
             string custPasswd = cust_password.Text;
@@ -290,7 +292,7 @@ namespace WinFormsApp1
 
 
 
-        // add to cart
+        
 
         // Add to cart
         private void button13_Click(object sender, EventArgs e)
@@ -303,7 +305,8 @@ namespace WinFormsApp1
             }
 
             string prodName = productListBox.SelectedItem.ToString();
-            str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
+            //str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
+            str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;"; ;
             conn = new SqlConnection(str);
             query = $"SELECT product_quantity, product_price FROM STOCK WHERE product_name = '{prodName}'";
             cmd = new SqlCommand(query, conn);
@@ -333,7 +336,7 @@ namespace WinFormsApp1
                                 return;
                             }
 
-                            int updatedQuantity = existingQuantity + 1; // Increment quantity
+                            int updatedQuantity = existingQuantity + 1; 
                             if (updatedQuantity <= prodQuantity)
                             {
                                 // Update existing entry with new quantity
@@ -512,6 +515,7 @@ namespace WinFormsApp1
                 }
 
                 ops.DecreaseStock(ItemsBought);
+                setHighlights();
             }
             else
             {
@@ -735,7 +739,23 @@ namespace WinFormsApp1
         // clear filters button in purchase history form
         private void button26_Click(object sender, EventArgs e)
         {
+            
+            /*foreach (Control control in purchaseFilters.Controls)
+            {
+                
+                if (control is TextBox)
+                {
+                    control.Text = string.Empty;
+                }
+                // Check if the control is a DateTimePicker and reset it to today's date
+                else if (control is DateTimePicker dateTimePicker)
+                {
+                    dateTimePicker.Value = DateTime.Today; 
+                }
+            }
 
+           
+            comboBox1.SelectedIndex = -1;*/
         }
 
         private void groupBox7_Enter(object sender, EventArgs e)
@@ -832,7 +852,7 @@ namespace WinFormsApp1
                     {
                         ctrl.Enabled = false;
                     }
-                }
+                } 
                 textBox4.Enabled = true;
             }
             else if (comboBox1.SelectedItem.ToString() == "Date")
@@ -1015,9 +1035,11 @@ namespace WinFormsApp1
             {
                 if (ctrl is TextBox textBox)
                 {
-
+                    
                     textBox.Clear();
+                    textBox5.Text = "0"; // to avoid exception after clear
                 }
+                
                 else if (ctrl is DateTimePicker dateTimePicker)
                 {
 
@@ -1043,7 +1065,10 @@ namespace WinFormsApp1
             // Set the Stock Alert
             setStockAlert();
 
-            // set the most selling product
+            // refresh the highlights
+            setHighlights();
+
+            
 
         }
         private void setStockAlert()

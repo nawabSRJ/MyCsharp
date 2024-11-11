@@ -39,7 +39,8 @@ namespace WinFormsApp1
                 randomIds[i] = newId;
             }
 
-            str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
+            //str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
+            str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;";
             conn = new SqlConnection(str);
             query = $"SELECT ImgName , ImgPath FROM ImageCaptcha WHERE ImgId in ({randomIds[0]},{randomIds[1]}, {randomIds[2]},{randomIds[3]},{randomIds[4]},{randomIds[5]})";
             cmd = new SqlCommand(query, conn);
@@ -83,11 +84,13 @@ namespace WinFormsApp1
 
 
         // submit button on the login page
+
         private void button1_Click(object sender, EventArgs e)
         {
             DBOperations dbobj = new DBOperations();
             // read data from admin table
-            str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
+            //str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
+            str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;";
             conn = new SqlConnection(str);
             string query = $"SELECT * FROM Admin where admin_email = '{usernameBox.Text}' and admin_password = '{passwdBox.Text}' ";
             string adminEmail = "", adminPassword = "";
@@ -110,13 +113,13 @@ namespace WinFormsApp1
                     }
                     else
                     {
-                        MessageBox.Show("Wrong Credentials!! Please try again");
+                        MessageBox.Show("Wrong Credentials!! Please try again", "Warning",MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
                 }
                 else
                 {
-                    MessageBox.Show("No Admin Record Found");
+                    MessageBox.Show("No Admin Record Found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
@@ -128,7 +131,7 @@ namespace WinFormsApp1
                 conn.Close();
                 dr.Close();
                 cmd.Dispose();
-                // !string.IsNullOrEmpty(usernameBox.Text) || !string.IsNullOrEmpty(passwdBox.Text) && 
+                
 
             }
 
@@ -154,6 +157,11 @@ namespace WinFormsApp1
             if (user_ans == carCount)
             {
                 MessageBox.Show("Right Answer");
+                // clear for correct calc next time
+                carCount = 0;
+                roadCount = 0; 
+
+
                 // load Dashboard 
                 Form2 fm2 = new Form2();
                 fm2.StartPosition = FormStartPosition.CenterScreen;
@@ -167,7 +175,7 @@ namespace WinFormsApp1
             else
             {
                 MessageBox.Show("Wrong Answer");
-                // One more chance and back to login
+               
             }
 
         }
@@ -313,7 +321,8 @@ namespace WinFormsApp1
         public SqlConnection conn;
         public DBOperations()
         {
-            str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
+            //str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
+            str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;";
             conn = new SqlConnection(str);
         }
         public void DecreaseStock(Dictionary<string, int> dict)
@@ -581,7 +590,7 @@ namespace WinFormsApp1
             string query = "";
             try
             {
-                query = "SELECT product_id , product_name , product_quantity, product_price FROM STOCK WHERE product_quantity < 80 ";
+                query = "SELECT product_id , product_name , product_quantity, product_price FROM STOCK WHERE product_quantity < 30 ";
                 conn.Open();
                 SqlDataAdapter sqlDa = new SqlDataAdapter(query, conn);
                 sqlDa.Fill(dt);

@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\C# SEM 5\\GUI C#\\WinFormsApp1\\",
+  "WorkspaceRootPath": "F:\\C# SEM 5\\GUI C#\\WinFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10BC0070-CCBA-4AF9-86EA-BC7949D1CD5A}|WinFormsApp1.csproj|e:\\c# sem 5\\gui c#\\winformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{10BC0070-CCBA-4AF9-86EA-BC7949D1CD5A}|WinFormsApp1.csproj|f:\\c# sem 5\\gui c#\\winformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10BC0070-CCBA-4AF9-86EA-BC7949D1CD5A}|WinFormsApp1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10BC0070-CCBA-4AF9-86EA-BC7949D1CD5A}|WinFormsApp1.csproj|e:\\c# sem 5\\gui c#\\winformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{10BC0070-CCBA-4AF9-86EA-BC7949D1CD5A}|WinFormsApp1.csproj|F:\\C# SEM 5\\GUI C#\\WinFormsApp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{10BC0070-CCBA-4AF9-86EA-BC7949D1CD5A}|WinFormsApp1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -18,8 +18,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -29,14 +33,18 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "E:\\C# SEM 5\\GUI C#\\WinFormsApp1\\Form1.cs",
+              "DocumentMoniker": "F:\\C# SEM 5\\GUI C#\\WinFormsApp1\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "E:\\C# SEM 5\\GUI C#\\WinFormsApp1\\Form1.cs",
+              "ToolTip": "F:\\C# SEM 5\\GUI C#\\WinFormsApp1\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAnwB0AAAAvAAAA",
+              "ViewState": "AQIAABwAAAAAAAAAAAAcwB0AAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-13T03:50:54.121Z",
               "EditorCaption": ""
@@ -45,13 +53,11 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "E:\\C# SEM 5\\GUI C#\\WinFormsApp1\\Form1.cs",
+              "DocumentMoniker": "F:\\C# SEM 5\\GUI C#\\WinFormsApp1\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "E:\\C# SEM 5\\GUI C#\\WinFormsApp1\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T03:44:51.617Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-09-13T03:44:51.617Z"
             }
           ]
         }

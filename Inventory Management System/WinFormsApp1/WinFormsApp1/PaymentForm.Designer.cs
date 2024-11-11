@@ -52,47 +52,55 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(226, 14);
+            label1.Location = new Point(258, 19);
             label1.Name = "label1";
-            label1.Size = new Size(126, 21);
+            label1.Size = new Size(157, 28);
             label1.TabIndex = 0;
             label1.Text = "Order Summary";
             // 
             // orderNumBox
             // 
-            orderNumBox.Location = new Point(279, 67);
+            orderNumBox.Enabled = false;
+            orderNumBox.Location = new Point(319, 89);
+            orderNumBox.Margin = new Padding(3, 4, 3, 4);
             orderNumBox.Name = "orderNumBox";
-            orderNumBox.Size = new Size(171, 23);
+            orderNumBox.Size = new Size(195, 27);
             orderNumBox.TabIndex = 1;
             // 
             // orderDateBox
             // 
-            orderDateBox.Location = new Point(279, 112);
+            orderDateBox.Enabled = false;
+            orderDateBox.Location = new Point(319, 149);
+            orderDateBox.Margin = new Padding(3, 4, 3, 4);
             orderDateBox.Name = "orderDateBox";
-            orderDateBox.Size = new Size(171, 23);
+            orderDateBox.Size = new Size(195, 27);
             orderDateBox.TabIndex = 2;
             // 
             // custNameBox
             // 
-            custNameBox.Location = new Point(279, 160);
+            custNameBox.Enabled = false;
+            custNameBox.Location = new Point(319, 213);
+            custNameBox.Margin = new Padding(3, 4, 3, 4);
             custNameBox.Name = "custNameBox";
-            custNameBox.Size = new Size(171, 23);
+            custNameBox.Size = new Size(195, 27);
             custNameBox.TabIndex = 3;
             // 
             // totalAmtBox
             // 
-            totalAmtBox.Location = new Point(279, 205);
+            totalAmtBox.Enabled = false;
+            totalAmtBox.Location = new Point(319, 273);
+            totalAmtBox.Margin = new Padding(3, 4, 3, 4);
             totalAmtBox.Name = "totalAmtBox";
-            totalAmtBox.Size = new Size(171, 23);
+            totalAmtBox.Size = new Size(195, 27);
             totalAmtBox.TabIndex = 4;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
-            label2.Location = new Point(187, 73);
+            label2.Location = new Point(214, 97);
             label2.Name = "label2";
-            label2.Size = new Size(68, 17);
+            label2.Size = new Size(86, 23);
             label2.TabIndex = 5;
             label2.Text = "Order No.";
             // 
@@ -100,9 +108,9 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
-            label3.Location = new Point(180, 118);
+            label3.Location = new Point(206, 157);
             label3.Name = "label3";
-            label3.Size = new Size(75, 17);
+            label3.Size = new Size(95, 23);
             label3.TabIndex = 6;
             label3.Text = "Order Date";
             // 
@@ -110,9 +118,9 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
-            label4.Location = new Point(148, 161);
+            label4.Location = new Point(169, 215);
             label4.Name = "label4";
-            label4.Size = new Size(107, 17);
+            label4.Size = new Size(135, 23);
             label4.TabIndex = 7;
             label4.Text = "Customer Name";
             // 
@@ -120,9 +128,9 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
-            label5.Location = new Point(164, 211);
+            label5.Location = new Point(187, 281);
             label5.Name = "label5";
-            label5.Size = new Size(91, 17);
+            label5.Size = new Size(113, 23);
             label5.TabIndex = 8;
             label5.Text = "Total Amount";
             // 
@@ -130,9 +138,11 @@
             // 
             groupBox1.Controls.Add(radioButton2);
             groupBox1.Controls.Add(radioButton1);
-            groupBox1.Location = new Point(148, 258);
+            groupBox1.Location = new Point(169, 344);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(291, 70);
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(333, 93);
             groupBox1.TabIndex = 9;
             groupBox1.TabStop = false;
             groupBox1.Text = "Payment Method";
@@ -141,9 +151,10 @@
             // 
             radioButton2.AutoSize = true;
             radioButton2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            radioButton2.Location = new Point(188, 34);
+            radioButton2.Location = new Point(215, 45);
+            radioButton2.Margin = new Padding(3, 4, 3, 4);
             radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(47, 21);
+            radioButton2.Size = new Size(58, 27);
             radioButton2.TabIndex = 1;
             radioButton2.TabStop = true;
             radioButton2.Text = "UPI";
@@ -154,9 +165,10 @@
             // 
             radioButton1.AutoSize = true;
             radioButton1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            radioButton1.Location = new Point(40, 34);
+            radioButton1.Location = new Point(46, 45);
+            radioButton1.Margin = new Padding(3, 4, 3, 4);
             radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(55, 21);
+            radioButton1.Size = new Size(68, 27);
             radioButton1.TabIndex = 0;
             radioButton1.TabStop = true;
             radioButton1.Text = "Cash";
@@ -165,9 +177,10 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(254, 345);
+            button1.Location = new Point(290, 460);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(90, 30);
+            button1.Size = new Size(103, 40);
             button1.TabIndex = 10;
             button1.Text = "Done";
             button1.UseVisualStyleBackColor = true;
@@ -176,9 +189,10 @@
             // qrBox
             // 
             qrBox.Image = (Image)resources.GetObject("qrBox.Image");
-            qrBox.Location = new Point(136, 38);
+            qrBox.Location = new Point(155, 51);
+            qrBox.Margin = new Padding(3, 4, 3, 4);
             qrBox.Name = "qrBox";
-            qrBox.Size = new Size(330, 290);
+            qrBox.Size = new Size(377, 387);
             qrBox.SizeMode = PictureBoxSizeMode.StretchImage;
             qrBox.TabIndex = 11;
             qrBox.TabStop = false;
@@ -187,9 +201,10 @@
             // crossBtn
             // 
             crossBtn.BackColor = Color.IndianRed;
-            crossBtn.Location = new Point(428, 38);
+            crossBtn.Location = new Point(489, 51);
+            crossBtn.Margin = new Padding(3, 4, 3, 4);
             crossBtn.Name = "crossBtn";
-            crossBtn.Size = new Size(38, 23);
+            crossBtn.Size = new Size(43, 31);
             crossBtn.TabIndex = 12;
             crossBtn.Text = "❌";
             crossBtn.UseVisualStyleBackColor = false;
@@ -198,9 +213,9 @@
             // 
             // PaymentForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(598, 392);
+            ClientSize = new Size(683, 523);
             Controls.Add(qrBox);
             Controls.Add(crossBtn);
             Controls.Add(button1);
@@ -214,7 +229,9 @@
             Controls.Add(orderDateBox);
             Controls.Add(orderNumBox);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "PaymentForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "PaymentForm";
             Load += PaymentForm_Load;
             groupBox1.ResumeLayout(false);

@@ -52,8 +52,8 @@ SELECT * FROM ADMIN;
 CREATE TABLE AdminLogs(
 	admin_id int not null ,
 	admin_name varchar(20) not null,
-	admin_email varchar(50) not null unique,
-	admin_phone DECIMAL(10, 0) not null unique,
+	admin_email varchar(50) not null ,
+	admin_phone DECIMAL(10, 0) not null ,
 	login_time DATETIME not null,
 );
 SELECT * FROM AdminLogs;

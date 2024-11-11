@@ -61,9 +61,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.Location = new Point(443, 15);
+            label1.Location = new Point(506, 20);
             label1.Name = "label1";
-            label1.Size = new Size(465, 45);
+            label1.Size = new Size(579, 54);
             label1.TabIndex = 0;
             label1.Text = "Inventory Management System";
             // 
@@ -72,19 +72,21 @@
             usernameBox.AccessibleDescription = "";
             usernameBox.BackColor = SystemColors.ButtonHighlight;
             usernameBox.BorderStyle = BorderStyle.FixedSingle;
-            usernameBox.Location = new Point(245, 97);
+            usernameBox.Location = new Point(280, 129);
+            usernameBox.Margin = new Padding(3, 4, 3, 4);
             usernameBox.Name = "usernameBox";
-            usernameBox.Size = new Size(200, 33);
+            usernameBox.Size = new Size(228, 39);
             usernameBox.TabIndex = 1;
             // 
             // passwdBox
             // 
             passwdBox.BackColor = SystemColors.ButtonHighlight;
             passwdBox.BorderStyle = BorderStyle.FixedSingle;
-            passwdBox.Location = new Point(245, 160);
+            passwdBox.Location = new Point(280, 213);
+            passwdBox.Margin = new Padding(3, 4, 3, 4);
             passwdBox.Name = "passwdBox";
             passwdBox.PasswordChar = '*';
-            passwdBox.Size = new Size(200, 33);
+            passwdBox.Size = new Size(228, 39);
             passwdBox.TabIndex = 2;
             // 
             // groupBox1
@@ -97,9 +99,11 @@
             groupBox1.Controls.Add(passwdBox);
             groupBox1.Controls.Add(usernameBox);
             groupBox1.Font = new Font("Segoe UI Variable Small Semibol", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(437, 202);
+            groupBox1.Location = new Point(499, 269);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(477, 325);
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(545, 433);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Credentials";
@@ -108,9 +112,10 @@
             // 
             checkBox1.AutoSize = true;
             checkBox1.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox1.Location = new Point(129, 227);
+            checkBox1.Location = new Point(147, 303);
+            checkBox1.Margin = new Padding(3, 4, 3, 4);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(119, 20);
+            checkBox1.Size = new Size(147, 23);
             checkBox1.TabIndex = 6;
             checkBox1.Text = "Show Password";
             checkBox1.UseVisualStyleBackColor = true;
@@ -119,9 +124,10 @@
             // button1
             // 
             button1.BackColor = Color.Linen;
-            button1.Location = new Point(224, 267);
+            button1.Location = new Point(256, 356);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(95, 40);
+            button1.Size = new Size(109, 53);
             button1.TabIndex = 5;
             button1.Text = "Sign In";
             button1.UseVisualStyleBackColor = false;
@@ -130,18 +136,18 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(80, 164);
+            label3.Location = new Point(72, 219);
             label3.Name = "label3";
-            label3.Size = new Size(159, 26);
+            label3.Size = new Size(201, 32);
             label3.TabIndex = 4;
             label3.Text = "Admin Password";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(114, 101);
+            label2.Location = new Point(113, 135);
             label2.Name = "label2";
-            label2.Size = new Size(122, 26);
+            label2.Size = new Size(157, 32);
             label2.TabIndex = 3;
             label2.Text = "Admin Email";
             // 
@@ -158,9 +164,11 @@
             captchaBox1.Controls.Add(pictureBox2);
             captchaBox1.Controls.Add(pictureBox1);
             captchaBox1.Font = new Font("Segoe UI", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            captchaBox1.Location = new Point(430, 172);
+            captchaBox1.Location = new Point(491, 229);
+            captchaBox1.Margin = new Padding(3, 4, 3, 4);
             captchaBox1.Name = "captchaBox1";
-            captchaBox1.Size = new Size(490, 384);
+            captchaBox1.Padding = new Padding(3, 4, 3, 4);
+            captchaBox1.Size = new Size(560, 512);
             captchaBox1.TabIndex = 4;
             captchaBox1.TabStop = false;
             captchaBox1.Text = "Captcha";
@@ -169,18 +177,20 @@
             // captchaAnswer
             // 
             captchaAnswer.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            captchaAnswer.Location = new Point(179, 343);
+            captchaAnswer.Location = new Point(205, 457);
+            captchaAnswer.Margin = new Padding(3, 4, 3, 4);
             captchaAnswer.Name = "captchaAnswer";
-            captchaAnswer.Size = new Size(127, 33);
+            captchaAnswer.Size = new Size(145, 39);
             captchaAnswer.TabIndex = 9;
             // 
             // button2
             // 
             button2.BackColor = Color.Gold;
             button2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(313, 340);
+            button2.Location = new Point(358, 453);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(105, 36);
+            button2.Size = new Size(120, 48);
             button2.TabIndex = 8;
             button2.Text = "Submit";
             button2.UseVisualStyleBackColor = false;
@@ -190,75 +200,82 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(103, 71);
+            label4.Location = new Point(118, 95);
             label4.Name = "label4";
-            label4.Size = new Size(246, 21);
+            label4.Size = new Size(312, 28);
             label4.TabIndex = 6;
             label4.Text = "Enter how many images have car";
             // 
             // pictureBox4
             // 
-            pictureBox4.Location = new Point(324, 209);
+            pictureBox4.Location = new Point(370, 279);
+            pictureBox4.Margin = new Padding(3, 4, 3, 4);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(129, 98);
+            pictureBox4.Size = new Size(147, 131);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 5;
             pictureBox4.TabStop = false;
             // 
             // pictureBox5
             // 
-            pictureBox5.Location = new Point(189, 209);
+            pictureBox5.Location = new Point(216, 279);
+            pictureBox5.Margin = new Padding(3, 4, 3, 4);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(129, 98);
+            pictureBox5.Size = new Size(147, 131);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 4;
             pictureBox5.TabStop = false;
             // 
             // pictureBox6
             // 
-            pictureBox6.Location = new Point(54, 209);
+            pictureBox6.Location = new Point(62, 279);
+            pictureBox6.Margin = new Padding(3, 4, 3, 4);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(129, 98);
+            pictureBox6.Size = new Size(147, 131);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 3;
             pictureBox6.TabStop = false;
             // 
             // pictureBox3
             // 
-            pictureBox3.Location = new Point(324, 105);
+            pictureBox3.Location = new Point(370, 140);
+            pictureBox3.Margin = new Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(129, 98);
+            pictureBox3.Size = new Size(147, 131);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(189, 105);
+            pictureBox2.Location = new Point(216, 140);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(129, 98);
+            pictureBox2.Size = new Size(147, 131);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(54, 105);
+            pictureBox1.Location = new Point(62, 140);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(129, 98);
+            pictureBox1.Size = new Size(147, 131);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Linen;
-            ClientSize = new Size(1350, 729);
+            ClientSize = new Size(1543, 972);
             Controls.Add(captchaBox1);
             Controls.Add(groupBox1);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Inventory Manager";
             groupBox1.ResumeLayout(false);
