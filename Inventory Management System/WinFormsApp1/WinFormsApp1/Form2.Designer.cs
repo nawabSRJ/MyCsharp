@@ -187,6 +187,34 @@ namespace WinFormsApp1
             label23 = new Label();
             label21 = new Label();
             textBox3 = new TextBox();
+            panel1 = new Panel();
+            label46 = new Label();
+            tabPage5 = new TabPage();
+            groupBox1 = new GroupBox();
+            ordersDataGrid = new DataGridView();
+            orderNo = new DataGridViewTextBoxColumn();
+            customerName = new DataGridViewTextBoxColumn();
+            orderAmount = new DataGridViewTextBoxColumn();
+            orderDate = new DataGridViewTextBoxColumn();
+            orderFilters = new GroupBox();
+            label54 = new Label();
+            textBox13 = new TextBox();
+            numericUpDown2 = new NumericUpDown();
+            dateTimePicker3 = new DateTimePicker();
+            dateTimePicker4 = new DateTimePicker();
+            label49 = new Label();
+            label50 = new Label();
+            label51 = new Label();
+            textBox11 = new TextBox();
+            label52 = new Label();
+            textBox12 = new TextBox();
+            label53 = new Label();
+            label48 = new Label();
+            comboBox2 = new ComboBox();
+            groupBox6 = new GroupBox();
+            button9 = new Button();
+            button10 = new Button();
+            label47 = new Label();
             dBOperationsBindingSource = new BindingSource(components);
             textBox1 = new TextBox();
             textBox2 = new TextBox();
@@ -224,6 +252,13 @@ namespace WinFormsApp1
             ((System.ComponentModel.ISupportInitialize)stockDataGrid).BeginInit();
             groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            panel1.SuspendLayout();
+            tabPage5.SuspendLayout();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ordersDataGrid).BeginInit();
+            orderFilters.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+            groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dBOperationsBindingSource).BeginInit();
             SuspendLayout();
             // 
@@ -237,11 +272,10 @@ namespace WinFormsApp1
             tabPage1.Controls.Add(groupBox2);
             tabPage1.Controls.Add(groupBox3);
             tabPage1.Controls.Add(dashLbl);
-            tabPage1.Location = new Point(4, 29);
-            tabPage1.Margin = new Padding(3, 4, 3, 4);
+            tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3, 4, 3, 4);
-            tabPage1.Size = new Size(1535, 939);
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(1191, 534);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Dashboard";
             tabPage1.UseVisualStyleBackColor = true;
@@ -251,18 +285,17 @@ namespace WinFormsApp1
             // 
             label41.AutoSize = true;
             label41.Font = new Font("Segoe Print", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label41.Location = new Point(394, 64);
+            label41.Location = new Point(345, 48);
             label41.Name = "label41";
-            label41.Size = new Size(455, 61);
+            label41.Size = new Size(359, 47);
             label41.TabIndex = 8;
             label41.Text = "<<< Our Testimonials >>>";
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(3, 131);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(3, 98);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1151, 429);
+            pictureBox1.Size = new Size(856, 322);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
@@ -272,9 +305,9 @@ namespace WinFormsApp1
             dayLbl.AutoSize = true;
             dayLbl.BackColor = Color.PapayaWhip;
             dayLbl.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dayLbl.Location = new Point(749, 7);
+            dayLbl.Location = new Point(655, 5);
             dayLbl.Name = "dayLbl";
-            dayLbl.Size = new Size(185, 46);
+            dayLbl.Size = new Size(152, 37);
             dayLbl.TabIndex = 6;
             dayLbl.Text = "Day Today";
             // 
@@ -283,9 +316,9 @@ namespace WinFormsApp1
             timeLbl.AutoSize = true;
             timeLbl.BackColor = Color.PapayaWhip;
             timeLbl.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            timeLbl.Location = new Point(391, 7);
+            timeLbl.Location = new Point(342, 5);
             timeLbl.Name = "timeLbl";
-            timeLbl.Size = new Size(158, 46);
+            timeLbl.Size = new Size(127, 37);
             timeLbl.TabIndex = 5;
             timeLbl.Text = "00:00:00";
             // 
@@ -294,10 +327,9 @@ namespace WinFormsApp1
             button1.BackColor = Color.Black;
             button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.PapayaWhip;
-            button1.Location = new Point(1434, 9);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(1255, 7);
             button1.Name = "button1";
-            button1.Size = new Size(90, 41);
+            button1.Size = new Size(79, 31);
             button1.TabIndex = 4;
             button1.Text = "Logout";
             button1.UseVisualStyleBackColor = false;
@@ -310,11 +342,9 @@ namespace WinFormsApp1
             groupBox2.Controls.Add(stockAlertGrid);
             groupBox2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox2.ForeColor = SystemColors.ButtonFace;
-            groupBox2.Location = new Point(3, 568);
-            groupBox2.Margin = new Padding(3, 4, 3, 4);
+            groupBox2.Location = new Point(3, 426);
             groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(3, 4, 3, 4);
-            groupBox2.Size = new Size(1151, 363);
+            groupBox2.Size = new Size(856, 105);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Stock Alert";
@@ -324,11 +354,11 @@ namespace WinFormsApp1
             stockAlertGrid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             stockAlertGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             stockAlertGrid.Columns.AddRange(new DataGridViewColumn[] { product_id, product_name, product_quantity, product_price });
-            stockAlertGrid.Location = new Point(0, 37);
-            stockAlertGrid.Margin = new Padding(3, 4, 3, 4);
+            stockAlertGrid.Location = new Point(0, 28);
             stockAlertGrid.Name = "stockAlertGrid";
             stockAlertGrid.RowHeadersWidth = 51;
-            stockAlertGrid.Size = new Size(1151, 281);
+            stockAlertGrid.RowTemplate.Height = 35;
+            stockAlertGrid.Size = new Size(1007, 211);
             stockAlertGrid.TabIndex = 0;
             // 
             // product_id
@@ -389,11 +419,9 @@ namespace WinFormsApp1
             groupBox3.Controls.Add(label42);
             groupBox3.Dock = DockStyle.Right;
             groupBox3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox3.Location = new Point(1156, 59);
-            groupBox3.Margin = new Padding(3, 4, 3, 4);
+            groupBox3.Location = new Point(859, 44);
             groupBox3.Name = "groupBox3";
-            groupBox3.Padding = new Padding(3, 4, 3, 4);
-            groupBox3.Size = new Size(376, 876);
+            groupBox3.Size = new Size(329, 487);
             groupBox3.TabIndex = 2;
             groupBox3.TabStop = false;
             groupBox3.Text = "Highlights Today";
@@ -402,9 +430,9 @@ namespace WinFormsApp1
             // 
             label44.AutoSize = true;
             label44.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label44.Location = new Point(81, 460);
+            label44.Location = new Point(71, 345);
             label44.Name = "label44";
-            label44.Size = new Size(58, 28);
+            label44.Size = new Size(47, 21);
             label44.TabIndex = 3;
             label44.Text = "Sales";
             // 
@@ -412,9 +440,9 @@ namespace WinFormsApp1
             // 
             label45.AutoSize = true;
             label45.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label45.Location = new Point(70, 363);
+            label45.Location = new Point(61, 272);
             label45.Name = "label45";
-            label45.Size = new Size(176, 60);
+            label45.Size = new Size(140, 47);
             label45.TabIndex = 2;
             label45.Text = "label45";
             // 
@@ -422,9 +450,9 @@ namespace WinFormsApp1
             // 
             label43.AutoSize = true;
             label43.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label43.Location = new Point(70, 224);
+            label43.Location = new Point(61, 168);
             label43.Name = "label43";
-            label43.Size = new Size(73, 28);
+            label43.Size = new Size(60, 21);
             label43.TabIndex = 1;
             label43.Text = "Orders";
             // 
@@ -432,9 +460,9 @@ namespace WinFormsApp1
             // 
             label42.AutoSize = true;
             label42.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label42.Location = new Point(58, 127);
+            label42.Location = new Point(51, 95);
             label42.Name = "label42";
-            label42.Size = new Size(176, 60);
+            label42.Size = new Size(140, 47);
             label42.TabIndex = 0;
             label42.Text = "label42";
             // 
@@ -443,9 +471,9 @@ namespace WinFormsApp1
             dashLbl.BackColor = Color.PapayaWhip;
             dashLbl.Dock = DockStyle.Top;
             dashLbl.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            dashLbl.Location = new Point(3, 4);
+            dashLbl.Location = new Point(3, 3);
             dashLbl.Name = "dashLbl";
-            dashLbl.Size = new Size(1529, 55);
+            dashLbl.Size = new Size(1185, 41);
             dashLbl.TabIndex = 3;
             dashLbl.Text = "Dashboard";
             // 
@@ -455,12 +483,12 @@ namespace WinFormsApp1
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
             tabControl1.Controls.Add(tabPage4);
+            tabControl1.Controls.Add(tabPage5);
             tabControl1.Dock = DockStyle.Fill;
             tabControl1.Location = new Point(0, 0);
-            tabControl1.Margin = new Padding(3, 4, 3, 4);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1543, 972);
+            tabControl1.Size = new Size(1199, 562);
             tabControl1.TabIndex = 2;
             // 
             // tabPage2
@@ -472,11 +500,10 @@ namespace WinFormsApp1
             tabPage2.Controls.Add(button19);
             tabPage2.Controls.Add(orderDetailsBox);
             tabPage2.Controls.Add(label5);
-            tabPage2.Location = new Point(4, 29);
-            tabPage2.Margin = new Padding(3, 4, 3, 4);
+            tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3, 4, 3, 4);
-            tabPage2.Size = new Size(1535, 939);
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(1191, 534);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Customer";
             // 
@@ -499,11 +526,9 @@ namespace WinFormsApp1
             custRegisterBox.Controls.Add(label18);
             custRegisterBox.Controls.Add(newCustName);
             custRegisterBox.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            custRegisterBox.Location = new Point(437, 139);
-            custRegisterBox.Margin = new Padding(3, 4, 3, 4);
+            custRegisterBox.Location = new Point(382, 104);
             custRegisterBox.Name = "custRegisterBox";
-            custRegisterBox.Padding = new Padding(3, 4, 3, 4);
-            custRegisterBox.Size = new Size(607, 697);
+            custRegisterBox.Size = new Size(531, 523);
             custRegisterBox.TabIndex = 9;
             custRegisterBox.TabStop = false;
             custRegisterBox.Text = "Customer Register";
@@ -512,10 +537,9 @@ namespace WinFormsApp1
             // button6
             // 
             button6.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button6.Location = new Point(239, 611);
-            button6.Margin = new Padding(3, 4, 3, 4);
+            button6.Location = new Point(209, 458);
             button6.Name = "button6";
-            button6.Size = new Size(114, 56);
+            button6.Size = new Size(100, 42);
             button6.TabIndex = 23;
             button6.Text = "Login";
             button6.UseVisualStyleBackColor = true;
@@ -525,9 +549,9 @@ namespace WinFormsApp1
             // 
             label38.AutoSize = true;
             label38.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label38.Location = new Point(274, 559);
+            label38.Location = new Point(240, 419);
             label38.Name = "label38";
-            label38.Size = new Size(39, 28);
+            label38.Size = new Size(32, 21);
             label38.TabIndex = 22;
             label38.Text = "OR";
             // 
@@ -535,9 +559,9 @@ namespace WinFormsApp1
             // 
             label39.AutoSize = true;
             label39.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label39.Location = new Point(318, 553);
+            label39.Location = new Point(278, 415);
             label39.Name = "label39";
-            label39.Size = new Size(143, 23);
+            label39.Size = new Size(103, 17);
             label39.TabIndex = 21;
             label39.Text = "___________________";
             // 
@@ -545,57 +569,53 @@ namespace WinFormsApp1
             // 
             label40.AutoSize = true;
             label40.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label40.Location = new Point(151, 553);
+            label40.Location = new Point(132, 415);
             label40.Name = "label40";
-            label40.Size = new Size(143, 23);
+            label40.Size = new Size(103, 17);
             label40.TabIndex = 20;
             label40.Text = "___________________";
             // 
             // newCustPhone
             // 
             newCustPhone.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            newCustPhone.Location = new Point(185, 311);
-            newCustPhone.Margin = new Padding(3, 4, 3, 4);
+            newCustPhone.Location = new Point(162, 233);
             newCustPhone.Mask = "0000000000";
             newCustPhone.Name = "newCustPhone";
-            newCustPhone.Size = new Size(318, 39);
+            newCustPhone.Size = new Size(279, 33);
             newCustPhone.TabIndex = 19;
             // 
             // newCustAddress
             // 
             newCustAddress.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            newCustAddress.Location = new Point(185, 393);
-            newCustAddress.Margin = new Padding(3, 4, 3, 4);
+            newCustAddress.Location = new Point(162, 295);
             newCustAddress.Name = "newCustAddress";
-            newCustAddress.Size = new Size(318, 39);
+            newCustAddress.Size = new Size(279, 33);
             newCustAddress.TabIndex = 18;
             // 
             // newCustPassword
             // 
             newCustPassword.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            newCustPassword.Location = new Point(185, 239);
-            newCustPassword.Margin = new Padding(3, 4, 3, 4);
+            newCustPassword.Location = new Point(162, 179);
             newCustPassword.Name = "newCustPassword";
             newCustPassword.PasswordChar = '*';
-            newCustPassword.Size = new Size(318, 39);
+            newCustPassword.Size = new Size(279, 33);
             newCustPassword.TabIndex = 16;
             // 
             // newCustEmail
             // 
             newCustEmail.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            newCustEmail.Location = new Point(185, 161);
-            newCustEmail.Margin = new Padding(3, 4, 3, 4);
+            newCustEmail.Location = new Point(162, 121);
             newCustEmail.Name = "newCustEmail";
-            newCustEmail.Size = new Size(318, 39);
+            newCustEmail.Size = new Size(279, 33);
             newCustEmail.TabIndex = 15;
             // 
             // label16
             // 
             label16.AutoSize = true;
             label16.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.Location = new Point(74, 397);
+            label16.Location = new Point(65, 298);
             label16.Name = "label16";
-            label16.Size = new Size(100, 32);
+            label16.Size = new Size(80, 25);
             label16.TabIndex = 14;
             label16.Text = "Address";
             // 
@@ -603,9 +623,9 @@ namespace WinFormsApp1
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.Location = new Point(90, 320);
+            label14.Location = new Point(79, 240);
             label14.Name = "label14";
-            label14.Size = new Size(83, 32);
+            label14.Size = new Size(66, 25);
             label14.TabIndex = 12;
             label14.Text = "Phone";
             // 
@@ -613,19 +633,18 @@ namespace WinFormsApp1
             // 
             label15.AutoSize = true;
             label15.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label15.Location = new Point(98, 165);
+            label15.Location = new Point(86, 124);
             label15.Name = "label15";
-            label15.Size = new Size(72, 32);
+            label15.Size = new Size(59, 25);
             label15.TabIndex = 11;
             label15.Text = "Email";
             // 
             // button21
             // 
             button21.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button21.Location = new Point(154, 483);
-            button21.Margin = new Padding(3, 4, 3, 4);
+            button21.Location = new Point(135, 362);
             button21.Name = "button21";
-            button21.Size = new Size(270, 56);
+            button21.Size = new Size(236, 42);
             button21.TabIndex = 8;
             button21.Text = "Register New Customer";
             button21.UseVisualStyleBackColor = true;
@@ -635,9 +654,9 @@ namespace WinFormsApp1
             // 
             label17.AutoSize = true;
             label17.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label17.Location = new Point(62, 243);
+            label17.Location = new Point(54, 182);
             label17.Name = "label17";
-            label17.Size = new Size(115, 32);
+            label17.Size = new Size(91, 25);
             label17.TabIndex = 3;
             label17.Text = "Password";
             // 
@@ -645,19 +664,18 @@ namespace WinFormsApp1
             // 
             label18.AutoSize = true;
             label18.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label18.Location = new Point(93, 91);
+            label18.Location = new Point(81, 68);
             label18.Name = "label18";
-            label18.Size = new Size(79, 32);
+            label18.Size = new Size(64, 25);
             label18.TabIndex = 2;
             label18.Text = "Name";
             // 
             // newCustName
             // 
             newCustName.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            newCustName.Location = new Point(185, 84);
-            newCustName.Margin = new Padding(3, 4, 3, 4);
+            newCustName.Location = new Point(162, 63);
             newCustName.Name = "newCustName";
-            newCustName.Size = new Size(318, 39);
+            newCustName.Size = new Size(279, 33);
             newCustName.TabIndex = 0;
             // 
             // productSearchBox
@@ -669,11 +687,9 @@ namespace WinFormsApp1
             productSearchBox.Controls.Add(searchProdBox);
             productSearchBox.Enabled = false;
             productSearchBox.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            productSearchBox.Location = new Point(25, 84);
-            productSearchBox.Margin = new Padding(3, 4, 3, 4);
+            productSearchBox.Location = new Point(22, 63);
             productSearchBox.Name = "productSearchBox";
-            productSearchBox.Padding = new Padding(3, 4, 3, 4);
-            productSearchBox.Size = new Size(371, 575);
+            productSearchBox.Size = new Size(325, 431);
             productSearchBox.TabIndex = 6;
             productSearchBox.TabStop = false;
             productSearchBox.Text = "Product Search";
@@ -683,19 +699,17 @@ namespace WinFormsApp1
             // 
             productListBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             productListBox.FormattingEnabled = true;
-            productListBox.ItemHeight = 28;
-            productListBox.Location = new Point(22, 123);
-            productListBox.Margin = new Padding(3, 4, 3, 4);
+            productListBox.ItemHeight = 21;
+            productListBox.Location = new Point(19, 92);
             productListBox.Name = "productListBox";
-            productListBox.Size = new Size(318, 340);
+            productListBox.Size = new Size(279, 256);
             productListBox.TabIndex = 2;
             // 
             // button18
             // 
-            button18.Location = new Point(189, 477);
-            button18.Margin = new Padding(3, 4, 3, 4);
+            button18.Location = new Point(165, 358);
             button18.Name = "button18";
-            button18.Size = new Size(152, 45);
+            button18.Size = new Size(133, 34);
             button18.TabIndex = 7;
             button18.Text = "Refresh List";
             button18.UseVisualStyleBackColor = true;
@@ -703,10 +717,9 @@ namespace WinFormsApp1
             // 
             // button13
             // 
-            button13.Location = new Point(23, 477);
-            button13.Margin = new Padding(3, 4, 3, 4);
+            button13.Location = new Point(20, 358);
             button13.Name = "button13";
-            button13.Size = new Size(152, 45);
+            button13.Size = new Size(133, 34);
             button13.TabIndex = 6;
             button13.Text = "Add to Cart";
             button13.UseVisualStyleBackColor = true;
@@ -715,10 +728,9 @@ namespace WinFormsApp1
             // button12
             // 
             button12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button12.Location = new Point(290, 60);
-            button12.Margin = new Padding(3, 4, 3, 4);
+            button12.Location = new Point(254, 45);
             button12.Name = "button12";
-            button12.Size = new Size(50, 44);
+            button12.Size = new Size(44, 33);
             button12.TabIndex = 5;
             button12.Text = "Go";
             button12.UseVisualStyleBackColor = true;
@@ -727,10 +739,9 @@ namespace WinFormsApp1
             // searchProdBox
             // 
             searchProdBox.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            searchProdBox.Location = new Point(22, 60);
-            searchProdBox.Margin = new Padding(3, 4, 3, 4);
+            searchProdBox.Location = new Point(19, 45);
             searchProdBox.Name = "searchProdBox";
-            searchProdBox.Size = new Size(261, 42);
+            searchProdBox.Size = new Size(229, 35);
             searchProdBox.TabIndex = 4;
             // 
             // customerLoginBox
@@ -746,11 +757,9 @@ namespace WinFormsApp1
             customerLoginBox.Controls.Add(cust_password);
             customerLoginBox.Controls.Add(cust_email);
             customerLoginBox.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            customerLoginBox.Location = new Point(485, 157);
-            customerLoginBox.Margin = new Padding(3, 4, 3, 4);
+            customerLoginBox.Location = new Point(424, 118);
             customerLoginBox.Name = "customerLoginBox";
-            customerLoginBox.Padding = new Padding(3, 4, 3, 4);
-            customerLoginBox.Size = new Size(566, 620);
+            customerLoginBox.Size = new Size(495, 465);
             customerLoginBox.TabIndex = 0;
             customerLoginBox.TabStop = false;
             customerLoginBox.Text = "Customer Login";
@@ -758,10 +767,9 @@ namespace WinFormsApp1
             // 
             // button20
             // 
-            button20.Location = new Point(210, 501);
-            button20.Margin = new Padding(3, 4, 3, 4);
+            button20.Location = new Point(184, 376);
             button20.Name = "button20";
-            button20.Size = new Size(152, 65);
+            button20.Size = new Size(133, 49);
             button20.TabIndex = 8;
             button20.Text = "Register";
             button20.UseVisualStyleBackColor = true;
@@ -771,9 +779,9 @@ namespace WinFormsApp1
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label13.Location = new Point(272, 456);
+            label13.Location = new Point(238, 342);
             label13.Name = "label13";
-            label13.Size = new Size(39, 28);
+            label13.Size = new Size(32, 21);
             label13.TabIndex = 7;
             label13.Text = "OR";
             // 
@@ -781,9 +789,9 @@ namespace WinFormsApp1
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label12.Location = new Point(315, 451);
+            label12.Location = new Point(276, 338);
             label12.Name = "label12";
-            label12.Size = new Size(143, 23);
+            label12.Size = new Size(103, 17);
             label12.TabIndex = 6;
             label12.Text = "___________________";
             // 
@@ -791,18 +799,17 @@ namespace WinFormsApp1
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label11.Location = new Point(149, 451);
+            label11.Location = new Point(130, 338);
             label11.Name = "label11";
-            label11.Size = new Size(143, 23);
+            label11.Size = new Size(103, 17);
             label11.TabIndex = 5;
             label11.Text = "___________________";
             // 
             // button3
             // 
-            button3.Location = new Point(209, 381);
-            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Location = new Point(183, 286);
             button3.Name = "button3";
-            button3.Size = new Size(152, 65);
+            button3.Size = new Size(133, 49);
             button3.TabIndex = 4;
             button3.Text = "Log in";
             button3.UseVisualStyleBackColor = true;
@@ -812,9 +819,9 @@ namespace WinFormsApp1
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold);
-            label4.Location = new Point(78, 253);
+            label4.Location = new Point(68, 190);
             label4.Name = "label4";
-            label4.Size = new Size(115, 32);
+            label4.Size = new Size(91, 25);
             label4.TabIndex = 3;
             label4.Text = "Password";
             // 
@@ -822,27 +829,25 @@ namespace WinFormsApp1
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold);
-            label3.Location = new Point(97, 157);
+            label3.Location = new Point(85, 118);
             label3.Name = "label3";
-            label3.Size = new Size(72, 32);
+            label3.Size = new Size(59, 25);
             label3.TabIndex = 2;
             label3.Text = "Email";
             // 
             // cust_password
             // 
-            cust_password.Location = new Point(193, 243);
-            cust_password.Margin = new Padding(3, 4, 3, 4);
+            cust_password.Location = new Point(169, 182);
             cust_password.Name = "cust_password";
             cust_password.PasswordChar = '*';
-            cust_password.Size = new Size(318, 47);
+            cust_password.Size = new Size(279, 39);
             cust_password.TabIndex = 1;
             // 
             // cust_email
             // 
-            cust_email.Location = new Point(193, 145);
-            cust_email.Margin = new Padding(3, 4, 3, 4);
+            cust_email.Location = new Point(169, 109);
             cust_email.Name = "cust_email";
-            cust_email.Size = new Size(318, 47);
+            cust_email.Size = new Size(279, 39);
             cust_email.TabIndex = 0;
             // 
             // button19
@@ -850,10 +855,9 @@ namespace WinFormsApp1
             button19.BackColor = Color.Black;
             button19.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button19.ForeColor = Color.PapayaWhip;
-            button19.Location = new Point(1432, 9);
-            button19.Margin = new Padding(3, 4, 3, 4);
+            button19.Location = new Point(1253, 7);
             button19.Name = "button19";
-            button19.Size = new Size(90, 41);
+            button19.Size = new Size(79, 31);
             button19.TabIndex = 8;
             button19.Text = "Logout";
             button19.UseVisualStyleBackColor = false;
@@ -874,11 +878,9 @@ namespace WinFormsApp1
             orderDetailsBox.Controls.Add(receiptBox);
             orderDetailsBox.Enabled = false;
             orderDetailsBox.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            orderDetailsBox.Location = new Point(448, 84);
-            orderDetailsBox.Margin = new Padding(3, 4, 3, 4);
+            orderDetailsBox.Location = new Point(392, 63);
             orderDetailsBox.Name = "orderDetailsBox";
-            orderDetailsBox.Padding = new Padding(3, 4, 3, 4);
-            orderDetailsBox.Size = new Size(934, 805);
+            orderDetailsBox.Size = new Size(817, 604);
             orderDetailsBox.TabIndex = 7;
             orderDetailsBox.TabStop = false;
             orderDetailsBox.Text = "Order Details";
@@ -888,9 +890,9 @@ namespace WinFormsApp1
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Cascadia Code SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(665, 55);
+            label10.Location = new Point(582, 41);
             label10.Name = "label10";
-            label10.Size = new Size(238, 32);
+            label10.Size = new Size(188, 25);
             label10.TabIndex = 14;
             label10.Text = "Price (per unit)";
             // 
@@ -898,9 +900,9 @@ namespace WinFormsApp1
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Cascadia Code SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(355, 55);
+            label9.Location = new Point(311, 41);
             label9.Name = "label9";
-            label9.Size = new Size(126, 32);
+            label9.Size = new Size(100, 25);
             label9.TabIndex = 13;
             label9.Text = "Quantity";
             // 
@@ -908,9 +910,9 @@ namespace WinFormsApp1
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Cascadia Code SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(22, 55);
+            label8.Location = new Point(19, 41);
             label8.Name = "label8";
-            label8.Size = new Size(112, 32);
+            label8.Size = new Size(89, 25);
             label8.TabIndex = 12;
             label8.Text = "Product";
             // 
@@ -918,9 +920,9 @@ namespace WinFormsApp1
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Cascadia Code SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(527, 660);
+            label7.Location = new Point(461, 495);
             label7.Name = "label7";
-            label7.Size = new Size(392, 32);
+            label7.Size = new Size(309, 25);
             label7.TabIndex = 11;
             label7.Text = "Actions for Complete List :";
             // 
@@ -928,18 +930,17 @@ namespace WinFormsApp1
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Cascadia Code SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(22, 660);
+            label6.Location = new Point(19, 495);
             label6.Name = "label6";
-            label6.Size = new Size(364, 32);
+            label6.Size = new Size(287, 25);
             label6.TabIndex = 10;
             label6.Text = "Actions for Single Item :";
             // 
             // button17
             // 
-            button17.Location = new Point(727, 716);
-            button17.Margin = new Padding(3, 4, 3, 4);
+            button17.Location = new Point(636, 537);
             button17.Name = "button17";
-            button17.Size = new Size(169, 45);
+            button17.Size = new Size(148, 34);
             button17.TabIndex = 9;
             button17.Text = "Place Order";
             button17.UseVisualStyleBackColor = true;
@@ -947,10 +948,9 @@ namespace WinFormsApp1
             // 
             // button16
             // 
-            button16.Location = new Point(551, 716);
-            button16.Margin = new Padding(3, 4, 3, 4);
+            button16.Location = new Point(482, 537);
             button16.Name = "button16";
-            button16.Size = new Size(169, 45);
+            button16.Size = new Size(148, 34);
             button16.TabIndex = 8;
             button16.Text = "Clear List";
             button16.UseVisualStyleBackColor = true;
@@ -958,10 +958,9 @@ namespace WinFormsApp1
             // 
             // button15
             // 
-            button15.Location = new Point(219, 716);
-            button15.Margin = new Padding(3, 4, 3, 4);
+            button15.Location = new Point(192, 537);
             button15.Name = "button15";
-            button15.Size = new Size(169, 45);
+            button15.Size = new Size(148, 34);
             button15.TabIndex = 7;
             button15.Text = "Remove All";
             button15.UseVisualStyleBackColor = true;
@@ -969,10 +968,9 @@ namespace WinFormsApp1
             // 
             // button14
             // 
-            button14.Location = new Point(43, 716);
-            button14.Margin = new Padding(3, 4, 3, 4);
+            button14.Location = new Point(38, 537);
             button14.Name = "button14";
-            button14.Size = new Size(169, 45);
+            button14.Size = new Size(148, 34);
             button14.TabIndex = 6;
             button14.Text = "Remove Once";
             button14.UseVisualStyleBackColor = true;
@@ -982,11 +980,10 @@ namespace WinFormsApp1
             // 
             receiptBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             receiptBox.FormattingEnabled = true;
-            receiptBox.ItemHeight = 28;
-            receiptBox.Location = new Point(22, 99);
-            receiptBox.Margin = new Padding(3, 4, 3, 4);
+            receiptBox.ItemHeight = 21;
+            receiptBox.Location = new Point(19, 74);
             receiptBox.Name = "receiptBox";
-            receiptBox.Size = new Size(874, 536);
+            receiptBox.Size = new Size(765, 403);
             receiptBox.TabIndex = 2;
             // 
             // label5
@@ -994,9 +991,9 @@ namespace WinFormsApp1
             label5.BackColor = Color.DeepSkyBlue;
             label5.Dock = DockStyle.Top;
             label5.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label5.Location = new Point(3, 4);
+            label5.Location = new Point(3, 3);
             label5.Name = "label5";
-            label5.Size = new Size(1529, 53);
+            label5.Size = new Size(1185, 40);
             label5.TabIndex = 1;
             label5.Text = "Customer Services Portal";
             // 
@@ -1007,10 +1004,9 @@ namespace WinFormsApp1
             tabPage3.Controls.Add(panel3);
             tabPage3.Controls.Add(panel2);
             tabPage3.Controls.Add(flowLayoutPanel1);
-            tabPage3.Location = new Point(4, 29);
-            tabPage3.Margin = new Padding(3, 4, 3, 4);
+            tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(1535, 939);
+            tabPage3.Size = new Size(1191, 534);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Stock Data";
             tabPage3.UseVisualStyleBackColor = true;
@@ -1020,11 +1016,9 @@ namespace WinFormsApp1
             // 
             adminLogBox.Controls.Add(adminLogsGrid);
             adminLogBox.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            adminLogBox.Location = new Point(245, 23);
-            adminLogBox.Margin = new Padding(3, 4, 3, 4);
+            adminLogBox.Location = new Point(214, 17);
             adminLogBox.Name = "adminLogBox";
-            adminLogBox.Padding = new Padding(3, 4, 3, 4);
-            adminLogBox.Size = new Size(1266, 901);
+            adminLogBox.Size = new Size(1108, 676);
             adminLogBox.TabIndex = 9;
             adminLogBox.TabStop = false;
             adminLogBox.Text = "Admin Login Records";
@@ -1034,11 +1028,10 @@ namespace WinFormsApp1
             adminLogsGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             adminLogsGrid.Columns.AddRange(new DataGridViewColumn[] { AdminId, AdminName, AdminEmail, AdminPhone, LoginTime });
             adminLogsGrid.Dock = DockStyle.Bottom;
-            adminLogsGrid.Location = new Point(3, 125);
-            adminLogsGrid.Margin = new Padding(3, 4, 3, 4);
+            adminLogsGrid.Location = new Point(3, 94);
             adminLogsGrid.Name = "adminLogsGrid";
             adminLogsGrid.RowHeadersWidth = 51;
-            adminLogsGrid.Size = new Size(1260, 772);
+            adminLogsGrid.Size = new Size(1102, 579);
             adminLogsGrid.TabIndex = 0;
             // 
             // AdminId
@@ -1104,11 +1097,9 @@ namespace WinFormsApp1
             stockDataForm.Controls.Add(stockParameter);
             stockDataForm.Controls.Add(label36);
             stockDataForm.Controls.Add(stockParameterBox);
-            stockDataForm.Location = new Point(245, 23);
-            stockDataForm.Margin = new Padding(3, 4, 3, 4);
+            stockDataForm.Location = new Point(214, 17);
             stockDataForm.Name = "stockDataForm";
-            stockDataForm.Padding = new Padding(3, 4, 3, 4);
-            stockDataForm.Size = new Size(1266, 901);
+            stockDataForm.Size = new Size(1108, 676);
             stockDataForm.TabIndex = 6;
             stockDataForm.TabStop = false;
             stockDataForm.Text = "Stock Data Form";
@@ -1118,11 +1109,10 @@ namespace WinFormsApp1
             // 
             stockSearchGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             stockSearchGrid.Columns.AddRange(new DataGridViewColumn[] { productId, prodName, prodQuantity, prodPrice, prodDesc });
-            stockSearchGrid.Location = new Point(7, 319);
-            stockSearchGrid.Margin = new Padding(3, 4, 3, 4);
+            stockSearchGrid.Location = new Point(6, 239);
             stockSearchGrid.Name = "stockSearchGrid";
             stockSearchGrid.RowHeadersWidth = 51;
-            stockSearchGrid.Size = new Size(1253, 583);
+            stockSearchGrid.Size = new Size(1096, 437);
             stockSearchGrid.TabIndex = 8;
             // 
             // productId
@@ -1174,10 +1164,9 @@ namespace WinFormsApp1
             // button28
             // 
             button28.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button28.Location = new Point(531, 76);
-            button28.Margin = new Padding(3, 4, 3, 4);
+            button28.Location = new Point(465, 57);
             button28.Name = "button28";
-            button28.Size = new Size(112, 41);
+            button28.Size = new Size(98, 31);
             button28.TabIndex = 7;
             button28.Text = "Search";
             button28.UseVisualStyleBackColor = true;
@@ -1187,27 +1176,26 @@ namespace WinFormsApp1
             // 
             label37.AutoSize = true;
             label37.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label37.Location = new Point(263, 51);
+            label37.Location = new Point(230, 38);
             label37.Name = "label37";
-            label37.Size = new Size(135, 23);
+            label37.Size = new Size(108, 17);
             label37.TabIndex = 5;
             label37.Text = "Parameter Entry";
             // 
             // stockParameter
             // 
-            stockParameter.Location = new Point(261, 81);
-            stockParameter.Margin = new Padding(3, 4, 3, 4);
+            stockParameter.Location = new Point(228, 61);
             stockParameter.Name = "stockParameter";
-            stockParameter.Size = new Size(221, 27);
+            stockParameter.Size = new Size(194, 23);
             stockParameter.TabIndex = 4;
             // 
             // label36
             // 
             label36.AutoSize = true;
             label36.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label36.Location = new Point(43, 48);
+            label36.Location = new Point(38, 36);
             label36.Name = "label36";
-            label36.Size = new Size(89, 23);
+            label36.Size = new Size(71, 17);
             label36.TabIndex = 3;
             label36.Text = "Parameter";
             // 
@@ -1215,10 +1203,9 @@ namespace WinFormsApp1
             // 
             stockParameterBox.FormattingEnabled = true;
             stockParameterBox.Items.AddRange(new object[] { "Complete Stock", "Product Name", "Product Quantity" });
-            stockParameterBox.Location = new Point(40, 81);
-            stockParameterBox.Margin = new Padding(3, 4, 3, 4);
+            stockParameterBox.Location = new Point(35, 61);
             stockParameterBox.Name = "stockParameterBox";
-            stockParameterBox.Size = new Size(172, 28);
+            stockParameterBox.Size = new Size(151, 23);
             stockParameterBox.TabIndex = 0;
             stockParameterBox.SelectedIndexChanged += stockParameterBox_SelectedIndexChanged;
             // 
@@ -1226,10 +1213,9 @@ namespace WinFormsApp1
             // 
             panel3.Controls.Add(button7);
             panel3.Controls.Add(button8);
-            panel3.Location = new Point(6, 131);
-            panel3.Margin = new Padding(3, 4, 3, 4);
+            panel3.Location = new Point(5, 98);
             panel3.Name = "panel3";
-            panel3.Size = new Size(223, 52);
+            panel3.Size = new Size(195, 39);
             panel3.TabIndex = 3;
             // 
             // button7
@@ -1237,10 +1223,9 @@ namespace WinFormsApp1
             button7.BackColor = Color.LightCoral;
             button7.Cursor = Cursors.Hand;
             button7.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button7.Location = new Point(-2, -25);
-            button7.Margin = new Padding(3, 4, 3, 4);
+            button7.Location = new Point(-2, -19);
             button7.Name = "button7";
-            button7.Size = new Size(225, 104);
+            button7.Size = new Size(197, 78);
             button7.TabIndex = 1;
             button7.Text = "Log Records";
             button7.UseVisualStyleBackColor = false;
@@ -1250,10 +1235,9 @@ namespace WinFormsApp1
             // 
             button8.BackColor = Color.LightCoral;
             button8.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button8.Location = new Point(-13, -27);
-            button8.Margin = new Padding(3, 4, 3, 4);
+            button8.Location = new Point(-11, -20);
             button8.Name = "button8";
-            button8.Size = new Size(259, 104);
+            button8.Size = new Size(227, 78);
             button8.TabIndex = 0;
             button8.Text = "Stock";
             button8.UseVisualStyleBackColor = false;
@@ -1262,10 +1246,9 @@ namespace WinFormsApp1
             // 
             panel2.Controls.Add(button5);
             panel2.Controls.Add(button4);
-            panel2.Location = new Point(6, 35);
-            panel2.Margin = new Padding(3, 4, 3, 4);
+            panel2.Location = new Point(5, 26);
             panel2.Name = "panel2";
-            panel2.Size = new Size(223, 52);
+            panel2.Size = new Size(195, 39);
             panel2.TabIndex = 2;
             // 
             // button5
@@ -1273,10 +1256,9 @@ namespace WinFormsApp1
             button5.BackColor = Color.LightCoral;
             button5.Cursor = Cursors.Hand;
             button5.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.Location = new Point(-13, -12);
-            button5.Margin = new Padding(3, 4, 3, 4);
+            button5.Location = new Point(-11, -9);
             button5.Name = "button5";
-            button5.Size = new Size(245, 73);
+            button5.Size = new Size(214, 55);
             button5.TabIndex = 1;
             button5.Text = "Stock";
             button5.UseVisualStyleBackColor = false;
@@ -1286,10 +1268,9 @@ namespace WinFormsApp1
             // 
             button4.BackColor = Color.LightCoral;
             button4.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.Location = new Point(-13, -27);
-            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Location = new Point(-11, -20);
             button4.Name = "button4";
-            button4.Size = new Size(259, 104);
+            button4.Size = new Size(227, 78);
             button4.TabIndex = 0;
             button4.Text = "Stock";
             button4.UseVisualStyleBackColor = false;
@@ -1300,9 +1281,8 @@ namespace WinFormsApp1
             flowLayoutPanel1.BackColor = Color.Snow;
             flowLayoutPanel1.Dock = DockStyle.Left;
             flowLayoutPanel1.Location = new Point(0, 0);
-            flowLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(238, 939);
+            flowLayoutPanel1.Size = new Size(208, 534);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // tabPage4
@@ -1314,10 +1294,10 @@ namespace WinFormsApp1
             tabPage4.Controls.Add(button26);
             tabPage4.Controls.Add(purchaseHistoryForm);
             tabPage4.Controls.Add(stockEntryForm);
-            tabPage4.Location = new Point(4, 29);
-            tabPage4.Margin = new Padding(3, 4, 3, 4);
+            tabPage4.Controls.Add(panel1);
+            tabPage4.Location = new Point(4, 24);
             tabPage4.Name = "tabPage4";
-            tabPage4.Size = new Size(1535, 939);
+            tabPage4.Size = new Size(1191, 534);
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Purchase";
             tabPage4.UseVisualStyleBackColor = true;
@@ -1328,19 +1308,18 @@ namespace WinFormsApp1
             panel7.BackColor = Color.LightCoral;
             panel7.Controls.Add(label22);
             panel7.Cursor = Cursors.Hand;
-            panel7.Location = new Point(13, 171);
-            panel7.Margin = new Padding(3, 4, 3, 4);
+            panel7.Location = new Point(12, 141);
             panel7.Name = "panel7";
-            panel7.Size = new Size(225, 69);
+            panel7.Size = new Size(197, 52);
             panel7.TabIndex = 5;
             panel7.Paint += panel7_Paint;
             // 
             // label22
             // 
             label22.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label22.Location = new Point(13, 12);
+            label22.Location = new Point(11, 9);
             label22.Name = "label22";
-            label22.Size = new Size(198, 48);
+            label22.Size = new Size(173, 36);
             label22.TabIndex = 0;
             label22.Text = "Purchase History";
             label22.TextAlign = ContentAlignment.MiddleCenter;
@@ -1351,19 +1330,18 @@ namespace WinFormsApp1
             panel5.BackColor = Color.LightCoral;
             panel5.Controls.Add(label20);
             panel5.Cursor = Cursors.Hand;
-            panel5.Location = new Point(13, 69);
-            panel5.Margin = new Padding(3, 4, 3, 4);
+            panel5.Location = new Point(12, 65);
             panel5.Name = "panel5";
-            panel5.Size = new Size(225, 69);
+            panel5.Size = new Size(197, 52);
             panel5.TabIndex = 4;
             panel5.Paint += panel5_Paint;
             // 
             // label20
             // 
             label20.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label20.Location = new Point(13, 12);
+            label20.Location = new Point(11, 9);
             label20.Name = "label20";
-            label20.Size = new Size(198, 48);
+            label20.Size = new Size(173, 36);
             label20.TabIndex = 0;
             label20.Text = "New Stock Entry";
             label20.TextAlign = ContentAlignment.MiddleCenter;
@@ -1372,10 +1350,9 @@ namespace WinFormsApp1
             // flowLayoutPanel2
             // 
             flowLayoutPanel2.Dock = DockStyle.Left;
-            flowLayoutPanel2.Location = new Point(0, 53);
-            flowLayoutPanel2.Margin = new Padding(3, 4, 3, 4);
+            flowLayoutPanel2.Location = new Point(0, 40);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(253, 886);
+            flowLayoutPanel2.Size = new Size(221, 494);
             flowLayoutPanel2.TabIndex = 3;
             flowLayoutPanel2.Paint += flowLayoutPanel2_Paint;
             // 
@@ -1386,7 +1363,7 @@ namespace WinFormsApp1
             label19.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label19.Location = new Point(0, 0);
             label19.Name = "label19";
-            label19.Size = new Size(1535, 53);
+            label19.Size = new Size(1191, 40);
             label19.TabIndex = 2;
             label19.Text = "Supplier and Purchase Data";
             // 
@@ -1394,10 +1371,9 @@ namespace WinFormsApp1
             // 
             button26.Enabled = false;
             button26.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button26.Location = new Point(456, 3);
-            button26.Margin = new Padding(3, 4, 3, 4);
+            button26.Location = new Point(399, 2);
             button26.Name = "button26";
-            button26.Size = new Size(129, 39);
+            button26.Size = new Size(113, 29);
             button26.TabIndex = 1;
             button26.Text = "Clear Filters";
             button26.UseVisualStyleBackColor = true;
@@ -1412,11 +1388,9 @@ namespace WinFormsApp1
             purchaseHistoryForm.Controls.Add(comboBox1);
             purchaseHistoryForm.Controls.Add(groupBox4);
             purchaseHistoryForm.Enabled = false;
-            purchaseHistoryForm.Location = new Point(272, 69);
-            purchaseHistoryForm.Margin = new Padding(3, 4, 3, 4);
+            purchaseHistoryForm.Location = new Point(238, 52);
             purchaseHistoryForm.Name = "purchaseHistoryForm";
-            purchaseHistoryForm.Padding = new Padding(3, 4, 3, 4);
-            purchaseHistoryForm.Size = new Size(1245, 855);
+            purchaseHistoryForm.Size = new Size(1089, 641);
             purchaseHistoryForm.TabIndex = 21;
             purchaseHistoryForm.TabStop = false;
             purchaseHistoryForm.Text = "Purchase History Form";
@@ -1434,38 +1408,34 @@ namespace WinFormsApp1
             purchaseFilters.Controls.Add(textBox7);
             purchaseFilters.Controls.Add(label31);
             purchaseFilters.Controls.Add(textBox4);
-            purchaseFilters.Location = new Point(17, 148);
-            purchaseFilters.Margin = new Padding(3, 4, 3, 4);
+            purchaseFilters.Location = new Point(15, 111);
             purchaseFilters.Name = "purchaseFilters";
-            purchaseFilters.Padding = new Padding(3, 4, 3, 4);
-            purchaseFilters.Size = new Size(1214, 133);
+            purchaseFilters.Size = new Size(1062, 100);
             purchaseFilters.TabIndex = 4;
             purchaseFilters.TabStop = false;
             purchaseFilters.Text = "Filters";
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(963, 68);
-            dateTimePicker2.Margin = new Padding(3, 4, 3, 4);
+            dateTimePicker2.Location = new Point(843, 51);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(228, 27);
+            dateTimePicker2.Size = new Size(200, 23);
             dateTimePicker2.TabIndex = 11;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(706, 68);
-            dateTimePicker1.Margin = new Padding(3, 4, 3, 4);
+            dateTimePicker1.Location = new Point(618, 51);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(228, 27);
+            dateTimePicker1.Size = new Size(200, 23);
             dateTimePicker1.TabIndex = 10;
             // 
             // label35
             // 
             label35.AutoSize = true;
             label35.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label35.Location = new Point(965, 33);
+            label35.Location = new Point(844, 25);
             label35.Name = "label35";
-            label35.Size = new Size(80, 23);
+            label35.Size = new Size(63, 17);
             label35.TabIndex = 9;
             label35.Text = "End Date";
             // 
@@ -1473,9 +1443,9 @@ namespace WinFormsApp1
             // 
             label34.AutoSize = true;
             label34.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label34.Location = new Point(706, 33);
+            label34.Location = new Point(618, 25);
             label34.Name = "label34";
-            label34.Size = new Size(87, 23);
+            label34.Size = new Size(69, 17);
             label34.TabIndex = 7;
             label34.Text = "Start Date";
             // 
@@ -1483,54 +1453,51 @@ namespace WinFormsApp1
             // 
             label33.AutoSize = true;
             label33.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label33.Location = new Point(443, 35);
+            label33.Location = new Point(388, 26);
             label33.Name = "label33";
-            label33.Size = new Size(130, 23);
+            label33.Size = new Size(102, 17);
             label33.TabIndex = 5;
             label33.Text = "Maximum Price";
             // 
             // textBox10
             // 
-            textBox10.Location = new Point(442, 72);
-            textBox10.Margin = new Padding(3, 4, 3, 4);
+            textBox10.Location = new Point(387, 54);
             textBox10.Name = "textBox10";
-            textBox10.Size = new Size(186, 27);
+            textBox10.Size = new Size(163, 23);
             textBox10.TabIndex = 4;
             // 
             // label32
             // 
             label32.AutoSize = true;
             label32.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label32.Location = new Point(234, 37);
+            label32.Location = new Point(205, 28);
             label32.Name = "label32";
-            label32.Size = new Size(126, 23);
+            label32.Size = new Size(99, 17);
             label32.TabIndex = 3;
             label32.Text = "Minimum Price";
             // 
             // textBox7
             // 
-            textBox7.Location = new Point(233, 75);
-            textBox7.Margin = new Padding(3, 4, 3, 4);
+            textBox7.Location = new Point(204, 56);
             textBox7.Name = "textBox7";
-            textBox7.Size = new Size(186, 27);
+            textBox7.Size = new Size(163, 23);
             textBox7.TabIndex = 2;
             // 
             // label31
             // 
             label31.AutoSize = true;
             label31.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label31.Location = new Point(26, 39);
+            label31.Location = new Point(23, 29);
             label31.Name = "label31";
-            label31.Size = new Size(123, 23);
+            label31.Size = new Size(97, 17);
             label31.TabIndex = 1;
             label31.Text = "Supplier Name";
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(25, 76);
-            textBox4.Margin = new Padding(3, 4, 3, 4);
+            textBox4.Location = new Point(22, 57);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(186, 27);
+            textBox4.Size = new Size(163, 23);
             textBox4.TabIndex = 0;
             // 
             // dataGridView2
@@ -1538,11 +1505,10 @@ namespace WinFormsApp1
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { purchaseId, supplierName, supplyDate, totalPayment });
             dataGridView2.Dock = DockStyle.Bottom;
-            dataGridView2.Location = new Point(3, 352);
-            dataGridView2.Margin = new Padding(3, 4, 3, 4);
+            dataGridView2.Location = new Point(3, 264);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(1239, 499);
+            dataGridView2.Size = new Size(1083, 374);
             dataGridView2.TabIndex = 3;
             dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
@@ -1586,9 +1552,9 @@ namespace WinFormsApp1
             // 
             label30.AutoSize = true;
             label30.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label30.Location = new Point(538, 56);
+            label30.Location = new Point(471, 42);
             label30.Name = "label30";
-            label30.Size = new Size(89, 23);
+            label30.Size = new Size(71, 17);
             label30.TabIndex = 2;
             label30.Text = "Parameter";
             // 
@@ -1596,10 +1562,9 @@ namespace WinFormsApp1
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Supplier", "Date", "Date Range", "Minimum Price", "Maximum Price", "Price Range" });
-            comboBox1.Location = new Point(536, 88);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
+            comboBox1.Location = new Point(469, 66);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(181, 28);
+            comboBox1.Size = new Size(159, 23);
             comboBox1.TabIndex = 1;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
@@ -1607,11 +1572,9 @@ namespace WinFormsApp1
             // 
             groupBox4.Controls.Add(button27);
             groupBox4.Controls.Add(button25);
-            groupBox4.Location = new Point(17, 41);
-            groupBox4.Margin = new Padding(3, 4, 3, 4);
+            groupBox4.Location = new Point(15, 31);
             groupBox4.Name = "groupBox4";
-            groupBox4.Padding = new Padding(3, 4, 3, 4);
-            groupBox4.Size = new Size(487, 85);
+            groupBox4.Size = new Size(426, 64);
             groupBox4.TabIndex = 0;
             groupBox4.TabStop = false;
             groupBox4.Text = "Actions";
@@ -1619,10 +1582,9 @@ namespace WinFormsApp1
             // button27
             // 
             button27.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button27.Location = new Point(319, 24);
-            button27.Margin = new Padding(3, 4, 3, 4);
+            button27.Location = new Point(279, 18);
             button27.Name = "button27";
-            button27.Size = new Size(115, 49);
+            button27.Size = new Size(101, 37);
             button27.TabIndex = 5;
             button27.Text = "Search";
             button27.UseVisualStyleBackColor = true;
@@ -1631,10 +1593,9 @@ namespace WinFormsApp1
             // button25
             // 
             button25.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button25.Location = new Point(33, 29);
-            button25.Margin = new Padding(3, 4, 3, 4);
+            button25.Location = new Point(29, 22);
             button25.Name = "button25";
-            button25.Size = new Size(221, 39);
+            button25.Size = new Size(193, 29);
             button25.TabIndex = 0;
             button25.Text = "Show Complete History";
             button25.UseVisualStyleBackColor = true;
@@ -1654,11 +1615,9 @@ namespace WinFormsApp1
             stockEntryForm.Controls.Add(label23);
             stockEntryForm.Controls.Add(label21);
             stockEntryForm.Controls.Add(textBox3);
-            stockEntryForm.Location = new Point(282, 81);
-            stockEntryForm.Margin = new Padding(3, 4, 3, 4);
+            stockEntryForm.Location = new Point(247, 61);
             stockEntryForm.Name = "stockEntryForm";
-            stockEntryForm.Padding = new Padding(3, 4, 3, 4);
-            stockEntryForm.Size = new Size(1221, 843);
+            stockEntryForm.Size = new Size(1068, 632);
             stockEntryForm.TabIndex = 6;
             stockEntryForm.TabStop = false;
             stockEntryForm.Text = "Stock Entry Form";
@@ -1666,29 +1625,26 @@ namespace WinFormsApp1
             // button24
             // 
             button24.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button24.Location = new Point(771, 297);
-            button24.Margin = new Padding(3, 4, 3, 4);
+            button24.Location = new Point(675, 223);
             button24.Name = "button24";
-            button24.Size = new Size(143, 47);
+            button24.Size = new Size(125, 35);
             button24.TabIndex = 20;
             button24.Text = "Remove Item";
             button24.UseVisualStyleBackColor = true;
             // 
             // supDate
             // 
-            supDate.Location = new Point(537, 55);
-            supDate.Margin = new Padding(3, 4, 3, 4);
+            supDate.Location = new Point(470, 41);
             supDate.Name = "supDate";
-            supDate.Size = new Size(228, 27);
+            supDate.Size = new Size(200, 23);
             supDate.TabIndex = 19;
             // 
             // button23
             // 
             button23.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button23.Location = new Point(1078, 296);
-            button23.Margin = new Padding(3, 4, 3, 4);
+            button23.Location = new Point(943, 222);
             button23.Name = "button23";
-            button23.Size = new Size(115, 47);
+            button23.Size = new Size(101, 35);
             button23.TabIndex = 18;
             button23.Text = "Purchase";
             button23.UseVisualStyleBackColor = true;
@@ -1697,10 +1653,9 @@ namespace WinFormsApp1
             // button22
             // 
             button22.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button22.Location = new Point(945, 297);
-            button22.Margin = new Padding(3, 4, 3, 4);
+            button22.Location = new Point(827, 223);
             button22.Name = "button22";
-            button22.Size = new Size(97, 47);
+            button22.Size = new Size(85, 35);
             button22.TabIndex = 17;
             button22.Text = "Clear";
             button22.UseVisualStyleBackColor = true;
@@ -1710,9 +1665,9 @@ namespace WinFormsApp1
             // 
             label29.AutoSize = true;
             label29.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label29.Location = new Point(37, 296);
+            label29.Location = new Point(32, 222);
             label29.Name = "label29";
-            label29.Size = new Size(253, 37);
+            label29.Size = new Size(196, 30);
             label29.TabIndex = 9;
             label29.Text = "Purchase Summary";
             // 
@@ -1721,11 +1676,10 @@ namespace WinFormsApp1
             stockDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             stockDataGrid.Columns.AddRange(new DataGridViewColumn[] { ProductName, ProductQuantity, ProductPrice, ProductDescription });
             stockDataGrid.Dock = DockStyle.Bottom;
-            stockDataGrid.Location = new Point(3, 362);
-            stockDataGrid.Margin = new Padding(3, 4, 3, 4);
+            stockDataGrid.Location = new Point(3, 271);
             stockDataGrid.Name = "stockDataGrid";
             stockDataGrid.RowHeadersWidth = 51;
-            stockDataGrid.Size = new Size(1215, 477);
+            stockDataGrid.Size = new Size(1062, 358);
             stockDataGrid.TabIndex = 8;
             // 
             // ProductName
@@ -1772,11 +1726,9 @@ namespace WinFormsApp1
             groupBox5.Controls.Add(label26);
             groupBox5.Controls.Add(label27);
             groupBox5.Controls.Add(textBox8);
-            groupBox5.Location = new Point(25, 132);
-            groupBox5.Margin = new Padding(3, 4, 3, 4);
+            groupBox5.Location = new Point(22, 99);
             groupBox5.Name = "groupBox5";
-            groupBox5.Padding = new Padding(3, 4, 3, 4);
-            groupBox5.Size = new Size(1168, 145);
+            groupBox5.Size = new Size(1022, 109);
             groupBox5.TabIndex = 7;
             groupBox5.TabStop = false;
             groupBox5.Text = "Product Data";
@@ -1785,10 +1737,9 @@ namespace WinFormsApp1
             // stockSubmitBtn
             // 
             stockSubmitBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            stockSubmitBtn.Location = new Point(945, 81);
-            stockSubmitBtn.Margin = new Padding(3, 4, 3, 4);
+            stockSubmitBtn.Location = new Point(827, 61);
             stockSubmitBtn.Name = "stockSubmitBtn";
-            stockSubmitBtn.Size = new Size(97, 47);
+            stockSubmitBtn.Size = new Size(85, 35);
             stockSubmitBtn.TabIndex = 16;
             stockSubmitBtn.Text = "Submit";
             stockSubmitBtn.UseVisualStyleBackColor = true;
@@ -1796,116 +1747,383 @@ namespace WinFormsApp1
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(541, 31);
-            numericUpDown1.Margin = new Padding(3, 4, 3, 4);
+            numericUpDown1.Location = new Point(473, 23);
             numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(191, 27);
+            numericUpDown1.Size = new Size(167, 23);
             numericUpDown1.TabIndex = 15;
             // 
             // label28
             // 
             label28.AutoSize = true;
-            label28.Location = new Point(15, 93);
+            label28.Location = new Point(13, 70);
             label28.Name = "label28";
-            label28.Size = new Size(140, 20);
+            label28.Size = new Size(112, 15);
             label28.TabIndex = 14;
             label28.Text = "Product Description";
             // 
             // textBox9
             // 
-            textBox9.Location = new Point(160, 89);
-            textBox9.Margin = new Padding(3, 4, 3, 4);
+            textBox9.Location = new Point(140, 67);
             textBox9.Name = "textBox9";
-            textBox9.Size = new Size(714, 27);
+            textBox9.Size = new Size(625, 23);
             textBox9.TabIndex = 13;
             // 
             // label25
             // 
             label25.AutoSize = true;
-            label25.Location = new Point(785, 31);
+            label25.Location = new Point(687, 23);
             label25.Name = "label25";
-            label25.Size = new Size(137, 20);
+            label25.Size = new Size(111, 15);
             label25.TabIndex = 12;
             label25.Text = "Product Price / Unit";
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(927, 27);
-            textBox6.Margin = new Padding(3, 4, 3, 4);
+            textBox6.Location = new Point(811, 20);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(199, 27);
+            textBox6.Size = new Size(175, 23);
             textBox6.TabIndex = 11;
             // 
             // label26
             // 
             label26.AutoSize = true;
-            label26.Location = new Point(414, 35);
+            label26.Location = new Point(362, 26);
             label26.Name = "label26";
-            label26.Size = new Size(120, 20);
+            label26.Size = new Size(98, 15);
             label26.TabIndex = 10;
             label26.Text = "Product Quantity";
             // 
             // label27
             // 
             label27.AutoSize = true;
-            label27.Location = new Point(17, 33);
+            label27.Location = new Point(15, 25);
             label27.Name = "label27";
-            label27.Size = new Size(104, 20);
+            label27.Size = new Size(84, 15);
             label27.TabIndex = 8;
             label27.Text = "Product Name";
             // 
             // textBox8
             // 
-            textBox8.Location = new Point(125, 29);
-            textBox8.Margin = new Padding(3, 4, 3, 4);
+            textBox8.Location = new Point(109, 22);
             textBox8.Name = "textBox8";
-            textBox8.Size = new Size(229, 27);
+            textBox8.Size = new Size(201, 23);
             textBox8.TabIndex = 7;
             // 
             // label24
             // 
             label24.AutoSize = true;
-            label24.Location = new Point(806, 57);
+            label24.Location = new Point(705, 43);
             label24.Name = "label24";
-            label24.Size = new Size(102, 20);
+            label24.Size = new Size(82, 15);
             label24.TabIndex = 6;
             label24.Text = "Total Payment";
             // 
             // textBox5
             // 
             textBox5.Enabled = false;
-            textBox5.Location = new Point(909, 51);
-            textBox5.Margin = new Padding(3, 4, 3, 4);
+            textBox5.Location = new Point(795, 38);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(199, 27);
+            textBox5.Size = new Size(175, 23);
             textBox5.TabIndex = 5;
             textBox5.Text = "0";
             // 
             // label23
             // 
             label23.AutoSize = true;
-            label23.Location = new Point(429, 57);
+            label23.Location = new Point(375, 43);
             label23.Name = "label23";
-            label23.Size = new Size(110, 20);
+            label23.Size = new Size(86, 15);
             label23.TabIndex = 3;
             label23.Text = "Date Of Supply";
             // 
             // label21
             // 
             label21.AutoSize = true;
-            label21.Location = new Point(41, 58);
+            label21.Location = new Point(36, 44);
             label21.Name = "label21";
-            label21.Size = new Size(108, 20);
+            label21.Size = new Size(85, 15);
             label21.TabIndex = 1;
             label21.Text = "Supplier Name";
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(155, 53);
-            textBox3.Margin = new Padding(3, 4, 3, 4);
+            textBox3.Location = new Point(136, 40);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(229, 27);
+            textBox3.Size = new Size(201, 23);
             textBox3.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.LightCoral;
+            panel1.Controls.Add(label46);
+            panel1.Cursor = Cursors.Hand;
+            panel1.Location = new Point(457, 5);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(29, 26);
+            panel1.TabIndex = 5;
+            // 
+            // label46
+            // 
+            label46.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label46.Location = new Point(19, 9);
+            label46.Name = "label46";
+            label46.Size = new Size(173, 36);
+            label46.TabIndex = 0;
+            label46.Text = "New Stock Entry";
+            label46.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // tabPage5
+            // 
+            tabPage5.Controls.Add(groupBox1);
+            tabPage5.Controls.Add(label47);
+            tabPage5.Location = new Point(4, 24);
+            tabPage5.Name = "tabPage5";
+            tabPage5.Size = new Size(1191, 534);
+            tabPage5.TabIndex = 4;
+            tabPage5.Text = "Orders";
+            tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox1.Controls.Add(ordersDataGrid);
+            groupBox1.Controls.Add(orderFilters);
+            groupBox1.Controls.Add(label48);
+            groupBox1.Controls.Add(comboBox2);
+            groupBox1.Controls.Add(groupBox6);
+            groupBox1.Location = new Point(8, 43);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(1175, 470);
+            groupBox1.TabIndex = 4;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Orders Data Form";
+            // 
+            // ordersDataGrid
+            // 
+            ordersDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ordersDataGrid.Columns.AddRange(new DataGridViewColumn[] { orderNo, customerName, orderAmount, orderDate });
+            ordersDataGrid.Location = new Point(139, 262);
+            ordersDataGrid.Name = "ordersDataGrid";
+            ordersDataGrid.Size = new Size(897, 150);
+            ordersDataGrid.TabIndex = 7;
+            // 
+            // orderNo
+            // 
+            orderNo.DataPropertyName = "order_number";
+            orderNo.HeaderText = "Order No.";
+            orderNo.Name = "orderNo";
+            orderNo.ReadOnly = true;
+            // 
+            // customerName
+            // 
+            customerName.DataPropertyName = "customer_name";
+            customerName.HeaderText = "Customer Name";
+            customerName.Name = "customerName";
+            customerName.ReadOnly = true;
+            customerName.Width = 300;
+            // 
+            // orderAmount
+            // 
+            orderAmount.DataPropertyName = "order_amount";
+            orderAmount.HeaderText = "Amount Paid";
+            orderAmount.Name = "orderAmount";
+            orderAmount.ReadOnly = true;
+            orderAmount.Width = 200;
+            // 
+            // orderDate
+            // 
+            orderDate.DataPropertyName = "order_date";
+            orderDate.HeaderText = "Order Date";
+            orderDate.Name = "orderDate";
+            orderDate.ReadOnly = true;
+            orderDate.Width = 250;
+            // 
+            // orderFilters
+            // 
+            orderFilters.Controls.Add(label54);
+            orderFilters.Controls.Add(textBox13);
+            orderFilters.Controls.Add(numericUpDown2);
+            orderFilters.Controls.Add(dateTimePicker3);
+            orderFilters.Controls.Add(dateTimePicker4);
+            orderFilters.Controls.Add(label49);
+            orderFilters.Controls.Add(label50);
+            orderFilters.Controls.Add(label51);
+            orderFilters.Controls.Add(textBox11);
+            orderFilters.Controls.Add(label52);
+            orderFilters.Controls.Add(textBox12);
+            orderFilters.Controls.Add(label53);
+            orderFilters.Location = new Point(28, 114);
+            orderFilters.Name = "orderFilters";
+            orderFilters.Size = new Size(1128, 100);
+            orderFilters.TabIndex = 6;
+            orderFilters.TabStop = false;
+            orderFilters.Text = "Filters";
+            // 
+            // label54
+            // 
+            label54.AutoSize = true;
+            label54.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label54.Location = new Point(569, 26);
+            label54.Name = "label54";
+            label54.Size = new Size(135, 17);
+            label54.TabIndex = 14;
+            label54.Text = "Order Amount (Max)";
+            // 
+            // textBox13
+            // 
+            textBox13.Location = new Point(568, 54);
+            textBox13.Name = "textBox13";
+            textBox13.Size = new Size(163, 23);
+            textBox13.TabIndex = 13;
+            // 
+            // numericUpDown2
+            // 
+            numericUpDown2.Location = new Point(16, 55);
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.Size = new Size(92, 23);
+            numericUpDown2.TabIndex = 12;
+            // 
+            // dateTimePicker3
+            // 
+            dateTimePicker3.Location = new Point(975, 51);
+            dateTimePicker3.Name = "dateTimePicker3";
+            dateTimePicker3.Size = new Size(142, 23);
+            dateTimePicker3.TabIndex = 11;
+            // 
+            // dateTimePicker4
+            // 
+            dateTimePicker4.Location = new Point(799, 51);
+            dateTimePicker4.Name = "dateTimePicker4";
+            dateTimePicker4.Size = new Size(147, 23);
+            dateTimePicker4.TabIndex = 10;
+            // 
+            // label49
+            // 
+            label49.AutoSize = true;
+            label49.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label49.Location = new Point(976, 25);
+            label49.Name = "label49";
+            label49.Size = new Size(63, 17);
+            label49.TabIndex = 9;
+            label49.Text = "End Date";
+            // 
+            // label50
+            // 
+            label50.AutoSize = true;
+            label50.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label50.Location = new Point(799, 25);
+            label50.Name = "label50";
+            label50.Size = new Size(69, 17);
+            label50.TabIndex = 7;
+            label50.Text = "Start Date";
+            // 
+            // label51
+            // 
+            label51.AutoSize = true;
+            label51.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label51.Location = new Point(381, 26);
+            label51.Name = "label51";
+            label51.Size = new Size(132, 17);
+            label51.TabIndex = 5;
+            label51.Text = "Order Amount (Min)";
+            // 
+            // textBox11
+            // 
+            textBox11.Location = new Point(380, 54);
+            textBox11.Name = "textBox11";
+            textBox11.Size = new Size(163, 23);
+            textBox11.TabIndex = 4;
+            // 
+            // label52
+            // 
+            label52.AutoSize = true;
+            label52.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label52.Location = new Point(132, 28);
+            label52.Name = "label52";
+            label52.Size = new Size(107, 17);
+            label52.TabIndex = 3;
+            label52.Text = "Customer Name";
+            // 
+            // textBox12
+            // 
+            textBox12.Location = new Point(131, 56);
+            textBox12.Name = "textBox12";
+            textBox12.Size = new Size(186, 23);
+            textBox12.TabIndex = 2;
+            // 
+            // label53
+            // 
+            label53.AutoSize = true;
+            label53.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label53.Location = new Point(14, 29);
+            label53.Name = "label53";
+            label53.Size = new Size(68, 17);
+            label53.TabIndex = 1;
+            label53.Text = "Order No.";
+            // 
+            // label48
+            // 
+            label48.AutoSize = true;
+            label48.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label48.Location = new Point(433, 36);
+            label48.Name = "label48";
+            label48.Size = new Size(71, 17);
+            label48.TabIndex = 5;
+            label48.Text = "Parameter";
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Date", "Date Range", "Price Range", "Order Number", "Customer Name", "Order Amount" });
+            comboBox2.Location = new Point(431, 60);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(159, 23);
+            comboBox2.TabIndex = 4;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            // 
+            // groupBox6
+            // 
+            groupBox6.Controls.Add(button9);
+            groupBox6.Controls.Add(button10);
+            groupBox6.Location = new Point(28, 26);
+            groupBox6.Name = "groupBox6";
+            groupBox6.Size = new Size(351, 64);
+            groupBox6.TabIndex = 3;
+            groupBox6.TabStop = false;
+            groupBox6.Text = "Actions";
+            // 
+            // button9
+            // 
+            button9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button9.Location = new Point(248, 22);
+            button9.Name = "button9";
+            button9.Size = new Size(82, 29);
+            button9.TabIndex = 1;
+            button9.Text = "Search";
+            button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
+            // 
+            // button10
+            // 
+            button10.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button10.Location = new Point(29, 22);
+            button10.Name = "button10";
+            button10.Size = new Size(193, 29);
+            button10.TabIndex = 0;
+            button10.Text = "Show Complete History";
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
+            // 
+            // label47
+            // 
+            label47.BackColor = Color.DeepSkyBlue;
+            label47.Dock = DockStyle.Top;
+            label47.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label47.Location = new Point(0, 0);
+            label47.Name = "label47";
+            label47.Size = new Size(1191, 40);
+            label47.TabIndex = 3;
+            label47.Text = "Customer Orders Data";
             // 
             // dBOperationsBindingSource
             // 
@@ -1915,14 +2133,14 @@ namespace WinFormsApp1
             // 
             textBox1.Location = new Point(224, 116);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(265, 27);
+            textBox1.Size = new Size(265, 23);
             textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
             textBox2.Location = new Point(224, 182);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(265, 27);
+            textBox2.Size = new Size(265, 23);
             textBox2.TabIndex = 1;
             // 
             // label1
@@ -1963,13 +2181,13 @@ namespace WinFormsApp1
             // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1543, 972);
+            ClientSize = new Size(1199, 562);
             Controls.Add(tabControl1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Form2";
             Text = "Inventory Manager";
+            WindowState = FormWindowState.Maximized;
             Load += Form2_Load;
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
@@ -2011,6 +2229,15 @@ namespace WinFormsApp1
             groupBox5.ResumeLayout(false);
             groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            panel1.ResumeLayout(false);
+            tabPage5.ResumeLayout(false);
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ordersDataGrid).EndInit();
+            orderFilters.ResumeLayout(false);
+            orderFilters.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+            groupBox6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dBOperationsBindingSource).EndInit();
             ResumeLayout(false);
         }
@@ -2172,5 +2399,33 @@ namespace WinFormsApp1
         private DataGridViewTextBoxColumn product_name;
         private DataGridViewTextBoxColumn product_quantity;
         private DataGridViewTextBoxColumn product_price;
+        private Panel panel1;
+        private Label label46;
+        private TabPage tabPage5;
+        private Label label47;
+        private GroupBox groupBox1;
+        private Label label48;
+        private ComboBox comboBox2;
+        private GroupBox groupBox6;
+        private Button button9;
+        private Button button10;
+        private DataGridView ordersDataGrid;
+        private GroupBox orderFilters;
+        private NumericUpDown numericUpDown2;
+        private DateTimePicker dateTimePicker3;
+        private DateTimePicker dateTimePicker4;
+        private Label label49;
+        private Label label50;
+        private Label label51;
+        private TextBox textBox11;
+        private Label label52;
+        private TextBox textBox12;
+        private Label label53;
+        private DataGridViewTextBoxColumn orderNo;
+        private DataGridViewTextBoxColumn customerName;
+        private DataGridViewTextBoxColumn orderAmount;
+        private DataGridViewTextBoxColumn orderDate;
+        private Label label54;
+        private TextBox textBox13;
     }
 }

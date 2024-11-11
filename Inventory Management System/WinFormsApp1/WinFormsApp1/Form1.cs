@@ -8,7 +8,9 @@ namespace WinFormsApp1
         SqlConnection conn;
         SqlCommand cmd;
         SqlDataReader dr;
-        string query, str;
+        //string query;
+        string str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;"; // srj pc
+        //string str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;"; // pratham pc
         int carCount = 0, roadCount = 0;
 
         public Form1()
@@ -40,9 +42,9 @@ namespace WinFormsApp1
             }
 
             //str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
-            str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;";
+            //str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;";
             conn = new SqlConnection(str);
-            query = $"SELECT ImgName , ImgPath FROM ImageCaptcha WHERE ImgId in ({randomIds[0]},{randomIds[1]}, {randomIds[2]},{randomIds[3]},{randomIds[4]},{randomIds[5]})";
+            string query = $"SELECT ImgName , ImgPath FROM ImageCaptcha WHERE ImgId in ({randomIds[0]},{randomIds[1]}, {randomIds[2]},{randomIds[3]},{randomIds[4]},{randomIds[5]})";
             cmd = new SqlCommand(query, conn);
             conn.Open();
             dr = cmd.ExecuteReader();
@@ -90,7 +92,7 @@ namespace WinFormsApp1
             DBOperations dbobj = new DBOperations();
             // read data from admin table
             //str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
-            str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;";
+            //str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;";
             conn = new SqlConnection(str);
             string query = $"SELECT * FROM Admin where admin_email = '{usernameBox.Text}' and admin_password = '{passwdBox.Text}' ";
             string adminEmail = "", adminPassword = "";
@@ -106,14 +108,14 @@ namespace WinFormsApp1
                     adminPassword = dr["admin_password"].ToString();
                     if (usernameBox.Text == adminEmail && passwdBox.Text == adminPassword)
                     {
-                        dbobj.setAdminLogs(dr["admin_id"].ToString(), dr["admin_name"].ToString() , dr["admin_email"].ToString() , dr["admin_phone"].ToString(), DateTime.Now);
+                        dbobj.setAdminLogs(dr["admin_id"].ToString(), dr["admin_name"].ToString(), dr["admin_email"].ToString(), dr["admin_phone"].ToString(), DateTime.Now);
                         // show captcha
                         LoadCaptcha();
                         captchaBox1.Visible = true;
                     }
                     else
                     {
-                        MessageBox.Show("Wrong Credentials!! Please try again", "Warning",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Wrong Credentials!! Please try again", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
                 }
@@ -131,7 +133,7 @@ namespace WinFormsApp1
                 conn.Close();
                 dr.Close();
                 cmd.Dispose();
-                
+
 
             }
 
@@ -159,12 +161,11 @@ namespace WinFormsApp1
                 MessageBox.Show("Right Answer");
                 // clear for correct calc next time
                 carCount = 0;
-                roadCount = 0; 
+                roadCount = 0;
 
 
                 // load Dashboard 
                 Form2 fm2 = new Form2();
-                fm2.StartPosition = FormStartPosition.CenterScreen;
                 fm2.ShowDialog();
                 //this.Close();
                 captchaBox1.Visible = false;
@@ -175,7 +176,7 @@ namespace WinFormsApp1
             else
             {
                 MessageBox.Show("Wrong Answer");
-               
+
             }
 
         }
@@ -321,8 +322,8 @@ namespace WinFormsApp1
         public SqlConnection conn;
         public DBOperations()
         {
-            //str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
-            str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;";
+            str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;"; //srj pc
+            //str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;"; // pratham pc
             conn = new SqlConnection(str);
         }
         public void DecreaseStock(Dictionary<string, int> dict)
@@ -513,13 +514,169 @@ namespace WinFormsApp1
             return dt;
         }
 
+        // ------------------------------------ Orders --------------------------------------
+        // overloaded function for order data
+        public DataTable ShowOrderData(string paraType, string paraEntry)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                string query = "";
+                if (paraType == "All")
+                {
+                    query = $"SELECT * FROM Orders";
+                }
+                else if (paraType == "Order Number")
+                {
+                    query = $"SELECT * FROM Orders WHERE order_number = {Convert.ToInt32(paraEntry)} ";
+                }
+                else if (paraType == "Customer Name")
+                {
+                    query = $"SELECT * FROM Orders WHERE customer_name LIKE '%{paraEntry}%' ";
+                }
+                else if (paraType == "Order Amount")
+                {
+                    query = $"SELECT * FROM Orders WHERE order_amount = {Convert.ToInt32(paraEntry)} ";
+                }
+                else if (paraType == "Date")
+                {
+                    query = $"SELECT * FROM Orders WHERE order_date = '{paraEntry}' ";
+                }
+                conn.Open();
+                if(string.IsNullOrEmpty(query))
+                {
+                    MessageBox.Show("query empty");
+                }
+                SqlDataAdapter sqlDa = new SqlDataAdapter(query, conn);
+                sqlDa.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An exception occured\n : {ex}");
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dt;
+        }
+
+        public DataTable ShowOrderData(string paraType, string paraEntry1, string paraEntry2)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                string query = "";
+                if (paraType == "Date Range")
+                {
+                    query = $"SELECT * FROM Orders WHERE order_date between '{paraEntry1}' AND '{paraEntry2}' ";
+                }
+                else if (paraType == "Price Range")
+                {
+                    query = $"SELECT * FROM Orders WHERE order_amount between {Convert.ToInt32(paraEntry1)} AND {Convert.ToInt32(paraEntry2)} ";
+                }
+                conn.Open();
+                if (string.IsNullOrEmpty(query))
+                {
+                    MessageBox.Show("query empty");
+                }
+                SqlDataAdapter sqlDa = new SqlDataAdapter(query, conn);
+                sqlDa.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex}");
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dt;
+        }
+        
+
+        /* Overloaded function for order data with parameterized queries
+        public DataTable ShowOrderData(string paraType, string paraEntry = "", string paraEntry1 = "", string paraEntry2 = "")
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                string query = "";
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+
+                if (paraType == "All")
+                {
+                    query = "SELECT * FROM Orders";
+                }
+                else if (paraType == "Order Number")
+                {
+                    query = "SELECT * FROM Orders WHERE order_number = @orderNumber";
+                    cmd.Parameters.AddWithValue("@orderNumber", Convert.ToInt32(paraEntry));
+                }
+                else if (paraType == "Customer Name")
+                {
+                    query = "SELECT * FROM Orders WHERE customer_name LIKE @customerName";
+                    cmd.Parameters.AddWithValue("@customerName", "%" + paraEntry + "%");
+                }
+                else if (paraType == "Order Amount")
+                {
+                    query = "SELECT * FROM Orders WHERE order_amount = @orderAmount";
+                    cmd.Parameters.AddWithValue("@orderAmount", Convert.ToInt32(paraEntry));
+                }
+                else if (paraType == "Order Date")
+                {
+                    query = "SELECT * FROM Orders WHERE order_date = @orderDate";
+                    cmd.Parameters.AddWithValue("@orderDate", paraEntry);
+                }
+                else if (paraType == "Date Range")
+                {
+                    query = "SELECT * FROM Orders WHERE order_date BETWEEN @startDate AND @endDate";
+                    cmd.Parameters.AddWithValue("@startDate", paraEntry1);
+                    cmd.Parameters.AddWithValue("@endDate", paraEntry2);
+                }
+                else if (paraType == "Price Range")
+                {
+                    query = "SELECT * FROM Orders WHERE order_amount BETWEEN @minPrice AND @maxPrice";
+                    cmd.Parameters.AddWithValue("@minPrice", Convert.ToInt32(paraEntry1));
+                    cmd.Parameters.AddWithValue("@maxPrice", Convert.ToInt32(paraEntry2));
+                }
+                if (string.IsNullOrEmpty(query))
+                {
+                    MessageBox.Show("Query Empty");
+                }
+                cmd.CommandText = query;
+                conn.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter(cmd);
+                sqlDa.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An exception occurred:\n {ex.Message}");
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dt;
+        } */
+
+
+
+
+
+
+
+
+        //----------------------------- Purchase ------------------------------------
         // overload this function for different paraEntries
         public DataTable ShowPurchaseData(string paraType, string paraEntry) // single paraEntry
         {
             DataTable dt = new DataTable();
             try
             {
-                string query = "";
+                
+                string query = ""; 
                 if (paraType == "All")
                 {
                     query = $"SELECT * FROM Purchase";
@@ -541,6 +698,7 @@ namespace WinFormsApp1
                     query = $"SELECT * FROM Purchase WHERE total_payment < {Convert.ToDecimal(paraEntry)} ";
                 }
                 conn.Open();
+                
                 SqlDataAdapter sqlDa = new SqlDataAdapter(query, conn);
                 sqlDa.Fill(dt);
 
@@ -613,7 +771,7 @@ namespace WinFormsApp1
             {
 
                 string formattedDate = loginTime.ToString("yyyy-MM-dd HH:mm:ss");
-                
+
                 query = $"INSERT INTO AdminLogs VALUES ({Convert.ToInt32(id)}, '{name}', '{email}', {Convert.ToDecimal(phone)}, '{formattedDate}')";
 
                 conn.Open();
@@ -641,7 +799,8 @@ namespace WinFormsApp1
                 SqlDataAdapter sqlDa = new SqlDataAdapter(query, conn);
                 sqlDa.Fill(dt);
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show($"{ex}");
             }
             finally

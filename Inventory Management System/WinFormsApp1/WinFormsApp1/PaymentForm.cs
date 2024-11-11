@@ -49,8 +49,8 @@ namespace WinFormsApp1
             orderDateBox.Text = currentDate.ToString("dd-MM-yyyy");
 
             // Connection string
-            //str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
-            str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;";
+            str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";   // srj pc
+            //str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;"; // pratham
             conn = new SqlConnection(str);
 
             

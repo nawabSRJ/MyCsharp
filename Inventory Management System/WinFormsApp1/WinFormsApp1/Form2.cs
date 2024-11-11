@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Formats.Tar;
+using System.Text.RegularExpressions;
 
 namespace WinFormsApp1
 {
@@ -17,8 +18,10 @@ namespace WinFormsApp1
         SqlConnection conn;
         SqlCommand cmd;
         SqlDataReader dr;
-        string query, str;
-        string customerName = "";
+        string query;
+        string str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;"; // srj pc
+        
+        string customer_Name = "";
         DBOperations ops = new DBOperations();
 
         List<Image> images = new List<Image>();
@@ -49,13 +52,13 @@ namespace WinFormsApp1
         public void setHighlights()
         {
             //string str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
-                string str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;";
+            //string str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;";
             SqlConnection conn = new SqlConnection(str);
-            
+
             int totalOrders = 0;
             decimal totalSales = 0;
 
-            
+
             string today = DateTime.Now.ToString("yyyy-MM-dd");
             MessageBox.Show(today);
 
@@ -103,9 +106,9 @@ namespace WinFormsApp1
         public void addImagesCarousel()
         {
             // absolute path
-            images.Add(Image.FromFile("E:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\bin\\Debug\\net8.0-windows\\feedback3.jpg"));
-            images.Add(Image.FromFile("E:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\bin\\Debug\\net8.0-windows\\feedback1.jpg"));
-            images.Add(Image.FromFile("E:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\bin\\Debug\\net8.0-windows\\feedback4.jpg"));
+            images.Add(Image.FromFile("F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\bin\\Debug\\net8.0-windows\\feedback3.jpg"));
+            images.Add(Image.FromFile("F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\bin\\Debug\\net8.0-windows\\feedback1.jpg"));
+            images.Add(Image.FromFile("F:\\C# SEM 5\\Inventory Management System\\WinFormsApp1\\WinFormsApp1\\bin\\Debug\\net8.0-windows\\feedback4.jpg"));
             imageIndex = 0;
             pictureBox1.Image = images[imageIndex];
         }
@@ -145,7 +148,7 @@ namespace WinFormsApp1
         {
 
             //str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
-            str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;";
+            //str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;";
             conn = new SqlConnection(str);
             // only loading products in stock
             query = "SELECT product_name, product_quantity FROM STOCK WHERE product_quantity > 0";
@@ -189,7 +192,8 @@ namespace WinFormsApp1
         private void button3_Click(object sender, EventArgs e)
         {
             //str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
-            str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;";
+            //str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;";
+            
             conn = new SqlConnection(str);
             string custEmail = cust_email.Text;
             string custPasswd = cust_password.Text;
@@ -203,7 +207,7 @@ namespace WinFormsApp1
                 {
                     // record exists
 
-                    customerName = dr["customer_name"].ToString();
+                    customer_Name = dr["customer_name"].ToString();
                     MessageBox.Show("Logged In Successfully");
                     customerLoginBox.Visible = false;
                     customerLoginBox.Enabled = false;
@@ -292,7 +296,7 @@ namespace WinFormsApp1
 
 
 
-        
+
 
         // Add to cart
         private void button13_Click(object sender, EventArgs e)
@@ -306,7 +310,7 @@ namespace WinFormsApp1
 
             string prodName = productListBox.SelectedItem.ToString();
             //str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
-            str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;"; ;
+            //str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;"; ;
             conn = new SqlConnection(str);
             query = $"SELECT product_quantity, product_price FROM STOCK WHERE product_name = '{prodName}'";
             cmd = new SqlCommand(query, conn);
@@ -336,7 +340,7 @@ namespace WinFormsApp1
                                 return;
                             }
 
-                            int updatedQuantity = existingQuantity + 1; 
+                            int updatedQuantity = existingQuantity + 1;
                             if (updatedQuantity <= prodQuantity)
                             {
                                 // Update existing entry with new quantity
@@ -485,14 +489,14 @@ namespace WinFormsApp1
             //Algo : 
             // Confirm Order using MessageBox -> make a form to display the payable amount and
             // the method to pay -> Click on Done -> Make changes in Order + Stock
-
+           
             DialogResult result = MessageBox.Show("Are you sure you want to place the order?", "Confirm Order", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 // Code to place the order
                 decimal totalAmount = getTotalAmount();
                 MessageBox.Show("Order placed successfully!"); // show Payment Form
-                PaymentForm pfm = new PaymentForm(customerName, totalAmount);
+                PaymentForm pfm = new PaymentForm(customer_Name, totalAmount);
                 pfm.ShowDialog(); //  Customer Name Total Amount to be sent to Payment Form
 
 
@@ -557,6 +561,15 @@ namespace WinFormsApp1
             return true;
         }
 
+
+        // utility function to validate email :
+        public bool validEmail(string emailText)
+        {
+            // Text'@'Text.Text
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(emailText, emailPattern);
+        }
+
         // Add New Customer Button (in customer Register Form)
         private void button21_Click(object sender, EventArgs e)
         {
@@ -581,9 +594,15 @@ namespace WinFormsApp1
             {
                 MessageBox.Show("Please enter a valid phone number.");
                 newCustPhone.Focus(); // Set focus back to the masked text box
+                label14.ForeColor = Color.Red;
                 return;
             }
-
+            if (!validEmail(newCustEmail.Text)) {
+                MessageBox.Show("Please enter a valid Email Id.");
+                newCustEmail.Focus(); // Set focus back to the masked text box
+                label15.ForeColor = Color.Red;
+                return;
+            }
             // get all the values from the text boxes -> Validate
             // call the DBOperations func
             string newName = newCustName.Text;
@@ -739,7 +758,7 @@ namespace WinFormsApp1
         // clear filters button in purchase history form
         private void button26_Click(object sender, EventArgs e)
         {
-            
+
             /*foreach (Control control in purchaseFilters.Controls)
             {
                 
@@ -852,7 +871,7 @@ namespace WinFormsApp1
                     {
                         ctrl.Enabled = false;
                     }
-                } 
+                }
                 textBox4.Enabled = true;
             }
             else if (comboBox1.SelectedItem.ToString() == "Date")
@@ -1035,11 +1054,11 @@ namespace WinFormsApp1
             {
                 if (ctrl is TextBox textBox)
                 {
-                    
+
                     textBox.Clear();
                     textBox5.Text = "0"; // to avoid exception after clear
                 }
-                
+
                 else if (ctrl is DateTimePicker dateTimePicker)
                 {
 
@@ -1068,7 +1087,7 @@ namespace WinFormsApp1
             // refresh the highlights
             setHighlights();
 
-            
+
 
         }
         private void setStockAlert()
@@ -1093,5 +1112,260 @@ namespace WinFormsApp1
         }
 
 
+        // show complete order history
+        private void button10_Click(object sender, EventArgs e)
+        {
+            DataTable orderHistory = ops.ShowOrderData("All", "*");
+
+            if (orderHistory.Rows.Count > 0)
+            {
+                ordersDataGrid.DataSource = orderHistory;
+                MessageBox.Show("Data Loaded Successfully");
+            }
+            else
+            {
+                MessageBox.Show("No data found.");
+            }
+        }
+
+
+        // set the enable and disable for this comboBox selections in Orders tab
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // set the disable and enable things here
+
+            if (comboBox2.SelectedItem.ToString() == "Customer Name")
+            {
+                foreach (Control ctrl in orderFilters.Controls)
+                {
+                    if (ctrl is TextBox || ctrl is DateTimePicker || ctrl is NumericUpDown)
+                    {
+                        ctrl.Enabled = false;
+                    }
+                }
+                textBox12.Enabled = true;
+            }
+            else if (comboBox2.SelectedItem.ToString() == "Date")
+            {
+                foreach (Control ctrl in orderFilters.Controls)
+                {
+                    if (ctrl is TextBox || ctrl is DateTimePicker || ctrl is NumericUpDown)
+                    {
+                        ctrl.Enabled = false;
+                    }
+                }
+                dateTimePicker4.Enabled = true; // enable only one
+                label50.Text = "Pick Date : ";
+            }
+            else if (comboBox2.SelectedItem.ToString() == "Order Amount")
+            {
+                foreach (Control ctrl in orderFilters.Controls)
+                {
+                    if (ctrl is TextBox || ctrl is DateTimePicker || ctrl is NumericUpDown)
+                    {
+                        ctrl.Enabled = false;
+                    }
+                }
+                textBox11.Enabled = true;
+                label51.Text = "Order Amount : ";
+            }
+            else if (comboBox2.SelectedItem.ToString() == "Order Number")
+            {
+                foreach (Control ctrl in orderFilters.Controls)
+                {
+                    if (ctrl is TextBox || ctrl is DateTimePicker)
+                    {
+                        ctrl.Enabled = false;
+                    }
+                }
+                numericUpDown2.Enabled = true;
+            }
+            else if (comboBox2.SelectedItem.ToString() == "Price Range")
+            {
+                foreach (Control ctrl in orderFilters.Controls)
+                {
+                    if (ctrl is TextBox || ctrl is DateTimePicker || ctrl is NumericUpDown)
+                    {
+                        ctrl.Enabled = false;
+                    }
+                }
+                label51.Text = "Order Amount (Min)";
+                textBox11.Enabled = true;
+                textBox13.Enabled = true;
+
+            }
+            else if (comboBox2.SelectedItem.ToString() == "Date Range")
+            {
+                foreach (Control ctrl in orderFilters.Controls)
+                {
+                    if (ctrl is TextBox || ctrl is NumericUpDown)
+                    {
+                        ctrl.Enabled = false;
+                    }
+                    else if (ctrl is DateTimePicker)
+                    {
+                        ctrl.Enabled = true;
+                    }
+                }
+
+            }
+        }
+
+        // orders tab search button
+
+        /*private void button9_Click(object sender, EventArgs e) gpt 
+        {
+            string paraType = comboBox2.SelectedItem?.ToString();
+            if (string.IsNullOrWhiteSpace(paraType))
+            {
+                MessageBox.Show("Please select a parameter and enter the values");
+                return;
+            }
+
+            // Variables for data handling
+            DataTable resultData;
+            string paraEntry = string.Empty;
+            string paraEntry1 = string.Empty;
+            string paraEntry2 = string.Empty;
+
+            try
+            {
+                if (paraType == "Date")
+                {
+                    paraEntry = dateTimePicker4.Value.ToString("yyyy-MM-dd");
+                    resultData = ops.ShowOrderData(paraType, paraEntry);
+                }
+                else if (paraType == "Date Range")
+                {
+                    paraEntry1 = dateTimePicker4.Value.ToString("yyyy-MM-dd");
+                    paraEntry2 = dateTimePicker3.Value.ToString("yyyy-MM-dd");
+                    resultData = ops.ShowOrderData(paraType, paraEntry1, paraEntry2);
+                }
+                else if (paraType == "Price Range")
+                {
+                    if (string.IsNullOrWhiteSpace(textBox11.Text) || string.IsNullOrWhiteSpace(textBox13.Text))
+                        throw new InvalidOperationException("Please enter both min and max prices.");
+
+                    paraEntry1 = textBox11.Text;
+                    paraEntry2 = textBox13.Text;
+                    resultData = ops.ShowOrderData(paraType, paraEntry1, paraEntry2);
+                }
+                else if (paraType == "Order Number" || paraType == "Order Amount")
+                {
+                    paraEntry = (paraType == "Order Number") ? numericUpDown2.Text : textBox11.Text;
+                    resultData = ops.ShowOrderData(paraType, paraEntry);
+                }
+                else if (paraType == "Customer Name")
+                {
+                    if (string.IsNullOrWhiteSpace(textBox12.Text))
+                        throw new InvalidOperationException("Please enter the Customer Name.");
+
+                    paraEntry = textBox12.Text;
+                    resultData = ops.ShowOrderData(paraType, paraEntry);
+                }
+                else
+                {
+                    throw new InvalidOperationException("Invalid parameter type selected.");
+                }
+
+                // Display results
+                ordersDataGrid.DataSource = resultData;
+                MessageBox.Show(resultData.Rows.Count > 0 ? "Data Loaded Successfully" : "No data found.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+        }
+        */
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(comboBox2.SelectedItem?.ToString()))
+            {
+                MessageBox.Show("Please select a parameter and enter the values");
+                return;
+            }
+            string paraType = comboBox2.Text;
+            string paraEntry = "";
+
+            if (paraType == "Date")
+            {
+                DateTime startDate = dateTimePicker4.Value;
+                paraEntry = startDate.ToString("yyyy-MM-dd");
+            }
+            else if (paraType == "Date Range")
+            {
+                DateTime startDate = dateTimePicker4.Value;
+                DateTime endDate = dateTimePicker3.Value;
+                DataTable ans = ops.ShowOrderData(paraType, startDate.ToString("yyyy-MM-dd"), endDate.ToString("yyyy-MM-dd"));
+                if (ans.Rows.Count > 0)
+                {
+                    ordersDataGrid.DataSource = ans;
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("No data found.");
+                    return;
+                }
+            }
+            else if(paraType == "Price Range")
+            {
+                if (string.IsNullOrWhiteSpace(textBox11.Text) || string.IsNullOrWhiteSpace(textBox13.Text))
+                {
+                    MessageBox.Show("Please enter the Price Range");
+                    return;
+                }
+                string minPrice = textBox11.Text;
+                string maxPrice = textBox13.Text;   // later convert to int
+                DataTable ans = ops.ShowOrderData(paraType, minPrice, maxPrice);
+                if (ans.Rows.Count > 0)
+                {
+                    ordersDataGrid.DataSource = ans;
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("No data found.");
+                    return;
+                }
+            }
+            else if(paraType == "Order Number")
+            {
+                paraEntry = numericUpDown2.Text.ToString();  // later convert to int
+            }
+            else if(paraType == "Customer Name")
+            {
+                if (string.IsNullOrWhiteSpace(textBox12.Text))
+                {
+                    MessageBox.Show("Please enter the Customer Name");
+                    return;
+                }
+                paraEntry = textBox12.Text;
+            }
+            else if(paraType == "Order Amount")
+            {
+                if (string.IsNullOrWhiteSpace(textBox11.Text))
+                {
+                    MessageBox.Show("Please enter the Order Amount");
+                    return;
+                }
+                paraEntry = textBox11.Text; // later convert to int
+            }
+
+
+            DataTable ordersData = ops.ShowOrderData(paraType, paraEntry);
+            if (ordersData.Rows.Count > 0)
+            {
+                ordersDataGrid.DataSource = ordersData;
+                MessageBox.Show("Data Loaded Successfully");
+            }
+            else
+            {
+                MessageBox.Show("No data found.");
+            }
+
+        } 
     } // Form 2 class ends
 }
