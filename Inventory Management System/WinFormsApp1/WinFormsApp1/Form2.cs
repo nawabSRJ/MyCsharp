@@ -20,7 +20,7 @@ namespace WinFormsApp1
         SqlDataReader dr;
         string query;
         string str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;"; // srj pc
-        
+        //string str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;"; // pratham
         string customer_Name = "";
         DBOperations ops = new DBOperations();
 
@@ -51,17 +51,12 @@ namespace WinFormsApp1
         }
         public void setHighlights()
         {
-            //string str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;";
-            //string str = "Data Source=pratham;Initial Catalog=sample;Integrated Security=True;";
+            string str = "Server=localhost;Database=SAMPLE;Trusted_Connection=True;"; //srj 
             SqlConnection conn = new SqlConnection(str);
-
             int totalOrders = 0;
             decimal totalSales = 0;
-
-
             string today = DateTime.Now.ToString("yyyy-MM-dd");
             MessageBox.Show(today);
-
             // using aliases here for single query
             string query = $"SELECT COUNT(*) AS TotalOrders, SUM(order_amount) AS TotalSales FROM Orders WHERE order_date = '{today}' ";
 
@@ -1210,74 +1205,6 @@ namespace WinFormsApp1
 
             }
         }
-
-        // orders tab search button
-
-        /*private void button9_Click(object sender, EventArgs e) gpt 
-        {
-            string paraType = comboBox2.SelectedItem?.ToString();
-            if (string.IsNullOrWhiteSpace(paraType))
-            {
-                MessageBox.Show("Please select a parameter and enter the values");
-                return;
-            }
-
-            // Variables for data handling
-            DataTable resultData;
-            string paraEntry = string.Empty;
-            string paraEntry1 = string.Empty;
-            string paraEntry2 = string.Empty;
-
-            try
-            {
-                if (paraType == "Date")
-                {
-                    paraEntry = dateTimePicker4.Value.ToString("yyyy-MM-dd");
-                    resultData = ops.ShowOrderData(paraType, paraEntry);
-                }
-                else if (paraType == "Date Range")
-                {
-                    paraEntry1 = dateTimePicker4.Value.ToString("yyyy-MM-dd");
-                    paraEntry2 = dateTimePicker3.Value.ToString("yyyy-MM-dd");
-                    resultData = ops.ShowOrderData(paraType, paraEntry1, paraEntry2);
-                }
-                else if (paraType == "Price Range")
-                {
-                    if (string.IsNullOrWhiteSpace(textBox11.Text) || string.IsNullOrWhiteSpace(textBox13.Text))
-                        throw new InvalidOperationException("Please enter both min and max prices.");
-
-                    paraEntry1 = textBox11.Text;
-                    paraEntry2 = textBox13.Text;
-                    resultData = ops.ShowOrderData(paraType, paraEntry1, paraEntry2);
-                }
-                else if (paraType == "Order Number" || paraType == "Order Amount")
-                {
-                    paraEntry = (paraType == "Order Number") ? numericUpDown2.Text : textBox11.Text;
-                    resultData = ops.ShowOrderData(paraType, paraEntry);
-                }
-                else if (paraType == "Customer Name")
-                {
-                    if (string.IsNullOrWhiteSpace(textBox12.Text))
-                        throw new InvalidOperationException("Please enter the Customer Name.");
-
-                    paraEntry = textBox12.Text;
-                    resultData = ops.ShowOrderData(paraType, paraEntry);
-                }
-                else
-                {
-                    throw new InvalidOperationException("Invalid parameter type selected.");
-                }
-
-                // Display results
-                ordersDataGrid.DataSource = resultData;
-                MessageBox.Show(resultData.Rows.Count > 0 ? "Data Loaded Successfully" : "No data found.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}");
-            }
-        }
-        */
 
         private void button9_Click(object sender, EventArgs e)
         {

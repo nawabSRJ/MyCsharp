@@ -139,6 +139,8 @@ namespace WinFormsApp1
             flowLayoutPanel2 = new FlowLayoutPanel();
             label19 = new Label();
             button26 = new Button();
+            panel1 = new Panel();
+            label46 = new Label();
             purchaseHistoryForm = new GroupBox();
             purchaseFilters = new GroupBox();
             dateTimePicker2 = new DateTimePicker();
@@ -187,8 +189,6 @@ namespace WinFormsApp1
             label23 = new Label();
             label21 = new Label();
             textBox3 = new TextBox();
-            panel1 = new Panel();
-            label46 = new Label();
             tabPage5 = new TabPage();
             groupBox1 = new GroupBox();
             ordersDataGrid = new DataGridView();
@@ -244,6 +244,7 @@ namespace WinFormsApp1
             tabPage4.SuspendLayout();
             panel7.SuspendLayout();
             panel5.SuspendLayout();
+            panel1.SuspendLayout();
             purchaseHistoryForm.SuspendLayout();
             purchaseFilters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -252,7 +253,6 @@ namespace WinFormsApp1
             ((System.ComponentModel.ISupportInitialize)stockDataGrid).BeginInit();
             groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            panel1.SuspendLayout();
             tabPage5.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ordersDataGrid).BeginInit();
@@ -275,7 +275,7 @@ namespace WinFormsApp1
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(1191, 534);
+            tabPage1.Size = new Size(1362, 549);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Dashboard";
             tabPage1.UseVisualStyleBackColor = true;
@@ -293,9 +293,10 @@ namespace WinFormsApp1
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox1.Location = new Point(3, 98);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(856, 322);
+            pictureBox1.Size = new Size(1021, 322);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
@@ -344,7 +345,7 @@ namespace WinFormsApp1
             groupBox2.ForeColor = SystemColors.ButtonFace;
             groupBox2.Location = new Point(3, 426);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(856, 105);
+            groupBox2.Size = new Size(1021, 120);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Stock Alert";
@@ -419,9 +420,9 @@ namespace WinFormsApp1
             groupBox3.Controls.Add(label42);
             groupBox3.Dock = DockStyle.Right;
             groupBox3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox3.Location = new Point(859, 44);
+            groupBox3.Location = new Point(1030, 44);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(329, 487);
+            groupBox3.Size = new Size(329, 502);
             groupBox3.TabIndex = 2;
             groupBox3.TabStop = false;
             groupBox3.Text = "Highlights Today";
@@ -473,7 +474,7 @@ namespace WinFormsApp1
             dashLbl.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             dashLbl.Location = new Point(3, 3);
             dashLbl.Name = "dashLbl";
-            dashLbl.Size = new Size(1185, 41);
+            dashLbl.Size = new Size(1356, 41);
             dashLbl.TabIndex = 3;
             dashLbl.Text = "Dashboard";
             // 
@@ -488,7 +489,7 @@ namespace WinFormsApp1
             tabControl1.Location = new Point(0, 0);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1199, 562);
+            tabControl1.Size = new Size(1370, 577);
             tabControl1.TabIndex = 2;
             // 
             // tabPage2
@@ -503,7 +504,7 @@ namespace WinFormsApp1
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1191, 534);
+            tabPage2.Size = new Size(1362, 534);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Customer";
             // 
@@ -993,7 +994,7 @@ namespace WinFormsApp1
             label5.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label5.Location = new Point(3, 3);
             label5.Name = "label5";
-            label5.Size = new Size(1185, 40);
+            label5.Size = new Size(1356, 40);
             label5.TabIndex = 1;
             label5.Text = "Customer Services Portal";
             // 
@@ -1006,7 +1007,7 @@ namespace WinFormsApp1
             tabPage3.Controls.Add(flowLayoutPanel1);
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(1191, 534);
+            tabPage3.Size = new Size(1362, 534);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Stock Data";
             tabPage3.UseVisualStyleBackColor = true;
@@ -1014,6 +1015,7 @@ namespace WinFormsApp1
             // 
             // adminLogBox
             // 
+            adminLogBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             adminLogBox.Controls.Add(adminLogsGrid);
             adminLogBox.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             adminLogBox.Location = new Point(214, 17);
@@ -1292,12 +1294,12 @@ namespace WinFormsApp1
             tabPage4.Controls.Add(flowLayoutPanel2);
             tabPage4.Controls.Add(label19);
             tabPage4.Controls.Add(button26);
+            tabPage4.Controls.Add(panel1);
             tabPage4.Controls.Add(purchaseHistoryForm);
             tabPage4.Controls.Add(stockEntryForm);
-            tabPage4.Controls.Add(panel1);
             tabPage4.Location = new Point(4, 24);
             tabPage4.Name = "tabPage4";
-            tabPage4.Size = new Size(1191, 534);
+            tabPage4.Size = new Size(1362, 534);
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Purchase";
             tabPage4.UseVisualStyleBackColor = true;
@@ -1363,7 +1365,7 @@ namespace WinFormsApp1
             label19.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label19.Location = new Point(0, 0);
             label19.Name = "label19";
-            label19.Size = new Size(1191, 40);
+            label19.Size = new Size(1362, 40);
             label19.TabIndex = 2;
             label19.Text = "Supplier and Purchase Data";
             // 
@@ -1380,17 +1382,38 @@ namespace WinFormsApp1
             button26.Visible = false;
             button26.Click += button26_Click;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.LightCoral;
+            panel1.Controls.Add(label46);
+            panel1.Cursor = Cursors.Hand;
+            panel1.Location = new Point(457, 5);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(29, 26);
+            panel1.TabIndex = 5;
+            // 
+            // label46
+            // 
+            label46.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label46.Location = new Point(19, 9);
+            label46.Name = "label46";
+            label46.Size = new Size(173, 36);
+            label46.TabIndex = 0;
+            label46.Text = "New Stock Entry";
+            label46.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // purchaseHistoryForm
             // 
+            purchaseHistoryForm.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             purchaseHistoryForm.Controls.Add(purchaseFilters);
             purchaseHistoryForm.Controls.Add(dataGridView2);
             purchaseHistoryForm.Controls.Add(label30);
             purchaseHistoryForm.Controls.Add(comboBox1);
             purchaseHistoryForm.Controls.Add(groupBox4);
             purchaseHistoryForm.Enabled = false;
-            purchaseHistoryForm.Location = new Point(238, 52);
+            purchaseHistoryForm.Location = new Point(227, 52);
             purchaseHistoryForm.Name = "purchaseHistoryForm";
-            purchaseHistoryForm.Size = new Size(1089, 641);
+            purchaseHistoryForm.Size = new Size(1106, 641);
             purchaseHistoryForm.TabIndex = 21;
             purchaseHistoryForm.TabStop = false;
             purchaseHistoryForm.Text = "Purchase History Form";
@@ -1502,13 +1525,13 @@ namespace WinFormsApp1
             // 
             // dataGridView2
             // 
+            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { purchaseId, supplierName, supplyDate, totalPayment });
-            dataGridView2.Dock = DockStyle.Bottom;
-            dataGridView2.Location = new Point(3, 264);
+            dataGridView2.Location = new Point(3, 231);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(1083, 374);
+            dataGridView2.Size = new Size(1100, 407);
             dataGridView2.TabIndex = 3;
             dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
@@ -1523,12 +1546,12 @@ namespace WinFormsApp1
             // 
             // supplierName
             // 
+            supplierName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             supplierName.DataPropertyName = "supplier_name";
             supplierName.HeaderText = "Supplier Name";
             supplierName.MinimumWidth = 6;
             supplierName.Name = "supplierName";
             supplierName.ReadOnly = true;
-            supplierName.Width = 250;
             // 
             // supplyDate
             // 
@@ -1852,33 +1875,13 @@ namespace WinFormsApp1
             textBox3.Size = new Size(201, 23);
             textBox3.TabIndex = 0;
             // 
-            // panel1
-            // 
-            panel1.BackColor = Color.LightCoral;
-            panel1.Controls.Add(label46);
-            panel1.Cursor = Cursors.Hand;
-            panel1.Location = new Point(457, 5);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(29, 26);
-            panel1.TabIndex = 5;
-            // 
-            // label46
-            // 
-            label46.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label46.Location = new Point(19, 9);
-            label46.Name = "label46";
-            label46.Size = new Size(173, 36);
-            label46.TabIndex = 0;
-            label46.Text = "New Stock Entry";
-            label46.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // tabPage5
             // 
             tabPage5.Controls.Add(groupBox1);
             tabPage5.Controls.Add(label47);
             tabPage5.Location = new Point(4, 24);
             tabPage5.Name = "tabPage5";
-            tabPage5.Size = new Size(1191, 534);
+            tabPage5.Size = new Size(1362, 534);
             tabPage5.TabIndex = 4;
             tabPage5.Text = "Orders";
             tabPage5.UseVisualStyleBackColor = true;
@@ -1902,9 +1905,9 @@ namespace WinFormsApp1
             // 
             ordersDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             ordersDataGrid.Columns.AddRange(new DataGridViewColumn[] { orderNo, customerName, orderAmount, orderDate });
-            ordersDataGrid.Location = new Point(139, 262);
+            ordersDataGrid.Location = new Point(116, 254);
             ordersDataGrid.Name = "ordersDataGrid";
-            ordersDataGrid.Size = new Size(897, 150);
+            ordersDataGrid.Size = new Size(982, 150);
             ordersDataGrid.TabIndex = 7;
             // 
             // orderNo
@@ -1916,11 +1919,11 @@ namespace WinFormsApp1
             // 
             // customerName
             // 
+            customerName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             customerName.DataPropertyName = "customer_name";
             customerName.HeaderText = "Customer Name";
             customerName.Name = "customerName";
             customerName.ReadOnly = true;
-            customerName.Width = 300;
             // 
             // orderAmount
             // 
@@ -2121,7 +2124,7 @@ namespace WinFormsApp1
             label47.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label47.Location = new Point(0, 0);
             label47.Name = "label47";
-            label47.Size = new Size(1191, 40);
+            label47.Size = new Size(1362, 40);
             label47.TabIndex = 3;
             label47.Text = "Customer Orders Data";
             // 
@@ -2183,7 +2186,7 @@ namespace WinFormsApp1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1199, 562);
+            ClientSize = new Size(1370, 577);
             Controls.Add(tabControl1);
             Name = "Form2";
             Text = "Inventory Manager";
@@ -2217,6 +2220,7 @@ namespace WinFormsApp1
             tabPage4.ResumeLayout(false);
             panel7.ResumeLayout(false);
             panel5.ResumeLayout(false);
+            panel1.ResumeLayout(false);
             purchaseHistoryForm.ResumeLayout(false);
             purchaseHistoryForm.PerformLayout();
             purchaseFilters.ResumeLayout(false);
@@ -2229,7 +2233,6 @@ namespace WinFormsApp1
             groupBox5.ResumeLayout(false);
             groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            panel1.ResumeLayout(false);
             tabPage5.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -2370,10 +2373,6 @@ namespace WinFormsApp1
         private DataGridViewTextBoxColumn prodQuantity;
         private DataGridViewTextBoxColumn prodPrice;
         private DataGridViewTextBoxColumn prodDesc;
-        private DataGridViewTextBoxColumn purchaseId;
-        private DataGridViewTextBoxColumn supplierName;
-        private DataGridViewTextBoxColumn supplyDate;
-        private DataGridViewTextBoxColumn totalPayment;
         private Label dayLbl;
         private Label timeLbl;
         private System.Windows.Forms.Timer timer1;
@@ -2421,11 +2420,15 @@ namespace WinFormsApp1
         private Label label52;
         private TextBox textBox12;
         private Label label53;
+        private Label label54;
+        private TextBox textBox13;
+        private DataGridViewTextBoxColumn purchaseId;
+        private DataGridViewTextBoxColumn supplierName;
+        private DataGridViewTextBoxColumn supplyDate;
+        private DataGridViewTextBoxColumn totalPayment;
         private DataGridViewTextBoxColumn orderNo;
         private DataGridViewTextBoxColumn customerName;
         private DataGridViewTextBoxColumn orderAmount;
         private DataGridViewTextBoxColumn orderDate;
-        private Label label54;
-        private TextBox textBox13;
     }
 }
