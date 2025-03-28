@@ -6,6 +6,8 @@
 <h2>Features</h2>
 
 <h3>🔐 Login Authentication & Captcha</h3>
+![image](https://github.com/user-attachments/assets/98450325-71fc-4b94-af80-3014627e6f72)
+
 <ul>
 <li>Secure login authentication for business owners and customers.</li>
 <li>Captcha verification to prevent automated login attempts.</li>
@@ -40,6 +42,11 @@
 </ul>
 
 <h3>📜 Order History & Search Filters</h3>
+![image](https://github.com/user-attachments/assets/96ebbd6f-09cb-453c-8f8f-09a599d41c40)
+![image](https://github.com/user-attachments/assets/22afb499-271e-48ee-8341-8fb80deaf251)
+![image](https://github.com/user-attachments/assets/65bdb1e5-d88f-44dd-9787-6abe6c598c66)
+![image](https://github.com/user-attachments/assets/be2f7b33-42b9-4aba-8213-564c5cfdf5e8)
+
 <ul>
 <li>View <strong>complete order history</strong>.</li>
 <li>Advanced search filters including:</li>
@@ -58,24 +65,20 @@
 <li><strong>SQL Server</strong> for database management.</li>
 </ul>
 
-<h2>Installation & Setup</h2>
-<ol>
-<li>Clone the repository:</li>
-<pre><code>git clone https://github.com/your-repo-url.git</code></pre>
-<li>Open the project in <strong>Visual Studio</strong>.</li>
-<li>Configure the <strong>SQL Server database connection</strong>.</li>
-<li>Build and run the application.</li>
-</ol>
-
-<h2>Screenshots (Place relevant images here)</h2>
+<h2> Screenshots </h2>
 <ul>
 <li>Dashboard Overview</li>
-<li>Stock Management</li>
-<li>Order History</li>
-</ul>
+  ![image](https://github.com/user-attachments/assets/16cc8bd8-5660-4285-ad4b-43a5c359931f)
 
-<h2>License</h2>
-<p>This project is licensed under the <strong>MIT License</strong>.</p>
+<li>Stock Management</li>
+![image](https://github.com/user-attachments/assets/3ba587b8-0d94-41d9-ba9a-daf1e0d162b8)
+![image](https://github.com/user-attachments/assets/869ca6ec-b4ee-4a43-9d79-20257e32318b)
+![image](https://github.com/user-attachments/assets/a2abc2d1-bd67-451a-bda4-0e27c96cd17e)
+
+<li>Order History</li>
+![image](https://github.com/user-attachments/assets/053d2af7-1d27-4ddb-8ea6-2758f8c12003)
+
+</ul>
 
 <h2>Developer</h2>
 <p>Developed by <strong>Srajan Saxena</strong>. Feel free to reach out for improvements or collaborations!</p>
